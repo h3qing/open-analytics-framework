@@ -13,7 +13,10 @@ jobs:
       - name: Lint markdown
         uses: DavidAnson/markdownlint-cli2-action@v16
         with:
-          globs: "**/*.md"
+          # CODE_OF_CONDUCT.md is verbatim upstream Contributor Covenant text
+          globs: |
+            **/*.md
+            !CODE_OF_CONDUCT.md
 
   links:
     runs-on: ubuntu-latest
