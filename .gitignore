@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Phase 0 working documents — not part of the published structure
+CANDIDATE_PATTERNS.md
+
+# Editor
+.vscode/
+.idea/
