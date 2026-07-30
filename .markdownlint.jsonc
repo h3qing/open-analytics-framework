@@ -1,0 +1,9 @@
+{
+  // Prose-heavy repository: long lines and inline HTML comments are intentional.
+  "MD013": false,
+  "MD033": false,
+  // First line is not always a top-level heading in issue templates (frontmatter).
+  "MD041": false,
+  // Duplicate headings are required by the fixed eight-section pattern template.
+  "MD024": false
+}
