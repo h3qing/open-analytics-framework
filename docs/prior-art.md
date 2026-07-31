@@ -1,6 +1,6 @@
 # Prior art and landscape review
 
-> Scope: the coverage matrix — one row per candidate pattern, recording what already exists publicly and what does not. This file is what makes the provenance system mean something. Status: **pending Phase 0; no review has been run yet.**
+> Scope: the coverage matrix — one row per candidate pattern, recording what already exists publicly and what does not. This file is what makes the provenance system mean something. Status: **the full Phase 0 review is pending; rows land individually as units are synthesized.**
 
 ## Method
 
@@ -10,7 +10,8 @@ For each candidate pattern: search books, peer-reviewed papers, standards docume
 
 | Pattern | Closest prior art | Citation key | What it covers | What it does not cover | Provisional tag |
 |---|---|---|---|---|---|
-| _pending Phase 0_ | | | | | |
+| State-based retention measurement (M1-11) | Duolingo's growth model, documented by the practitioners who built it; per Mazal, itself adapted from state models at Zynga and MyFitnessPal | [GUSTAFSON-2023], [MAZAL-2023] | Seven MECE daily activity states; named transition rates (CURR, NURR, RURR, SURR, reactivation/resurrection); sensitivity simulation to select a focus metric; verifying the metric is movable and moves the topline | Application to organizations without analytics staff; low-volume weekly-window variant; reverse-funnel bottleneck framing and coarse-first instrumentation (original here); LLM-agent operationalization | Adapted |
+| _remaining rows pending Phase 0_ | | | | | |
 
 ## Uncovered ground
 

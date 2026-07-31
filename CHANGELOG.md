@@ -9,3 +9,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Added
 
 - Repository skeleton: module charters, pattern template, prior-art and references scaffolding, deliverable-type homes, community files, CI.
+- First pattern draft: state-based retention measurement (M1-11, Adapted from Duolingo's published growth model), with Module 1's first control-plan template, first prior-art row, and first verified REFERENCES entries.

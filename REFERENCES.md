@@ -10,4 +10,7 @@ Bibliography for the framework. Every citation key used anywhere in `docs/`, `re
 
 ## Entries
 
-_Pending Phase 0: seeded from the prior-art review, verified entries only._
+_The full Phase 0 seeding is pending; entries below were verified individually as units were synthesized._
+
+- **[GUSTAFSON-2023]** — Gustafson, Erin. "Meaningful metrics: How data sharpened the focus of product teams." Duolingo Blog, February 17, 2023. <https://blog.duolingo.com/growth-model-duolingo/>
+- **[MAZAL-2023]** — Mazal, Jorge. "How Duolingo reignited user growth." Lenny's Newsletter, February 28, 2023. <https://www.lennysnewsletter.com/p/how-duolingo-reignited-user-growth>

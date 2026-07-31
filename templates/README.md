@@ -6,7 +6,7 @@ In the DMAIC mapping ([pattern template](../docs/pattern-template.md)), the arti
 
 | Directory | Module | Contents |
 |---|---|---|
-| `01-ai-data-quality/` | AI data quality | _pending Module 1 sessions_ |
+| `01-ai-data-quality/` | AI data quality | [Retention-state control plan](01-ai-data-quality/retention-state-control-plan.md) (M1-11) |
 | `02-infrastructure-design/` | Infrastructure design | _pending_ |
 | `03-ai-agent-integration/` | AI agent integration | _pending_ |
 | `04-governance-and-financial-reporting/` | Governance and financial reporting | _pending_ |
