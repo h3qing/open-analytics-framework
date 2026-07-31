@@ -1,6 +1,6 @@
 # Content backlog
 
-One row per writeable unit; a unit is finishable in one 60–90 minute sitting. Statuses: `candidate` (pre prior-art review), `ready`, `in progress`, `drafted`, `published`. Every unit currently sits at `candidate`: rows are provisional until the Phase 0 prior-art review runs and the candidate list is cut by the author. Expected provenance tags are assigned by the prior-art review, never guessed here.
+One row per writeable unit; a unit is finishable in one 60–90 minute sitting. Statuses: `candidate` (pre prior-art review), `ready`, `in progress`, `drafted`, `published`. Rows at `candidate` are provisional until the Phase 0 prior-art review runs and the candidate list is cut by the author; units synthesized from public sources ahead of Phase 0 carry their tag only once their prior-art row exists. Expected provenance tags are assigned by the prior-art review, never guessed here.
 
 | ID | Module | Working title | Type | Target | Status | Expected provenance | Effort |
 |---|---|---|---|---|---|---|---|
@@ -14,6 +14,7 @@ One row per writeable unit; a unit is finishable in one 60–90 minute sitting. 
 | M1-08 | 1 | The reconciliation protocol | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-09 | 1 | Measuring trust, not just accuracy | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-10 | 1 | Data incident root cause analysis | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
+| M1-11 | 1 | State-based retention measurement | pattern | v0.2.0 | drafted | Adapted | 1 session |
 | M2-01 | 2 | Minimum viable analytics stack | pattern | v0.3.0 | candidate | [TODO: prior art] | 1 session |
 | M2-02 | 2 | The semantic layer as trust infrastructure | pattern | v0.3.0 | candidate | [TODO: prior art] | 1 session |
 | M2-03 | 2 | Change management for analytics code | pattern | v0.3.0 | candidate | [TODO: prior art] | 1 session |

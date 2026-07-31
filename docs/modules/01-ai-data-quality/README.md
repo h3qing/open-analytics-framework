@@ -2,7 +2,7 @@
 
 > Scope: measuring and improving the quality of data feeding AI-assisted analytics — instrumentation, statistical control, validation, and the trust signals built on them. Does not cover: model selection, prompting, or benchmark performance; infrastructure design (Module 2); agent deployment mechanics (Module 3).
 
-**Status:** charter stub. This is the opening module. Patterns land here after the Phase 0 prior-art review and interview sessions; the working list lives in [CONTENT_BACKLOG.md](../../../CONTENT_BACKLOG.md).
+**Status:** charter plus first drafted pattern. This is the opening module. Patterns land here after prior-art review and interview or source-synthesis sessions; the working list lives in [CONTENT_BACKLOG.md](../../../CONTENT_BACKLOG.md).
 
 ## Why this module exists
 
@@ -10,7 +10,9 @@
 
 ## Patterns
 
-_None written yet. An empty stub is more useful than a plausible one._
+| ID | Pattern | Status | Provenance |
+|---|---|---|---|
+| M1-11 | [State-based retention measurement](state-based-retention-measurement.md) | drafted — awaiting author voice pass | Adapted |
 
 ## Control-plan template
 

@@ -5,5 +5,8 @@
   // First line is not always a top-level heading in issue templates (frontmatter).
   "MD041": false,
   // Duplicate headings are required by the fixed eight-section pattern template.
-  "MD024": false
+  "MD024": false,
+  // Pattern docs carry YAML frontmatter (machine metadata) plus a human H1;
+  // don't treat the frontmatter title as a second top-level heading.
+  "MD025": { "front_matter_title": "" }
 }
