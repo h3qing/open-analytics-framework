@@ -11,7 +11,7 @@ Every pattern document uses this shape. Eight sections, several of which are one
 5. **Implementation** — steps, linked to the artifact in `templates/` and any relevant implementation guide.
 6. **How you know it is working** — the observable signal or metric.
 7. **Failure modes** — how this gets implemented badly.
-8. **Provenance** — required on every pattern. Exactly one tag: `Established`, `Adapted`, or `Original`, with citation keys resolving to [REFERENCES.md](../REFERENCES.md). A tag may only be assigned after the prior-art search for the pattern is recorded in [prior-art.md](prior-art.md).
+8. **Sources & Stories** — where this comes from. List the key sources and stories using natural references (e.g. "the Duolingo growth model as described by the practitioners who built it", "practices described by Benn Stancil", "similar patterns at early Uber"). The pattern itself is the primary artifact; these are for traceability if the reader wants to go deeper. All citation keys must resolve in [REFERENCES.md](../REFERENCES.md).
 
 ## DMAIC mapping
 
@@ -26,9 +26,3 @@ The Six Sigma thread is structural, not claimed. Each template section is a DMAI
 | Control | The artifact in `templates/` |
 
 Every module ships at least one **control plan** template in `templates/`. That is the artifact that makes the methodology real rather than decorative.
-
-## Provenance tags
-
-- **Established** — well-documented existing concept. Cite and move on.
-- **Adapted** — existing concept applied to a domain it was not written for. Cite the origin, state precisely what changed.
-- **Original** — no prior art found. State that plainly, and link the prior-art search that came up empty. An `Original` tag with no corresponding prior-art row is a defect.

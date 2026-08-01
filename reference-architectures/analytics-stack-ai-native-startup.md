@@ -32,6 +32,6 @@
 
 [TODO: interview]
 
-## Provenance
+## Sources & Stories
 
 [TODO: pending prior-art review]

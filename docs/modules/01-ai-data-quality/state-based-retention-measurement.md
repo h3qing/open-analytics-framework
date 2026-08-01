@@ -4,7 +4,6 @@ title: State-based retention measurement
 module: 1
 type: pattern
 status: drafted # full sourced draft; awaiting author voice pass per AGENTS.md constraint 6
-provenance: Adapted
 sources:
   - GUSTAFSON-2023
   - MAZAL-2023
@@ -68,7 +67,7 @@ This pattern rejects three common practices:
 - **Copying growth features without a loss model.** Duolingo's borrowed gamification and referral mechanics failed until the team could say where users were actually being lost and why a mechanic would work in their context, not just in the source product's [MAZAL-2023].
 - **Choosing the focus metric by intuition.** New-user work felt like the obvious priority; the simulation showed current-user retention had several times the leverage [MAZAL-2023]. Run the sensitivity analysis before assigning a north star — the highest-leverage rate is frequently not the intuitive one.
 
-Original to this framework: treat retention as an acquisition funnel run in reverse. Lay out each step of drop-off, understand why each drop-off happens, and fix the bottleneck — the same logic industrial engineering applies to a production line. The state model is the instrument that makes the bottleneck visible.
+A framing this framework adds: treat retention as an acquisition funnel run in reverse. Lay out each step of drop-off, understand why each drop-off happens, and fix the bottleneck — the same logic industrial engineering applies to a production line. The state model is the instrument that makes the bottleneck visible.
 
 ## Implementation
 
@@ -102,7 +101,7 @@ Steps 1–3 are the Measure work; 4–6 are Analyze and Improve; the control pla
    ```
 
 3. **Build the daily classification job** and compute transition rates from consecutive snapshots. This is one query over an events table, not a platform build; the template has the skeleton.
-4. **Find the bottleneck coarse-first** (original to this framework). Before building finer instrumentation, make a rough estimate of where the largest loss is, pull a quick qualitative anecdote for why that drop-off happens, attempt a fix, and see if the rate responds. Only where the coarse pass cannot localize the loss do you instrument more detailed steps. Instrumentation is bought with time you may not need to spend.
+4. **Find the bottleneck coarse-first.** Before building finer instrumentation, make a rough estimate of where the largest loss is, pull a quick qualitative anecdote for why that drop-off happens, attempt a fix, and see if the rate responds. Only where the coarse pass cannot localize the loss do you instrument more detailed steps. Instrumentation is bought with time you may not need to spend.
 5. **Run the sensitivity analysis.** Bump each rate by the same small increment in a copy of the model, hold the others constant, and project the topline forward. Spreadsheet-grade simulation is sufficient; the point is the ranking of levers, not forecast precision.
 6. **Pick one focus rate and goal a team (or the team) on it.** Verify both halves the way Duolingo did: that the rate is movable by experiment, and that moving it moves the topline [GUSTAFSON-2023]. Record the metric, owner, cadence, and reaction plan in the control plan.
 
@@ -125,12 +124,8 @@ For an AI analytics agent or LLM workflow, the frontmatter above and the JSON sp
 - **Burning the reactivation channels.** Interventions on at-risk and dormant states run through notifications and email; Mazal's rule was to "protect the channel" — aggressive volume testing produces opt-outs that persist after the test ends [MAZAL-2023].
 - **False precision at small volume.** Rates computed on a few hundred entities move for no reason. Report them with widths, review weekly rather than daily, and resist reacting to single-day moves — this is what the control plan's expected-range column is for.
 
-## Provenance
+## Sources & Stories
 
-**Adapted.** Origin: Duolingo's growth model, as documented publicly by the practitioners who built and ran it [GUSTAFSON-2023] [MAZAL-2023]; Mazal records that Duolingo's model was itself adapted from state-model approaches at Zynga and MyFitnessPal, moved from weekly to daily cadence [MAZAL-2023]. Prior-art row: [prior-art.md](../../prior-art.md).
+This draws heavily from the Duolingo growth model as described publicly by the practitioners who built and ran it [GUSTAFSON-2023] [MAZAL-2023]. The core idea of decomposing aggregates into states and focusing on the highest-leverage transition rate comes directly from their work; Mazal records that Duolingo's model was itself adapted from state-model approaches at Zynga and MyFitnessPal, moved from weekly to daily cadence [MAZAL-2023]. The prior-art search for this pattern is recorded in [prior-art.md](../../prior-art.md).
 
-What changed in this adaptation:
-
-1. Restated for organizations without dedicated analytics resources: spreadsheet-grade sensitivity analysis, a weekly-window variant for low-volume products, and a single-query implementation path.
-2. Added the reverse-funnel bottleneck framing and the coarse-first instrumentation loop (steps 4 above) — original to this framework, from the author's industrial-engineering practice, and marked as such.
-3. Added the LLM/agent operationalization: machine-readable state spec, prompt templates, and structured readout format in the [control-plan template](../../../templates/01-ai-data-quality/retention-state-control-plan.md).
+The emphasis on making the approach usable for small teams without dedicated analysts, the reverse-funnel bottleneck framing, the coarse-first instrumentation loop, and the machine-readable specs plus agent prompts are syntheses aimed at the audience this framework targets, drawing on the author's industrial-engineering practice.
