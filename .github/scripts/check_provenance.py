@@ -15,7 +15,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-CONTENT_DIRS = ["docs/modules", "reference-architectures", "implementation-guides"]
+CONTENT_DIRS = ["docs/modules", "docs/metrics", "reference-architectures", "implementation-guides"]
 KEY_RE = re.compile(r"\[([A-Z][A-Z0-9]*-\d{4}[a-z]?)\]")
 
 errors = []

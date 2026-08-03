@@ -33,3 +33,11 @@ One entry per judgment call: decision, alternatives, why.
 **Alternatives:** Amend the spec now (skills as a fifth deliverable type, `skill/` → `skills/`); or fold skills under the existing "something to adopt" principle without a spec change.
 
 **Why:** The prior-art review will show where skills add the most over prose patterns. Amending the fixed spec before that evidence exists inverts the project's own method. Revisit when Phase 0 reports.
+
+## 2026-08-03 — Metrics library added as the knowledge layer
+
+**Decision:** Classical metric knowledge gets its own layer: `docs/metrics/`, one topic page per metric (retention first; active users, revenue, cost, margins, usage to follow). A topic page teaches the metric — definition, why it matters, connections to adjacent metrics, classical visualizations — and patterns become sourced ways of working on a topic, with their case studies attached (the Duolingo state-model pattern is one way to work on retention). Skills are confirmed as the eventual guided layer: developing each metric in a user's specific business context. The four-module set is no longer treated as fixed; modules can expand as the structure evolves. Topic pages carry the same Sources & Stories requirement, and the CI check now covers `docs/metrics/`.
+
+**Alternatives:** Keep patterns as the only content unit; fold metric knowledge into module charters; wait for Phase 0 to merge first.
+
+**Why:** A reader searching for help arrives thinking "retention," not "state-based measurement pattern M1-11." Leading with the metric matches how the audience actually asks the question, and gives every future pattern and skill a stable home to hang off. This partially supersedes the 2026-07-30 skills deferral: the destination is now committed; the build order still waits on Phase 0.
