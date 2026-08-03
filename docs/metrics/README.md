@@ -15,5 +15,6 @@ Topic pages carry a Sources & Stories section like every other content file; cit
 | Topic | Status |
 |---|---|
 | [Retention](retention.md) | stub — structure and open questions |
+| [Conversion](conversion.md) | stub — sources researched and verified; interview pending |
 
 Planned next, in no committed order: active users, revenue, cost, margins, usage.
