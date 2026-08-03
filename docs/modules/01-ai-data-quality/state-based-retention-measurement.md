@@ -53,6 +53,35 @@ Assign every user — past or present — exactly one activity state per day, fr
 
 Topline aggregates stop being primitive numbers and become sums of states: DAU is new + current + reactivated + resurrected; WAU adds at-risk WAU; MAU adds at-risk MAU. The system is nearly closed — new users are the only external inflow [MAZAL-2023] — so the user base behaves as a state-transition (Markov-style) system: measure the rate at which users move between each pair of states, and you can reproduce and forecast the topline from the flows.
 
+The states and the flows between them, per the published model [GUSTAFSON-2023] [MAZAL-2023] — solid arrows are the named retention and return rates, dashed arrows are decay through inactivity:
+
+```mermaid
+flowchart LR
+    subgraph dau ["Active today — counted in DAU"]
+        NEW([New])
+        CUR([Current])
+        REA([Reactivated])
+        RES([Resurrected])
+    end
+    ARW([At-risk WAU])
+    ARM([At-risk MAU])
+    DOR([Dormant])
+
+    NEW -->|NURR| CUR
+    CUR -->|CURR| CUR
+    REA -->|RURR| CUR
+    RES -->|SURR| CUR
+    NEW -.-> ARW
+    CUR -.-> ARW
+    REA -.-> ARW
+    RES -.-> ARW
+    ARW -->|"active again within 7 days"| CUR
+    ARW -.->|"7 days inactive"| ARM
+    ARM -->|reactivation| REA
+    ARM -.->|"30 days inactive"| DOR
+    DOR -->|resurrection| RES
+```
+
 The named rates are the working metrics: CURR (current-user retention rate), NURR (new-user retention rate), RURR (reactivated), SURR (resurrected), plus reactivation and resurrection inflows from the at-risk and dormant pools [GUSTAFSON-2023]. The two source accounts state the window conventions slightly differently; what matters is fixing one convention in your control plan and keeping it stable.
 
 Then simulate. Duolingo increased each rate by the same small increment (2%) in turn, holding the others constant, and projected the effect on DAU. Current-user retention — CURR — had roughly five times the impact of the second-best rate, because retained current users recycle into the same state and compound [GUSTAFSON-2023] [MAZAL-2023]. That one simulated finding redirected the team from intuition-led new-user work to a single focus metric, and the interventions that followed (leaderboards, notification tuning, streak mechanics) produced a 21% CURR increase and 4.5x DAU growth over four years [MAZAL-2023].
@@ -72,6 +101,17 @@ A framing this framework adds: treat retention as an acquisition funnel run in r
 ## Implementation
 
 Steps 1–3 are the Measure work; 4–6 are Analyze and Improve; the control plan is the Control artifact. Copyable artifact: [retention-state control plan](../../../templates/01-ai-data-quality/retention-state-control-plan.md), which carries the full machine-readable state spec, a classification query skeleton, and agent prompt templates.
+
+```mermaid
+flowchart TD
+    S1["1 — Define 'active' once"] --> S2["2 — Adopt the state set"]
+    S2 --> S3["3 — Classify daily, compute transition rates"]
+    S3 --> S4["4 — Find the bottleneck coarse-first"]
+    S4 --> S5["5 — Simulate: rank the levers"]
+    S5 --> S6["6 — Goal one rate, one owner"]
+    S6 -.->|"rate will not move — pick the next lever"| S5
+    S4 -.->|"coarse pass cannot localize the loss"| S3
+```
 
 1. **Define "active" once.** One canonical event counts as activity, written down and versioned. If "active" means different things in different queries, every downstream rate is unreliable.
 2. **Adopt the state set.** Start from the seven states above; they are published, MECE, and battle-tested. Adjust only the windows (daily → weekly) if your volume demands it. A machine-readable version:

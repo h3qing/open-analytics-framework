@@ -2,6 +2,12 @@
 
 Structured foundations for building analytics operations, for organizations that lack dedicated analytics resources. Free and open: documentation under CC BY 4.0, code and templates under MIT.
 
+## Start here
+
+- **Read the first pattern:** [State-based retention measurement](docs/modules/01-ai-data-quality/state-based-retention-measurement.md) — decompose DAU into user states and find the one retention rate worth a team's focus, drawn from the Duolingo growth story.
+- **Copy something usable:** [templates](templates/README.md) — control plans, machine-readable specs, and agent prompts to drop into your own stack.
+- **Browse the framework:** [reading guide](docs/index.md), then the four modules — [data quality](docs/modules/01-ai-data-quality/README.md) · [infrastructure](docs/modules/02-infrastructure-design/README.md) · [agent integration](docs/modules/03-ai-agent-integration/README.md) · [governance & financial reporting](docs/modules/04-governance-and-financial-reporting/README.md).
+
 ## The problem
 
 Two versions of the same gap. Early-stage and AI-native companies rebuild the same foundational analytics systems from scratch, losing six to twelve months on work that could be standardized. Small and mid-sized businesses never build those foundations at all, and operate without reliable access to their own data. Neither group has a playbook.
@@ -23,15 +29,9 @@ The primary worked case is early-stage and AI-native companies; the patterns gen
 
 Four deliverable types, each with a visible home here: the framework itself (`docs/modules/`), best-practices documentation, reference architectures (`reference-architectures/`), and implementation guides (`implementation-guides/`). Every module ships at least one copyable control-plan template in `templates/`. A diagnostic skill (`skill/`) assesses an organization's readiness before it deploys an AI analytics agent.
 
-## Provenance
+## Sources
 
-Every pattern carries exactly one tag, assigned only after a recorded prior-art search ([docs/prior-art.md](docs/prior-art.md)):
-
-- **Established** — well-documented existing concept, cited.
-- **Adapted** — existing concept applied to a domain it was not written for; origin cited, changes stated.
-- **Original** — no prior art found, with the empty search recorded so the claim is checkable.
-
-All citations resolve to [REFERENCES.md](REFERENCES.md). No unsourced assertions.
+Every pattern lists the stories and research it draws from — the Duolingo growth model, practitioner writing, prior-art research recorded in [docs/prior-art.md](docs/prior-art.md) — so you can go back to the originals if you want to go deeper. All citations resolve to [REFERENCES.md](REFERENCES.md).
 
 ## Status
 

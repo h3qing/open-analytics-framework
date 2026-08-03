@@ -46,6 +46,8 @@ All citation keys must resolve in `REFERENCES.md`. CI still requires a "Sources 
 - Reference and guide are separate: canonical pattern statements and long-form guides live in different places.
 - Plain markdown for the framework itself. Nothing to install to read it.
 - Something to adopt, not just read. Ship copyable artifacts alongside prose.
+- Content over scaffolding. A reader landing on the README reaches a finished pattern in one click. Process files (backlog, decisions, this file) exist for the maintainer and stay out of the reader's path.
+- Match the fidelity of the sources. Where the original story used a chart or a diagram, the pattern shows one (Mermaid, rendered natively on GitHub). Dense unbroken prose is a defect — see the Presentation section of `docs/pattern-template.md`.
 
 ## When to stop and ask
 

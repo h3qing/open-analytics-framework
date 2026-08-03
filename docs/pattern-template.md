@@ -26,3 +26,11 @@ The Six Sigma thread is structural, not claimed. Each template section is a DMAI
 | Control | The artifact in `templates/` |
 
 Every module ships at least one **control plan** template in `templates/`. That is the artifact that makes the methodology real rather than decorative.
+
+## Presentation
+
+The sections fix the shape; this fixes the fidelity. The audience is teams without analysts on staff, and the bar is the source material: the original stories these patterns draw from use charts and diagrams to carry their argument, and a pattern that flattens them into prose has lost fidelity, not gained rigor.
+
+- **Draw the structure.** If the pattern has a state model, a flow, a loop, or a before/after, show it as a Mermaid diagram — GitHub renders these natively, nothing to install. The state diagram in [state-based retention measurement](modules/01-ai-data-quality/state-based-retention-measurement.md) is the reference example.
+- **Skimmable first.** A reader should get the shape of the pattern from the headings, one diagram, and the canonical statement in section 3, before committing to the full text.
+- **Break up density.** A third consecutive paragraph of prose is a signal to reach for a table, a diagram, or a worked example instead.
