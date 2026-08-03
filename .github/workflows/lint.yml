@@ -32,5 +32,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check provenance tags and citation keys
+      - name: Check Sources & Stories sections and citation keys
         run: python3 .github/scripts/check_provenance.py

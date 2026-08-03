@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Provenance checks, per docs/pattern-template.md.
+"""Sources & Stories checks, per docs/pattern-template.md.
 
 Fails if:
 - a pattern doc (any .md in the content dirs, excluding README.md charters/indexes)
-  lacks a Provenance section carrying a tag or an explicit [TODO ...] placeholder;
+  lacks a non-empty "Sources & Stories" section;
 - any citation key used in content resolves to nothing in REFERENCES.md.
 
-Placeholders pass: stubs are expected to carry [TODO: pending prior-art review]
-until their prior-art row exists. A finished tag with no docs/prior-art.md row is
-not yet machine-checked; the review process owns that until titles stabilize.
+No formal provenance tag is required. Sources are natural-language references
+so readers can trace back to the original stories or research; stubs may carry
+a [TODO ...] placeholder until their sources are written up.
 """
 import pathlib
 import re
@@ -16,7 +16,6 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 CONTENT_DIRS = ["docs/modules", "reference-architectures", "implementation-guides"]
-TAG_RE = re.compile(r"\b(Established|Adapted|Original)\b|\[TODO[^\]]*\]")
 KEY_RE = re.compile(r"\[([A-Z][A-Z0-9]*-\d{4}[a-z]?)\]")
 
 errors = []
@@ -32,9 +31,9 @@ for content_dir in CONTENT_DIRS:
         rel = path.relative_to(ROOT)
 
         sections = re.split(r"^##\s+", text, flags=re.M)
-        provenance = next((s for s in sections if s.startswith("Provenance")), None)
-        if provenance is None or not TAG_RE.search(provenance):
-            errors.append(f"{rel}: missing Provenance section or tag")
+        sources = next((s for s in sections if s.startswith("Sources & Stories")), None)
+        if sources is None or not sources.splitlines()[1:] or not "".join(sources.splitlines()[1:]).strip():
+            errors.append(f"{rel}: missing or empty Sources & Stories section")
 
         for key in KEY_RE.findall(text):
             if key not in known_keys:
@@ -43,4 +42,4 @@ for content_dir in CONTENT_DIRS:
 if errors:
     print("\n".join(errors))
     sys.exit(1)
-print("provenance: ok")
+print("sources & stories: ok")

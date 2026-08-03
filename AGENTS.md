@@ -30,15 +30,15 @@ Sessions are 60 to 90 minutes. If a unit will not finish in one, split it in the
 
 ## Pattern template
 
-`docs/pattern-template.md` defines the fixed shape every pattern doc uses: eight sections, the DMAIC mapping, and the provenance tags. Stub every content file against it. Every module ships at least one control-plan template in `templates/`.
+`docs/pattern-template.md` defines the fixed shape every pattern doc uses: eight sections, the DMAIC mapping, and the Sources & Stories section. Stub every content file against it. Every module ships at least one control-plan template in `templates/`.
 
-## Provenance discipline
+## Sources & traceability
 
-Load-bearing. Every normative claim either cites prior art or is explicitly marked original. No unsourced assertions.
+The goal is to be helpful. The pattern itself is the primary artifact — the thing teams can take and apply to their own metrics and analytics.
 
-`REFERENCES.md` is a bibliography with stable citation keys, full reference, link where one exists. Do not invent entries or guess at citations. If unsure a source exists, write `[TODO: verify]` rather than a plausible-looking reference.
+We do real industry research (see `docs/prior-art.md`) so the patterns synthesize more than just one person's opinion. Sources are listed so readers can trace back to the original stories or research if they want to go deeper ("the Duolingo story", "practices described by Benn Stancil", etc.).
 
-Every pattern carries exactly one provenance tag — `Established`, `Adapted`, or `Original` — assigned only after the prior-art search for that pattern is recorded in `docs/prior-art.md`. An `Original` tag with no corresponding prior-art row is a defect. CI fails if a pattern doc lacks a provenance tag or cites a key absent from `REFERENCES.md`.
+All citation keys must resolve in `REFERENCES.md`. CI still requires a "Sources & Stories" section in every pattern and that cited keys exist.
 
 ## Structural model
 
