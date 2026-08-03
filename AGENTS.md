@@ -17,7 +17,7 @@ Read at the start of every session. If anything elsewhere conflicts with the har
 
 Every working session, in order:
 
-1. Read `AGENTS.md`, `CONTENT_BACKLOG.md`, and `DECISIONS.md`.
+1. Read `AGENTS.md`, `CONTENT_BACKLOG.md`, and `DECISIONS.md`. Also read `AGENTS.local.md` if present — machine-local working notes, untracked; in a linked worktree it lives at the main checkout root.
 2. Read `docs/prior-art.md` if the session touches a pattern.
 3. Confirm the unit. Default to the next `ready` row in the backlog.
 4. **Interview.** Ask questions one or two at a time. Push back on vague answers. Do not accept best-practices language, passive constructions that hide the actor, or claims without a mechanism. If I say "we improved data quality," ask what was measured, what the number was before, and who noticed.
