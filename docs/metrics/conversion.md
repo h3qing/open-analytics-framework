@@ -2,7 +2,7 @@
 id: conversion
 title: Conversion
 type: topic
-status: drafted # full sourced draft; awaiting author voice pass per AGENTS.md constraint 6
+status: drafted # sourced draft with author interview answers; author voice pass 2026-08-05
 summary: >
   What conversion is, where it ends and activation and retention begin,
   why a rate between two funnel steps is worth a small team's attention,
@@ -20,9 +20,7 @@ keywords:
 
 # Conversion
 
-In my professional work experiences, funnel analysis played an integral role. One part of the company's business is working with domain experts who create training data for AI models. An expert passes several steps before they can contribute: identity checks, quality screens, and training on the platform. Each step loses people. My role was the analytics function: measuring the pass rate at every step and segmenting to see which experts were getting stuck and where, so the team could fix the worst step and measure again. If your product has steps between signup and value, you have the same problem, and the same method works.
-
-<!-- TODO(heqing): voice pass -->
+Conversion is the movement of the business towards your final goal, whether that's monthly active users or revenue. Funnel analysis was a big part of my last job. One part of the company's business is working with domain experts who create training data for AI models. An expert passes several steps before they can contribute: identity checks, quality screens, and training on the platform. Each step loses people. My role was the analytics function: measuring the pass rate at every step and segmenting to see which experts were getting stuck and where, so the team could fix the worst step and measure again. If your product has steps between signup and value, you have the same problem, and the same method works.
 
 ## What conversion is
 
