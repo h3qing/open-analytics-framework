@@ -4,6 +4,7 @@ One row per writeable unit; a unit is finishable in one 60–90 minute sitting. 
 
 | ID | Module | Working title | Type | Target | Status | Key sources | Effort |
 |---|---|---|---|---|---|---|---|
+| SK-01 | — | Defining your definitions (guided skill) | skill | — | candidate | Facebook single-definition story (Schultz lecture, S-1) | 1 session |
 | M1-01 | 1 | Single point of metric computation | pattern | v0.1.0 | candidate | [TODO: prior art] | 1 session |
 | M1-02 | 1 | Statistical process control for data pipelines | pattern | v0.1.0 | candidate | [TODO: prior art] | 1 session |
 | M1-03 | 1 | Detecting plausible-but-wrong outputs | pattern | v0.1.0 | candidate | [TODO: prior art] | 1 session |
