@@ -20,7 +20,7 @@ keywords:
 
 # Conversion
 
-In my professional work experiences, funnel analysis played an integral role. I used it to onboard domain experts who create training data for AI models. An expert passes several steps before they can contribute: identity checks, quality screens, and training on the platform. Each step loses people. We measured the pass rate at every step, segmented to see which experts were getting stuck and where, fixed the worst step, and measured again. If your product has steps between signup and value, you have the same problem, and the same method works.
+In my professional work experiences, funnel analysis played an integral role. One part of the company's business is working with domain experts who create training data for AI models. An expert passes several steps before they can contribute: identity checks, quality screens, and training on the platform. Each step loses people. My role was the analytics function: measuring the pass rate at every step and segmenting to see which experts were getting stuck and where, so the team could fix the worst step and measure again. If your product has steps between signup and value, you have the same problem, and the same method works.
 
 <!-- TODO(heqing): voice pass -->
 
