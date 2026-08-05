@@ -2,7 +2,7 @@
 id: attribution
 title: Attribution
 type: topic
-status: stub # structure and interview questions only, per AGENTS.md constraint 6; research rounds in progress 2026-08-05
+status: stub # structure and interview questions only, per AGENTS.md constraint 6; both research rounds complete 2026-08-05, sources verified and entered in REFERENCES.md, draft next
 summary: >
   Who gets credit for an outcome. The classic marketing models
   (last-touch, multi-touch, marketing mix modeling) as illustrations
@@ -72,4 +72,4 @@ No pattern page yet. Candidates come from the research rounds.
 
 ## Sources & Stories
 
-[TODO: pending research — two research rounds running (classic marketing models and MMM/incrementality; go-to-market attribution and incentives), every source to be fetched and verified before it is cited here.]
+[TODO: draft pending — both research rounds are complete and their sources verified into REFERENCES.md: the model catalog and privacy-era shift (Kaushik, Seufert, the Google model retirement, the MMM renaissance and its skeptics), the incrementality stories (eBay via Tadelis's first-person account, Uber's ad-fraud discovery, P&G), the pipeline-credit practitioners (Kellogg, Varni, Lemkin, Kramer), the measurement canon with its true provenance chain (Strathern, Goodhart, Kerr), and the when-not-to voices (Fishkin, Piyush). Known gaps recorded in the research memos: no verified small-team story, no citable "attribution model as compensation model" literature — that argument is the author's original ground.]
