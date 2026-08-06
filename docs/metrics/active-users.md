@@ -2,7 +2,7 @@
 id: active-users
 title: Active users
 type: topic
-status: stub # structure and interview questions only, per AGENTS.md constraint 6; research rounds launched 2026-08-05
+status: drafted # full sourced draft; awaiting author interview and voice pass per AGENTS.md constraint 6
 summary: >
   What an active user is, why the definition of "active" is the whole
   game, the windows and ratios (DAU, WAU, MAU, stickiness), when the
@@ -23,45 +23,144 @@ keywords:
 
 [TODO(heqing): one-paragraph opening in your voice — what question active users answers about a business, for a reader who has never had an analyst.]
 
+Where to jump: [what an active user is](#what-an-active-user-is) covers the definition choices and how they fail; [the windows and the ratios](#the-windows-and-the-ratios) covers DAU, WAU, MAU and stickiness; [worth measuring, or vanity](#worth-measuring-or-vanity) is the vanity-metric question with its real provenance; [decomposing the aggregate](#decomposing-the-aggregate) turns the number into levers; [the public record](#definitions-on-the-public-record) carries the stories, which are the spine of this page.
+
 ## What an active user is
 
-Scope: three choices make the number. The entity (user, account, workspace, seat), the action that counts as "active," and the window (a day, a week, a month). The formal reference example already in this library: Facebook's S-1 definition, a registered user who logged in and visited within the window, with its edge cases documented, duplicate accounts and devices that contact servers without user action [[FACEBOOK-2012]](../../REFERENCES.md). The single-definition discipline story, one company-level definition held to inside and out, lives on the [conversion page](conversion.md) [[SCHULTZ-2014]](../../REFERENCES.md).
+Four choices make the number: the entity you count, the action that counts as "active," the window the action must fall in, and the population you count over. Each choice has failed in public, which is why every example in this table comes from a filing or a working document rather than a glossary.
+
+| Choice | The question | A public example |
+|---|---|---|
+| Entity | A user, an account, a seat, a workspace, or a person? | Meta redefined the entity from accounts to people, and says plainly that the person-level number is estimated by models, not counted [[META-2024]](../../REFERENCES.md). |
+| Action | What must the entity do to count? | Facebook: logged in and visited [[FACEBOOK-2012]](../../REFERENCES.md). Snap: opened the app at least once [[SNAP-2017]](../../REFERENCES.md). Wikimedia: made five or more edits [[WIKIMEDIA-2015]](../../REFERENCES.md). |
+| Window | A day, a week, a month? | Snap's S-1 defines only a daily metric and defends the choice in one sentence about engagement and ad inventory [[SNAP-2017]](../../REFERENCES.md). |
+| Population | Active among whom? | The SEC asked Slack to clarify that its "10,000,000+ Worldwide Daily Active Users" included paying and non-paying users [[SEC-2019]](../../REFERENCES.md). |
+
+The formal reference definition in this library is Facebook's S-1: a registered user who logged in and visited within the window, with the edge cases documented in the same filing, duplicate accounts and devices that contact servers without user action [[FACEBOOK-2012]](../../REFERENCES.md). The single-definition discipline story, one company-level definition held to inside and out, lives on the [conversion page](conversion.md) [[SCHULTZ-2014]](../../REFERENCES.md).
+
+**The action axis is where honesty lives.** Snap's definition pairs the weakest possible action, opening the app, with the strictest window, a day [[SNAP-2017]](../../REFERENCES.md). The opposite position comes from an investor framework built at a consumer product: counting users is meaningless until you have chosen the core action of the product, and "active" should mean completing that action, not showing up [[TAVEL-2017]](../../REFERENCES.md) [[TAVEL-2023]](../../REFERENCES.md). A founder's essay on B2B daily actives shows how broad the logged-in style gets in practice: his "active" includes signing in, using the platform, or calling the API programmatically [[CUMMINGS-2017]](../../REFERENCES.md). Neither pole is wrong; the page's position is that the choice must be written down and defended, the way the filings defend theirs.
+
+**A practitioner glimpse of the definition's edge cases.** Wikimedia's analytics team maintains a public working document on its own active-editor definition, a registered, logged-in, non-bot person making five or more edits in a month, and itemizes where it misleads: the bot exclusion is a heuristic that is hard to enforce automatically, history is retroactively unstable because activity on later-deleted pages vanishes from the data, and an editor whose five edits are all reverted still counts as active [[WIKIMEDIA-2015]](../../REFERENCES.md). It is the only first-party internal working document on an active-user definition this research round could verify, and it reads like a checklist for anyone writing their own.
+
+**Definitions decay unless someone owns them.** One data practitioner's essay describes the mechanism precisely: metric formulas end up scattered across tools and dashboards, and "in the best case, these calculations drift apart over time; in the worst case, they never match in the first place" [[STANCIL-2021]](../../REFERENCES.md). The public-company version of drift, definitions that quietly broke and had to be corrected in print, is in [the stories below](#definitions-on-the-public-record).
 
 - [TODO(heqing): interview — the default choices you would recommend: what entity and what action for a B2C product vs. a B2B product, where seats, accounts, and workspaces compete for the definition?]
 - [TODO(heqing): interview — logged-in vs. a value action: when is "opened the app" an honest definition of active, and when is it flattering noise?]
+- [TODO(heqing): interview — the seat-vs-account rule in B2B: when does the account count lie while the seat count tells the truth, and vice versa? No good public treatment survived verification, so this slot is yours.]
+- [TODO(heqing): interview — a definition-drift story: have you seen an "active user" definition drift inside one company, and what was the cheapest mechanism that stopped it (a metrics layer, a document, one owner)?]
 
 ## The windows and the ratios
 
-Scope: DAU, WAU, MAU as the same definition at three windows; the stickiness ratio (DAU/MAU) and what it does and does not say; matching the window to the product's natural cadence rather than to convention, the same argument the [retention page](retention.md) makes for retention windows.
+DAU, WAU, and MAU are the same definition evaluated at three windows: active today, active in the trailing week, active in the trailing month. The window is not a reporting detail; it is a claim about how often the product should matter in someone's life. The practitioner guidance is to choose the top metric from the frequency you expect the product to be used at, not from convention [[SEQUOIA-2018]](../../REFERENCES.md), the same argument the [retention page](retention.md) makes for retention windows. A company can also re-choose the window: Twitter narrowed both the window and the surface at once when it moved from MAU to mDAU, with its reasoning in print ([the story below](#definitions-on-the-public-record)) [[TWITTER-2019]](../../REFERENCES.md).
+
+**Stickiness.** DAU/MAU is the standard engagement ratio. Read it as an overlap: a ratio of 0.6 means 60 percent of the people who show up over a month are also showing up on a given day [[SEQUOIA-2018]](../../REFERENCES.md). Two caveats come with it from the same source: the ratio depends strongly on what the product is and how it is expected to be used, and a healthy mix of casual and highly engaged users can depress it without meaning failure [[SEQUOIA-2018]](../../REFERENCES.md).
+
+**The ratio hides a histogram.** The sharper critique comes from two consumer investors writing on its home turf: DAU/MAU is a single number, so it blurs the variance among users. Their alternative is the power user curve, an L30 histogram of users by number of active days in the month [[JIN-CHEN-2018]](../../REFERENCES.md). A "smile" shape means a hardcore daily segment exists even when the blended ratio looks mediocre, and the curve can be drawn on a value action instead of app opens. The figure below sketches the shape with placeholder numbers.
+
+```mermaid
+xychart-beta
+    title "Placeholder sketch: power user curve (share of monthly actives by active days)"
+    x-axis "Days active in the month" ["1-3", "4-6", "7-9", "10-12", "13-15", "16-18", "19-21", "22-24", "25-27", "28-30"]
+    y-axis "Percent of monthly actives" 0 --> 40
+    bar [34, 16, 9, 6, 5, 4, 4, 5, 7, 10]
+```
+
+**On benchmarks, plainly.** No citable DAU/MAU benchmark survived this page's verification round. A ">50 percent is excellent" heuristic circulates in secondary sources, but it could not be pinned to a primary post, so this page does not repeat it. The verified pattern worth carrying instead is that engagement benchmarks differ sharply by product category, which is documented for retention: a practitioner survey puts good six-month retention at 25 percent for consumer social and 75 percent for enterprise SaaS, a threefold difference for the same word [[RACHITSKY-WINTERS-2020]](../../REFERENCES.md). Assume the same category dependence for stickiness. A working analyst's treatment of how to report the ratio exists but sits behind a paywall, so this page cites it only as a pointer [[BEREZOVSKY-2025]](../../REFERENCES.md).
 
 - [TODO(heqing): interview — how should a team pick its primary window? What products have you seen goal on DAU when their honest cadence was weekly?]
-- [TODO: research round in progress — verified sources on stickiness, engagement ratios, and cadence-matching.]
 
 ## Worth measuring, or vanity
 
-Scope: when the active-user aggregate deserves north-star status and when it is a vanity number that only ever goes up. The registered-users-vs-active-users contrast is the founding story of the distinction [[SCHULTZ-2014]](../../REFERENCES.md).
+The vanity-metric critique has real provenance, and it is worth getting right because the folklore misattributes it. The distinction is Eric Ries's, and the primary artifacts are two 2009 blog posts, before the book that later codified them. The first defines vanity metrics against actionable metrics and names registered users, alongside raw hits and message totals, as the type specimen: numbers that only ever go up and support no decision [[RIES-2009a]](../../REFERENCES.md). The second supplies the organizational damage: when a vanity number rises, everyone credits their own work; when it falls, everyone blames someone else, so the team never learns what actually causes what [[RIES-2009b]](../../REFERENCES.md). The registered-users-vs-active-users contrast is the founding story of the distinction, and the same contrast anchors the growth lecture already cited on the [conversion page](conversion.md) [[SCHULTZ-2014]](../../REFERENCES.md).
+
+The modern restatement calls it data theater: reporting that makes a team feel data-driven without touching a real decision, including metrics that show adoption or engagement without a link to the business objective [[WIDJAJA-2024]](../../REFERENCES.md). That essay's own examples are operations metrics rather than active-user counts, so this page cites it for the general failure, not for DAU specifically.
+
+An active-user aggregate earns north-star status when the definition is honest (a value action, a window matched to cadence) and when the team works on its [decomposition](#decomposing-the-aggregate) rather than the topline. The strongest statement of the alternative comes from a public company arguing against its own bigger number. When Twitter replaced MAU with the narrower mDAU, it wrote: "our goal was not to disclose just the largest daily active user number we could" [[TWITTER-2019]](../../REFERENCES.md). A definition chosen to align everyone on delivering value is the opposite of a vanity metric, whatever the number's size.
 
 - [TODO(heqing): interview — a class-level vanity-metric trap you have seen: the number that looked like health and was not.]
-- [TODO: research round in progress — who has written the honest vanity-metrics critique, with real provenance.]
 
 ## Decomposing the aggregate
 
-Scope: the aggregate is a sum of flows, not a lever. DAU decomposes into new, current, reactivated, and resurrected users; WAU and MAU add the at-risk pools [[GUSTAFSON-2023]](../../REFERENCES.md) [[MAZAL-2023]](../../REFERENCES.md). The full treatment, states, transition rates, and the sensitivity analysis that finds the one rate worth a team's focus, is the [state-based retention measurement pattern](../modules/01-ai-data-quality/state-based-retention-measurement.md), with the state diagram drawn there.
+The aggregate is a sum of flows, not a lever. The citable ancestor of every decomposition in this library is growth accounting, from a data scientist writing up his fund's diligence method: this month's MAU is exactly new users plus retained users plus resurrected users, and last month's MAU is exactly this month's retained plus churned [[HSU-2015]](../../REFERENCES.md). Nothing is modeled; the identity forces every change in the topline to be attributed to a flow.
+
+```mermaid
+flowchart LR
+    LAST["MAU last month"] --> RET["Retained"]
+    LAST --> CHURN["Churned"]
+    NEW["New"] --> MAU["MAU this month"]
+    RET --> MAU
+    RES["Resurrected"] --> MAU
+```
+
+The same source compresses the flows into one number, the quick ratio: new plus resurrected, divided by churned. Above 1 the product grows; the essay's rough ranges are around 1 to 1.5 for consumer products and 1.5 to 2 for businesses with strong retention, and the whole analysis shifts to weekly or daily windows depending on the product [[HSU-2015]](../../REFERENCES.md).
+
+Growth accounting is the coarse version, three flows and an identity. The full treatment, seven states, transition rates between them, and the sensitivity analysis that finds the one rate worth a team's focus, is the [state-based retention measurement pattern](../modules/01-ai-data-quality/state-based-retention-measurement.md), built on the Duolingo growth model [[GUSTAFSON-2023]](../../REFERENCES.md) [[MAZAL-2023]](../../REFERENCES.md). The state diagram is drawn there and not duplicated here. Start with the accounting identity; upgrade to the state model when the coarse flows stop telling you where to work.
 
 ## Classical ways to see it
 
-Scope: the standard visualizations, each with a figure per the presentation guidance: the topline trend and its weekly seasonality, the stacked view of DAU by state (which makes "up and to the right" honest or dishonest at a glance), and the stickiness trend.
+The standard visualizations, per the presentation guidance in [the pattern template](../pattern-template.md). All numbers in the figures are round placeholders, not benchmarks.
 
-- [TODO: figures — topline with placeholder seasonality, stacked-by-state area, stickiness line, all with obviously-placeholder numbers.]
-- [TODO: research round in progress — canonical treatments of each chart, if any exist.]
+**The topline trend, and its seasonality.** A daily-actives line almost always carries a weekly rhythm, and calendar months quietly measure month length as well as engagement. The practitioner fix is a rolling window: a 28-day rolling MAU covers the same number of each weekday and neutralizes both distortions [[SEQUOIA-2018]](../../REFERENCES.md).
+
+```mermaid
+xychart-beta
+    title "Placeholder sketch: daily actives with weekend dips, and the rolling view"
+    x-axis "Day" 1 --> 28
+    y-axis "Active users (placeholder)" 0 --> 120
+    line [100, 102, 101, 103, 104, 82, 80, 101, 103, 104, 105, 106, 84, 82, 103, 105, 106, 107, 108, 86, 84, 105, 107, 108, 109, 110, 88, 86]
+    line [96, 96, 96, 97, 97, 97, 97, 98, 98, 98, 99, 99, 99, 99, 100, 100, 100, 101, 101, 101, 101, 102, 102, 102, 103, 103, 103, 103]
+```
+
+The jagged line is raw daily actives with weekend dips; the smooth line is the rolling view of the same data. Nothing in the product changes on Saturdays; the chart just stops pretending otherwise.
+
+**The decomposed view.** Growth accounting's chart is the flows drawn as bars, inflows above the axis and churn below, so "up and to the right" is honest or dishonest at a glance [[HSU-2015]](../../REFERENCES.md). The stacked-by-state area chart in the [state-based retention pattern](../modules/01-ai-data-quality/state-based-retention-measurement.md) is the higher-resolution version of the same picture [[GUSTAFSON-2023]](../../REFERENCES.md).
+
+**The stickiness trend.** DAU/MAU plotted over time, watched for direction rather than level, with the category caveats from [the ratios section](#the-windows-and-the-ratios). Honest note: no canonical treatment of the stickiness-over-time chart survived verification, so this page teaches it plainly and cites nothing for it.
+
+**The power user curve.** The L30 histogram [sketched above](#the-windows-and-the-ratios) is the fourth classical view: the distribution the stickiness ratio compresses [[JIN-CHEN-2018]](../../REFERENCES.md).
+
+- [TODO(heqing): interview — rolling vs. calendar windows: is the rolling 28-day window worth the explanation burden for an audience without analysts, or do you accept calendar months and teach the seasonality caveat instead?]
+
+## Definitions on the public record
+
+The stories are the spine of this page, and they all make one argument: an active-user definition is load-bearing enough that regulators audit it. Every passage below is drawn from the primary documents, filings fetched from EDGAR and one public working document, not from press coverage.
+
+**Twitter retires MAU and invents mDAU (2019).** In one earnings release, Twitter defined a new headline metric, monetizable daily active users: users who logged in or were otherwise authenticated and accessed Twitter on a given day through surfaces able to show ads. The old MAU was wider on two axes at once, a 30-day window and every access path including SMS and third-party clients. The release states the reasoning, admits the new number is not comparable to other companies' more expansive metrics, and announces MAU's retirement after one more quarter [[TWITTER-2019]](../../REFERENCES.md). The transition quarter showed both numbers moving in opposite directions:
+
+| Metric | Q4 2017 | Q4 2018 | Direction |
+|---|---|---|---|
+| MAU (broad surface, 30-day window) | 330M | 321M | down |
+| mDAU (ad-capable surface, daily window) | 115M | 126M | up |
+
+The release never says the decline drove the switch; that reading is interpretation, visible in the same table but not claimed by the filing. What the filing does claim is the alignment logic, the public-company echo of the single-definition discipline on the [conversion page](conversion.md): one metric, chosen to reflect the goal, disclosed even though a larger number was available.
+
+**Twitter's two corrections.** The same metric family broke twice, and both failures were versions of caveats Facebook had written down in 2012. In 2017, Twitter disclosed that for three years its MAU had included users of third-party apps whose SMS authentication traffic passed through Twitter's systems without any activity on Twitter itself, roughly 1 to 2 million users per quarter; data-retention policies meant periods before late 2016 could not be reconciled at all [[TWITTER-2017]](../../REFERENCES.md). That is the lived version of the S-1 caveat about devices contacting servers without user action [[FACEBOOK-2012]](../../REFERENCES.md). In 2022, Twitter disclosed that a 2019 account-linking feature had counted one person's action as activity on every linked account, overstating mDAU for three years, and published a recast table quantifying the overstatement quarter by quarter [[TWITTER-2022]](../../REFERENCES.md). That is the entity axis failing, accounts counted as people, and the honest repair is on the record: a published recast with magnitudes, not a quiet re-baseline.
+
+**Meta migrates the entity, then retires the old numbers (2019 to 2024).** The Family metrics story is a five-year deprecation arc. The cross-app "people" number first appears as an informal estimate in an earnings release; a year later, Family daily active people (DAP) and monthly active people (MAP) are headline metrics reported alongside Facebook's own DAU and MAU; four years after that, the 10-K announces that per-app DAU, MAU, ARPU, and MAP will no longer be reported at all, leaving DAP [[FACEBOOK-2019]](../../REFERENCES.md) [[FACEBOOK-2020]](../../REFERENCES.md) [[META-2024]](../../REFERENCES.md).
+
+```mermaid
+flowchart LR
+    A["2019: Family number appears<br/>as an informal estimate"] --> B["2020: DAP and MAP become<br/>headline metrics, reported<br/>alongside Facebook DAU/MAU"] --> C["2024: per-app DAU, MAU, ARPU<br/>and MAP retired; DAP remains"]
+```
+
+The 10-K is candid about what the new entity costs: people are not required to link their accounts, so daily active people is an estimate produced by attribution techniques and machine-learning models, not a count [[META-2024]](../../REFERENCES.md). The filings state the rationale, that Family metrics better reflect the community's size, and nothing more; commentary about why the per-app numbers were retired when they were is interpretation, and this page does not add any.
+
+**Snap defines only DAU (2017).** Snap's S-1 defines a daily active user, a registered user who opens the app at least once in a 24-hour period, and defines no monthly metric at all. The filing defends the daily window as the most reliable way to understand engagement, and notes that daily engagement drives ad inventory. Its measurement caveats are first-party: the metrics come from internal data, unvalidated by third parties, and some individuals hold multiple accounts against the terms of service [[SNAP-2017]](../../REFERENCES.md). The filing chooses DAU; it never argues against MAU, and this page does not put that argument in its mouth.
+
+**The SEC reads the definitions (2016, 2019).** Before Snap's S-1 became public, SEC staff comment letters audited the metric itself. One comment caught a "quarterly average" DAU that was actually computed from the last month of the quarter alone, and required the label to match the math; the public S-1's quarter-wide average is the corrected version. Others required the averaging window behind headline claims to be disclosed, asked when Snap had switched from third-party to internal analytics because the pipeline change broke comparability, and pressed on whether DAU and ARPU were really the only metrics management used [[SEC-2016]](../../REFERENCES.md). Slack's turn came in 2019, one sentence with a whole scoping question inside it: clarify whether the ten million daily active users on the prospectus cover include non-paying users [[SEC-2019]](../../REFERENCES.md). A team with no analyst can run the same checklist on its own number: does the label match the math, is the window stated, did the pipeline change under the trend, and active among whom?
 
 ## Patterns & case studies
 
-- [State-based retention measurement](../modules/01-ai-data-quality/state-based-retention-measurement.md) — the Duolingo growth model: decompose DAU into states, goal one transition rate [[GUSTAFSON-2023]](../../REFERENCES.md) [[MAZAL-2023]](../../REFERENCES.md).
-- [TODO: research round in progress — public-company definition stories: metric redefinitions, what changed and why, from primary filings and first-party accounts.]
+- [State-based retention measurement](../modules/01-ai-data-quality/state-based-retention-measurement.md), the Duolingo growth model: decompose DAU into states, goal one transition rate [[GUSTAFSON-2023]](../../REFERENCES.md) [[MAZAL-2023]](../../REFERENCES.md).
+- Two candidate patterns sit in [the stories above](#definitions-on-the-public-record), not yet written as pattern pages. **Redefine in the open**: state the new definition, state why, admit non-comparability, run both numbers through a transition [[TWITTER-2019]](../../REFERENCES.md) [[META-2024]](../../REFERENCES.md). **Publish the recast**: when the definition breaks, disclose the mechanism, the magnitude, and the corrected series, and say plainly where data retention ends the correction [[TWITTER-2017]](../../REFERENCES.md) [[TWITTER-2022]](../../REFERENCES.md) [[SEC-2016]](../../REFERENCES.md).
+- One honest research finding belongs on the record: no verified first-party account exists of a small team, this framework's audience, changing its internal active-user definition and reporting what happened. What is public is either vendor content or the filings above. The definition-drift interview question in [the first section](#what-an-active-user-is) reserves that slot for the author's own practice.
 
 ## Sources & Stories
 
-Already in the bibliography from earlier topics: the Facebook S-1 definition and its caveats [[FACEBOOK-2012]](../../REFERENCES.md), the single-definition discipline story [[SCHULTZ-2014]](../../REFERENCES.md), and the Duolingo decomposition [[GUSTAFSON-2023]](../../REFERENCES.md) [[MAZAL-2023]](../../REFERENCES.md).
+Two threads run through this page.
 
-[TODO: research rounds in progress — definitions, ratios, and vanity critiques in one thread; public-company redefinition stories from primary filings in the other. Every source fetched and verified before it is cited here.]
+The definitions-and-ratios thread: Facebook's S-1 carries the formal definition and its caveats [[FACEBOOK-2012]](../../REFERENCES.md), and Alex Schultz's growth lecture carries the single-definition discipline, cited via the [conversion page](conversion.md) [[SCHULTZ-2014]](../../REFERENCES.md). Sarah Tavel's hierarchy-of-engagement essay and her later podcast restatement supply the core-action argument [[TAVEL-2017]](../../REFERENCES.md) [[TAVEL-2023]](../../REFERENCES.md), David Cummings the B2B logged-in counterpoint [[CUMMINGS-2017]](../../REFERENCES.md), and Benn Stancil the definition-drift mechanism [[STANCIL-2021]](../../REFERENCES.md). The window and ratio guidance is the Sequoia data science team's product-health essay [[SEQUOIA-2018]](../../REFERENCES.md); the power user curve is Li Jin and Andrew Chen's [[JIN-CHEN-2018]](../../REFERENCES.md); the category-dependence of benchmarks is documented in Lenny Rachitsky and Casey Winters's retention survey [[RACHITSKY-WINTERS-2020]](../../REFERENCES.md), and Olga Berezovsky's paywalled reporting treatment is cited as a pointer only [[BEREZOVSKY-2025]](../../REFERENCES.md). The vanity-metric provenance is Eric Ries's two 2009 posts [[RIES-2009a]](../../REFERENCES.md) [[RIES-2009b]](../../REFERENCES.md), with Crystal Widjaja's data-theater essay as the modern restatement [[WIDJAJA-2024]](../../REFERENCES.md). Growth accounting and the quick ratio are Jonathan Hsu's [[HSU-2015]](../../REFERENCES.md), ancestor to the Duolingo decomposition [[GUSTAFSON-2023]](../../REFERENCES.md) [[MAZAL-2023]](../../REFERENCES.md).
+
+The public-record thread is built on primary documents fetched from EDGAR: Twitter's Q4 2018 release for the mDAU redefinition [[TWITTER-2019]](../../REFERENCES.md), its Q3 2017 letter for the Digits overcount [[TWITTER-2017]](../../REFERENCES.md), its Q1 2022 letter for the linked-accounts recast [[TWITTER-2022]](../../REFERENCES.md), the Facebook and Meta filings for the Family-metrics arc [[FACEBOOK-2019]](../../REFERENCES.md) [[FACEBOOK-2020]](../../REFERENCES.md) [[META-2024]](../../REFERENCES.md), Snap's S-1 [[SNAP-2017]](../../REFERENCES.md), and the SEC staff comment letters to Snap and Slack [[SEC-2016]](../../REFERENCES.md) [[SEC-2019]](../../REFERENCES.md). The one practitioner working document is the Wikimedia analytics team's active-editors page [[WIKIMEDIA-2015]](../../REFERENCES.md). Where a filing's numbers admit a tempting causal reading, the page labels the reading as interpretation.
+
+Held back for lack of a source: any DAU/MAU benchmark (none survived verification), a per-seat vs. per-account treatment for B2B, a named first-person definition-drift story, and a canonical citation for the stickiness-trend chart. Each is either declared plainly in the body or reserved as an interview question. All figure numbers on this page are placeholders, and the interview TODOs are unanswered by design, per this repository's working method.
