@@ -10,9 +10,9 @@
 
 ## Patterns
 
-| ID | Pattern | Status | Provenance |
+| ID | Pattern | Status | Key sources |
 |---|---|---|---|
-| M1-11 | [State-based retention measurement](state-based-retention-measurement.md) | drafted — awaiting author voice pass | Adapted |
+| M1-11 | [State-based retention measurement](state-based-retention-measurement.md) | drafted — awaiting author voice pass | Duolingo growth model (Gustafson, Mazal) |
 
 ## Control-plan template
 

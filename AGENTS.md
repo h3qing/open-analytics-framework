@@ -17,7 +17,7 @@ Read at the start of every session. If anything elsewhere conflicts with the har
 
 Every working session, in order:
 
-1. Read `AGENTS.md`, `CONTENT_BACKLOG.md`, and `DECISIONS.md`.
+1. Read `AGENTS.md`, `CONTENT_BACKLOG.md`, and `DECISIONS.md`. Also read `AGENTS.local.md` if present — machine-local working notes, untracked; in a linked worktree it lives at the main checkout root.
 2. Read `docs/prior-art.md` if the session touches a pattern.
 3. Confirm the unit. Default to the next `ready` row in the backlog.
 4. **Interview.** Ask questions one or two at a time. Push back on vague answers. Do not accept best-practices language, passive constructions that hide the actor, or claims without a mechanism. If I say "we improved data quality," ask what was measured, what the number was before, and who noticed.
@@ -46,6 +46,8 @@ All citation keys must resolve in `REFERENCES.md`. CI still requires a "Sources 
 - Reference and guide are separate: canonical pattern statements and long-form guides live in different places.
 - Plain markdown for the framework itself. Nothing to install to read it.
 - Something to adopt, not just read. Ship copyable artifacts alongside prose.
+- Content over scaffolding. A reader landing on the README reaches a finished pattern in one click. Process files (backlog, decisions, this file) exist for the maintainer and stay out of the reader's path.
+- Match the fidelity of the sources. Where the original story used a chart or a diagram, the pattern shows one (Mermaid, rendered natively on GitHub). Dense unbroken prose is a defect — see the Presentation section of `docs/pattern-template.md`.
 
 ## When to stop and ask
 

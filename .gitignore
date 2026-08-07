@@ -4,6 +4,9 @@
 # Phase 0 working documents — not part of the published structure
 CANDIDATE_PATTERNS.md
 
+# Machine-local working notes
+AGENTS.local.md
+
 # Editor
 .vscode/
 .idea/

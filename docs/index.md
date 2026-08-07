@@ -15,10 +15,15 @@ These systems do not fail at the model layer. They fail at deployment. Query gen
 ## How the framework is organized
 
 - Four modules, read in order: [data quality](modules/01-ai-data-quality/README.md), [infrastructure](modules/02-infrastructure-design/README.md), [agent integration](modules/03-ai-agent-integration/README.md), [governance and financial reporting](modules/04-governance-and-financial-reporting/README.md).
+- The [metrics library](metrics/README.md): classical metric knowledge, one topic page per metric, with patterns and case studies hanging off each topic.
 - Every pattern uses the same eight-section shape: [the pattern template](pattern-template.md), which maps onto DMAIC.
 - Reference and guide are separate: the canonical statement of a pattern lives in `docs/modules/`; the longer walkthroughs live in [`implementation-guides/`](../implementation-guides/README.md) and [`reference-architectures/`](../reference-architectures/README.md).
 - Something to adopt, not just read: every module ships copyable artifacts in [`templates/`](../templates/README.md).
-- Every claim is sourced or explicitly original: see [the prior-art review](prior-art.md) and [REFERENCES.md](../REFERENCES.md).
+- Patterns cite the stories and research they draw from: see [the prior-art review](prior-art.md) and [REFERENCES.md](../REFERENCES.md).
+
+## Available now
+
+- [State-based retention measurement](modules/01-ai-data-quality/state-based-retention-measurement.md) — the first pattern, drawn from the Duolingo growth story. Drafted; awaiting the author's voice pass.
 
 ## Reading order
 
