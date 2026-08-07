@@ -25,7 +25,7 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --no-progress --accept 200,201,202,203,204,206,301,302,308,403,429 --exclude-path CANDIDATE_PATTERNS.md "**/*.md"
+          args: --config lychee.toml "**/*.md"
           fail: true
 
   provenance:
