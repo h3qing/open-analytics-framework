@@ -21,7 +21,7 @@ Ask, one at a time:
 - **Q2.** Roughly what band is your marketing spend (under $100K a year, $100K to a few million, more) and your revenue (under $50M, over)? Bands only.
 - **Q3.** Which teams touch the path to that outcome today? (Marketing, SDR or sales, partnerships, product, just you?)
 
-Guidance: if the user cannot name one outcome, stop and route them to the [conversion page](../../docs/metrics/conversion.md) first. Attribution splits credit for an outcome; an undefined outcome has nothing to split.
+Guidance: if the user cannot name one outcome, stop and route them to the [conversion page](../../docs/metrics/conversion-rate.md) first. Attribution splits credit for an outcome; an undefined outcome has nothing to split.
 
 ## Stage 2: Route by size
 
