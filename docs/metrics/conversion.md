@@ -85,7 +85,7 @@ flowchart LR
 
 Conversion hands the customer to retention, and the two multiply into everything after. The same chain is drawn from the other end on the [retention page](retention.md).
 
-For a small startup, start with last-touch attribution: credit the conversion to the last channel the user touched before converting. It is the easiest way to start with high signal. The world is more complicated than last touch, and when the company grows into that complexity, or a specific business case shows last touch failing, attribution deserves its own treatment. Attribution is planned as its own topic page in the [metrics library](README.md); this section will link to it when it exists.
+For a small startup, start with last-touch attribution: credit the conversion to the last channel the user touched before converting. It is the easiest way to start with high signal. The world is more complicated than last touch, and when the company grows into that complexity, or a specific business case shows last touch failing, attribution deserves its own treatment: see the [attribution page](attribution.md).
 
 ## Classical ways to see it
 

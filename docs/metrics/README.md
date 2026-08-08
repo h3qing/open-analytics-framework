@@ -15,6 +15,7 @@ Topic pages carry a Sources & Stories section like every other content file; cit
 | Topic | Status |
 |---|---|
 | [Retention](retention.md) | stub — structure and open questions |
-| [Conversion](conversion.md) | drafted — full sourced draft; author voice pass and interview TODOs pending |
+| [Conversion](conversion.md) | drafted — sourced draft with author interview answers and voice pass; two definition TODOs open |
+| [Attribution](attribution.md) | stub — research rounds in progress |
 
-Planned next, in no committed order: active users, revenue, cost, margins, usage, attribution.
+Planned next: active users, then revenue, cost, margins, usage in no committed order.
