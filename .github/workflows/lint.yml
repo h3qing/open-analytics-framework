@@ -23,9 +23,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check links
-        uses: lycheeverse/lychee-action@v1
+        uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --exclude-path CANDIDATE_PATTERNS.md "**/*.md"
+          args: --config lychee.toml "**/*.md"
           fail: true
 
   provenance:
