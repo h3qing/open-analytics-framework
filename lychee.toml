@@ -23,6 +23,7 @@ exclude = [
   "^https://.*\\.blogspot\\.com/",
   "^https://www\\.reforge\\.com/",
   "^https://www\\.slideshare\\.net/",
+  "^https://a16z\\.com/",
 ]
 
 accept = ["200", "201", "202", "203", "204", "206", "301", "302", "308", "403", "429"]
