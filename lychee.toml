@@ -3,6 +3,12 @@
 
 no_progress = true
 
+# Some hosts answer slowly under CI. A slow response is not a broken link, so
+# give them room and retry before calling it a failure.
+timeout = 30
+max_retries = 3
+retry_wait_time = 2
+
 # Phase 0 working document, not part of the published structure.
 exclude_path = ["CANDIDATE_PATTERNS.md"]
 
