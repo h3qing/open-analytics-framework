@@ -62,7 +62,7 @@ Two approaches are missing from the table because they never look at a journey: 
 
 Five rules, five different answers, and nothing was measured. How large can the gap between a credit rule and a measurement get? The eBay story below puts numbers on it.
 
-**Last-touch.** All credit to the final touch. It became every tool's default because the converting visit was the one thing early tools could confidently observe [^kaushik-2013]. For a small team it is still the honest starting point: cheap, high signal, and everyone understands it (see the [conversion page](conversion.md)). For a sophisticated spender, Kaushik's verdict in 2013 was already: "The only use for last click attribution now is to get you fired. Avoid it." [^kaushik-2013] Both are right. The model is fine as a first approximation and dangerous as a belief.
+**Last-touch.** All credit to the final touch. It became every tool's default because the converting visit was the one thing early tools could confidently observe [^kaushik-2013]. For a small team it is still the honest starting point: cheap, high signal, and everyone understands it (see the [conversion page](conversion-rate.md)). For a sophisticated spender, Kaushik's verdict in 2013 was already: "The only use for last click attribution now is to get you fired. Avoid it." [^kaushik-2013] Both are right. The model is fine as a first approximation and dangerous as a belief.
 
 **First-touch.** All credit to the touch that started the journey. Kaushik's one-line failure mode: "First click attribution is akin to giving my first girlfriend 100% of the credit for me marrying my wife." [^kaushik-2013]
 
@@ -128,7 +128,7 @@ flowchart TD
 
 **Revisit on complexity, not headcount.** A company's first credit rule does not change much with headcount; it changes with the complexity of the business. Over time you develop more customer segments, more territories, and different incentives for different teams. That is the time to revisit how the incentives are designed and make sure everybody is contributing to the same goal.
 
-**The afternoon smell test.** Ask each team, individually, whether the pipeline is running smoothly. Every team has inputs and outputs, and the conversion rate between them tells a big story (the [conversion page](conversion.md) covers the mechanics). A high rate means the upstream steps are handing over quality, and the attribution is probably well designed. A rate far below industry standard means someone upstream may be exaggerating their number without caring about downstream impact.
+**The afternoon smell test.** Ask each team, individually, whether the pipeline is running smoothly. Every team has inputs and outputs, and the conversion rate between them tells a big story (the [conversion page](conversion-rate.md) covers the mechanics). A high rate means the upstream steps are handing over quality, and the attribution is probably well designed. A rate far below industry standard means someone upstream may be exaggerating their number without caring about downstream impact.
 
 ## When attribution is not worth it
 
@@ -143,7 +143,7 @@ The size guide first. The advice comes from practitioners at different ends of t
 
 Two notes on the sources. The under-$100K advice comes from the CEO of a marketing measurement vendor, arguing against his own interest; his reasoning is that a click after an event does not make the event the cause, so click models over-credit the channels that capture demand rather than create it [^piyush-2025]. And by 2024 the under-$50M argument had hardened from not-worth-it to no-longer-possible: privacy law, walled gardens, and zero-click consumption mean click-level attribution mechanically stops working, and measurement returns to lift methods and influence you cannot trace [^fishkin-2024].
 
-Below some scale, attribution machinery costs more than the decisions it informs are worth. Above some scale, experiments answer the question better. The band where rule-based modeling earns its keep is much narrower than the tooling industry suggests. Last-touch plus honest channel tests carries a small team a long way; the [conversion page](conversion.md) covers where last-touch enters.
+Below some scale, attribution machinery costs more than the decisions it informs are worth. Above some scale, experiments answer the question better. The band where rule-based modeling earns its keep is much narrower than the tooling industry suggests. Last-touch plus honest channel tests carries a small team a long way; the [conversion page](conversion-rate.md) covers where last-touch enters.
 
 **Testing at a small scale.** In the modern world the channels mix together, and clean A/B tests are very hard to run scientifically. Run tests at a very local level: copy A against copy B for the same audience, or the same copy for different audiences, tightly controlled. Beyond that, a scientific test costs more resources than a small or medium business can spare. Anecdotes, and taste built through user interviews, are a legitimate part of the toolkit at this scale. <!-- TODO(heqing): confirm this reading --> Modern campaign tools also auto-optimize parts of the funnel; a team that is just starting should lean on those instead of building testing in-house.
 
@@ -151,7 +151,7 @@ Below some scale, attribution machinery costs more than the decisions it informs
 
 ## Where else attribution shows up
 
-Marketing and go-to-market are the two treatments on this page, but the credit-assignment question appears anywhere an outcome has many parents. Product work asks which feature or change gets credit for a [retention](retention.md) or [conversion](conversion.md) move. Partnerships ask which introduction gets credit for a deal. Finance asks which team or product a shared cost belongs to. These will grow into their own treatments as the library expands.
+Marketing and go-to-market are the two treatments on this page, but the credit-assignment question appears anywhere an outcome has many parents. Product work asks which feature or change gets credit for a [retention](retention.md) or [conversion](conversion-rate.md) move. Partnerships ask which introduction gets credit for a deal. Finance asks which team or product a shared cost belongs to. These will grow into their own treatments as the library expands.
 
 ## Patterns & case studies
 

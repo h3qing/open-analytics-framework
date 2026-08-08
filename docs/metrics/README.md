@@ -15,8 +15,9 @@ Topic pages carry a Sources & Stories section like every other content file; cit
 | Topic | Status |
 |---|---|
 | [Retention](retention.md) | stub — structure and open questions |
-| [Conversion](conversion.md) | drafted — sourced, author answers and voice pass done; one original section reserved |
+| [Conversion rate](conversion-rate.md) | drafted — sourced, author answers and voice pass done; one original section reserved |
+| [Time to convert](time-to-convert.md) | stub — deep research round running |
 | [Attribution](attribution.md) | drafted — sourced, author answers and voice pass done; guided skill shipped |
-| [Active users](active-users.md) | drafted — sourced draft from primary-document research; author interview and voice pass pending |
+| [Active users](active-users.md) | drafted — sourced from primary documents; author opening written, seven interview questions open |
 
 Planned next: revenue, cost, margins, usage in no committed order.

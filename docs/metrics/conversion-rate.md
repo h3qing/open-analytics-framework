@@ -1,6 +1,6 @@
 ---
-id: conversion
-title: Conversion
+id: conversion-rate
+title: Conversion rate
 type: topic
 status: drafted # sourced draft with author interview answers; author voice pass 2026-08-05
 summary: >
@@ -18,7 +18,7 @@ keywords:
   - activation
 ---
 
-# Conversion
+# Conversion rate
 
 Conversion is the movement of the business towards your final goal, whether that's monthly active users or revenue. Funnel analysis was a big part of my last job. One part of the company's business is working with domain experts who create training data for AI models. An expert passes several steps before they can contribute: identity checks, quality screens, and training on the platform. Each step loses people. My role was the analytics function: measuring the pass rate at every step and segmenting to see which experts were getting stuck and where, so the team could fix the worst step and measure again. If your product has steps between signup and value, you have the same problem, and the same method works.
 
@@ -125,7 +125,7 @@ xychart-beta
     line [0, 4, 6, 8, 9, 10, 10, 10, 10, 10, 10, 10, 10]
 ```
 
-Where the curve flattens is where the window can close. Before that point, any rate you quote is still moving.
+Where the curve flattens is where the window can close. Before that point, any rate you quote is still moving. How fast entities move through the funnel is its own subject: see [time to convert](time-to-convert.md).
 
 **When the funnel is the wrong model.** The modern growth-loops critique argues that funnels describe one-way flow, while fast-growing products often grow through closed loops whose output feeds back in as input [^balfour-2018]. Loops, long research phases, and sales-assisted journeys all strain the funnel picture.
 
