@@ -1,10 +1,14 @@
-# Diagnostic skill
+# Skills
 
-Home of `analytics-readiness` (working name — Open Decision #2): a structured diagnostic run on an organization's analytics function *before* that organization deploys an AI analytics agent. Output: a readiness report with a prioritized remediation plan mapped to the four modules, including the narrowest wedge — the single metric that, if made trustworthy enough that nobody re-checks it, changes the most downstream.
+Guided conversations that apply this framework's knowledge to one company's situation: questions one or two at a time, guidance after each answer, a decision record at the end. Every skill follows [the skill template](../docs/skill-template.md). MIT licensed.
 
-**Status:** not built yet. Construction is Phase 2, deliberately before the module content: writing the forcing questions is how the content gets articulated.
+| Skill | Status |
+|---|---|
+| [attribution-design](attribution-design/SKILL.md) — pick the credit rule for your size, align it with team incentives | draft |
+| `analytics-readiness` — the diagnostic run before deploying an AI analytics agent (working name, Open Decision #2) | planned, Phase 2 |
+| Defining your definitions (SK-01) and the vanity-metric check (SK-02) | candidate rows in the backlog |
 
-Planned shape: `SKILL.md` (frontmatter + body), `references/` for per-module detail, `assets/` for the report template. Five stages — frame, forcing questions, privacy gate before any outward search, score and route, output. MIT licensed. Installation docs land here when the skill does.
+The `analytics-readiness` diagnostic outputs a readiness report with a prioritized remediation plan mapped to the four modules, including the narrowest wedge — the single metric that, if made trustworthy enough that nobody re-checks it, changes the most downstream. Its construction is Phase 2, deliberately before the module content: writing the forcing questions is how the content gets articulated.
 
 ## Seeded forcing questions
 
