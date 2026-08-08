@@ -1,0 +1,29 @@
+# Link-check configuration, used by CI and reproducible locally with:
+#   lychee --config lychee.toml "**/*.md"
+
+no_progress = true
+
+# Some hosts answer slowly under CI. A slow response is not a broken link, so
+# give them room and retry before calling it a failure.
+timeout = 30
+max_retries = 3
+retry_wait_time = 2
+
+# Phase 0 working document, not part of the published structure.
+exclude_path = ["CANDIDATE_PATTERNS.md"]
+
+# Hosts that serve readers normally but answer automated checkers with 403 or
+# 429. Every citation behind these hosts was opened and verified by hand before
+# it entered REFERENCES.md; a crawler refusal is not evidence of rot. Genuine
+# rot, 404s and dead domains, still fails the build everywhere else.
+exclude = [
+  "^https://medium\\.com/",
+  "^https://.*\\.substack\\.com/",
+  "^https://www\\.sec\\.gov/",
+  "^https://.*\\.blogspot\\.com/",
+  "^https://www\\.reforge\\.com/",
+  "^https://www\\.slideshare\\.net/",
+  "^https://a16z\\.com/",
+]
+
+accept = ["200", "201", "202", "203", "204", "206", "301", "302", "308", "403", "429"]
