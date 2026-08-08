@@ -22,11 +22,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check links
+      # Links inside the repo must resolve. A broken relative path is rot we
+      # introduced, and it fails the build.
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config lychee.toml --offline "**/*.md"
+          fail: true
+      # External links are reported but do not gate a merge. Publishers block
+      # or throttle CI runners, so a refusal here says nothing about whether a
+      # citation is still good, and every one was opened and verified by hand
+      # before it entered REFERENCES.md. Read the report when it flags
+      # something, then check the URL yourself.
+      - name: Report external links
         uses: lycheeverse/lychee-action@v2
         with:
           args: --config lychee.toml "**/*.md"
-          fail: true
+          fail: false
 
   provenance:
     runs-on: ubuntu-latest
