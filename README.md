@@ -5,7 +5,8 @@ Structured foundations for building analytics operations, for organizations that
 ## Start here
 
 - **Read the first pattern:** [State-based retention measurement](docs/modules/01-ai-data-quality/state-based-retention-measurement.md) — decompose DAU into user states and find the one retention rate worth a team's focus, drawn from the Duolingo growth story.
-- **Learn a metric:** the [metrics library](docs/metrics/README.md) — classical metric knowledge, one page per topic, starting with [retention](docs/metrics/retention.md).
+- **Learn a metric:** the [metrics library](docs/metrics/README.md). Classical metric knowledge, one page per topic. The two finished pages are [attribution](docs/metrics/attribution.md) and [conversion rate](docs/metrics/conversion-rate.md); start with either.
+- **No analyst, ninety minutes:** read [attribution](docs/metrics/attribution.md), then [conversion rate](docs/metrics/conversion-rate.md). Between them they cover who gets credit for an outcome and how to find the step that is losing you the most people.
 - **Copy something usable:** [templates](templates/README.md) — control plans, machine-readable specs, and agent prompts to drop into your own stack.
 - **Browse the framework:** [reading guide](docs/index.md), then the four modules — [data quality](docs/modules/01-ai-data-quality/README.md) · [infrastructure](docs/modules/02-infrastructure-design/README.md) · [agent integration](docs/modules/03-ai-agent-integration/README.md) · [governance & financial reporting](docs/modules/04-governance-and-financial-reporting/README.md).
 
