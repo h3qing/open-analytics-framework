@@ -47,7 +47,11 @@ All citation keys must resolve in `REFERENCES.md`. CI still requires a "Sources 
 - Plain markdown for the framework itself. Nothing to install to read it.
 - Something to adopt, not just read. Ship copyable artifacts alongside prose.
 - Content over scaffolding. A reader landing on the README reaches a finished pattern in one click. Process files (backlog, decisions, this file) exist for the maintainer and stay out of the reader's path.
-- Match the fidelity of the sources. Where the original story used a chart or a diagram, the pattern shows one (Mermaid, rendered natively on GitHub). Dense unbroken prose is a defect — see the Presentation section of `docs/pattern-template.md`.
+- Match the fidelity of the sources. Where the original story used a chart or a diagram, the page shows one. Dense unbroken prose is a defect — see the Presentation section of `docs/pattern-template.md`.
+- **Write for the reader, not about the research.** Every page exists to help a company without analytics resources act, and to give their AI agents something precise to work from. It is not a literature review. Sourcing status, verification caveats, and accounts of what could not be found belong in Sources & Stories, never in the body. Where the framework makes a claim of its own, state it plainly and mark it as the framework's position in a clause.
+- **Organize around decisions.** A reader with ninety minutes and no analyst reads what tells them what to do. Pages that answer "which one, at my size, and who owns it" get read; pages organized around the concept get skimmed. A size guide beats a survey.
+- **Every recommendation needs a version for a team of ten.** The audience has no sales ops, no traffic for a clean holdout, and nobody spare to keep a neutral ledger. A recommendation that assumes staff the reader does not have is not advice, and the small-company version belongs beside it.
+- **Do not repeat a number the framework has not verified.** Famous benchmarks in this field frequently fail tracing. Say plainly that no citable figure survived checking rather than passing folklore along with a caveat.
 
 ## When to stop and ask
 
