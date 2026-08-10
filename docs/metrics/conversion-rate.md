@@ -115,28 +115,21 @@ flowchart TD
 
 **Cohorted vs. blended conversion.** The aggregate (blended) rate lies in known ways. With a growing user base and slow conversion, new users flood the denominator before they have had time to convert, so the blended rate falls while every cohort is healthy [^bernhardsson-2017]. Mix shifts can do the reverse trick inside an experiment: a published case shows a treatment that looked 4 percent worse in aggregate while being better on almost every individual day. The cause was a mid-experiment change to the traffic split, which shifted the mix of users. This is Simpson's paradox: a shift in the mix reverses the comparison in the total while every subgroup moves the other way [^kohavi-2010]. Cohorting by start date separates conversion likelihood from conversion speed [^bernhardsson-2017].
 
-```mermaid
-xychart-beta
-    title "Placeholder sketch of the blended-rate illusion"
-    x-axis "Week since launch" 1 --> 8
-    y-axis "Conversion rate in percent" 0 --> 12
-    line [10, 10, 10, 10, 10, 10, 10, 10]
-    line [10, 9, 8, 7, 6, 6, 5, 5]
-```
+Draw it and the argument makes itself. Group your signups by the month they arrived, then plot each group's conversion against months since that group signed up:
 
-The flat line is each weekly cohort's eventual conversion rate, held at a placeholder 10 percent. The falling line is the blended rate measured each week while signups grow: the newest users have not had time to convert, and they dominate the denominator. Nothing got worse. The other side of the trade: fixed-window blended rates are cheap, computable in plain SQL, and legible to stakeholders, and modeling pays off only when the window or the timing itself matters [^kent-2021]. A blended number can still earn a place in executive reporting alongside the cohorted view [^berezovsky-2024].
+![Conversion by time since signup, one line per signup month. Six lines all rise toward about twelve percent; each newer group's line is shorter because it has had less time.](figures/cohort-conversion-curves.svg)
 
-**The time-to-convert curve.** Conversions arriving over time since cohort start, the survival-analysis view: entities that have not converted yet are censored, not failed. "Has not converted yet" is not the same as "never will," and the curve shows when a window can honestly be closed [^bernhardsson-2017] [^kent-2021]. A go-deeper pointer for most small teams, but the concept fits in one figure:
+Every group is heading to the same place, around 12 percent. The newest group's line is the shortest, not the worst: it has simply had fewer months. Where a line stops is where the data stops, and that stopping point is the whole reason the next chart lies.
 
-```mermaid
-xychart-beta
-    title "Placeholder sketch of one cohort's conversions over time"
-    x-axis "Days since cohort start" 0 --> 60
-    y-axis "Cumulative conversion in percent" 0 --> 12
-    line [0, 4, 6, 8, 9, 10, 10, 10, 10, 10, 10, 10, 10]
-```
+Now collapse those same signups into one number per calendar month, everyone who ever signed up over everyone who ever signed up:
 
-Where the curve flattens is where the window can close. Before that point, any rate you quote is still moving. How fast entities move through the funnel is its own subject: see [time to convert](time-to-convert.md).
+![The same signups as one blended number. A single line falls steadily from about seven and a half percent to under four percent.](figures/blended-rate-illusion.svg)
+
+The blended rate falls every month, from about 7.5 percent to under 4. Nothing got worse. Signups grew, so most of the base has not had time to convert yet, and the young groups outvote the mature ones in the denominator. A team watching only this chart spends the quarter hunting for a problem that does not exist. Both figures use the same illustrative numbers.
+
+This is also why a rate is still moving before its window closes: on the first chart, the point where a line flattens is the point where you can honestly quote a number for that group. Entities that have not converted yet are censored, not failed, and "has not converted yet" is not the same as "never will" [^bernhardsson-2017] [^kent-2021]. How fast entities move through the funnel is its own subject: see [time to convert](time-to-convert.md).
+
+The other side of the trade: fixed-window blended rates are cheap, computable in plain SQL, and legible to stakeholders, and modeling pays off only when the window or the timing itself matters [^kent-2021]. A blended number can still earn a place in executive reporting alongside the cohorted view [^berezovsky-2024].
 
 **When the funnel is the wrong model.** The modern growth-loops critique argues that funnels describe one-way flow, while fast-growing products often grow through closed loops whose output feeds back in as input [^balfour-2018]. Loops, long research phases, and sales-assisted journeys all strain the funnel picture.
 
@@ -154,11 +147,9 @@ The practitioner methodology on record is an audit: instrument the funnel end to
 
 When you ship a fix, timestamp it and label the cohorts on either side, so the change is comparable over time. Small companies often do not have the resources for well-designed controlled experiments, and sometimes that is fine: a single step's conversion rate over time will tell you whether the step is fixed or still moving. The learning matters as much as the number. A team that watches its funnel this way develops judgment, and the next funnel design gets easier, quicker, and better.
 
-- [TODO(heqing): the fuller theory-of-constraints treatment remains to be written: where Goldratt's five focusing steps hold for a funnel, and where the analogy breaks.]
-
 ## Patterns & case studies
 
-No pattern page yet. The funnel-audit methodology [^qu-2023] is a candidate seed for the first conversion pattern. Candidate case studies:
+Three stories worth knowing, all first-party accounts:
 
 - **The $300 Million Button.** A drop-off located at one checkout step, qualitative research explaining why, a one-word fix, a measured $300M/year gain [^spool-2009]. The complete conversion loop in miniature, doable with zero analysts.
 - **The Obama 2008 splash-page experiment.** A multivariate test of four buttons and six media panels over roughly 310,000 visitors. Intuition favored video and a "Sign Up" button; the winner was "Learn More" with a family photo, lifting signups from 8.26 to 11.6 percent. Each signup was valued downstream at about $21 in donations, which is the bridge from a conversion rate to LTV thinking [^siroker-2010].
@@ -170,7 +161,7 @@ The stories above are the spine: Jared Spool's $300 Million Button [^spool-2009]
 
 The modern, instrumentation-era layer: Erik Bernhardsson's cohort-conversion and survival-curve treatment from his Spotify and Better work [^bernhardsson-2017], the Kohavi lineage's published mix-shift pitfalls [^kohavi-2010] and book-length successor [^kohavi-2020], Casey Winters on activation [^winters-2017], the Rachitsky–Timen activation-rate survey [^rachitsky-2022], the growth-loops critique of the funnel itself [^balfour-2018], and product-manager voices from the podcast circuit (Hila Qu on funnel auditing [^qu-2023], Sean Ellis on the testing tempo [^ellis-2024] alongside the book [^ellis-2017], and Elena Verna on what not to optimize [^verna-2025]). The Facebook single-definition story now lives on the [active users page](active-users.md), with the definition work it belongs to.
 
-The opening story is from the author's own practice, on an expert-onboarding funnel, and the practice-grounded passages on activation boundaries, testing judgment, attribution, visualization choices, reporting, and fixing bottlenecks are drafted from the author's interview answers (2026-08-04), with the definition defaults and the boil-the-ocean warning added from the follow-up interview (2026-08-05). No vendor-neutral practitioner treatment applies the theory of constraints to conversion funnels, so the constraint reading in the bottleneck section is this framework's own and is reserved as the author's original contribution. Public conversion work is narrated almost entirely as single experiments, and no multi-year program account equivalent to the Duolingo retention story surfaced; the candidate case studies above are all first-party accounts, verified 2026-08-03. Placeholder figures on this page use deliberately round invented numbers and are not benchmarks.
+The opening story is from the author's own practice, on an expert-onboarding funnel, and the practice-grounded passages on activation boundaries, testing judgment, attribution, visualization choices, reporting, and fixing bottlenecks are drafted from the author's interview answers (2026-08-04), with the definition defaults and the boil-the-ocean warning added from the follow-up interview (2026-08-05). The constraint reading in the bottleneck section is this framework's own. The case studies above are first-party accounts, verified 2026-08-03. The funnel-audit methodology comes from Hila Qu's account of running one [^qu-2023]. Figures on this page use invented illustrative numbers and are not benchmarks; the two cohort charts are drawn from one consistent placeholder dataset, so the blended line really is what those groups produce when you average them.
 
 <!-- Footnote targets; full entries with links and caveats live in REFERENCES.md -->
 
