@@ -2,7 +2,7 @@
 id: time-to-convert
 title: Time to convert
 type: topic
-status: drafted # author opening and four interview answers folded in 2026-08-09; three questions open, voice pass pending
+status: drafted # author opening and interview answers folded in 2026-08-11; voice pass pending per AGENTS.md constraint 6
 summary: >
   How fast an entity moves through the pipeline, from the top of the
   funnel to the end. The sibling of conversion rate: the rate says how
@@ -63,35 +63,27 @@ Improving one of the three says nothing about the other two. A page that renders
 
 ## Measuring it honestly
 
-The average time to convert is usually the wrong statistic.
+A single average blurs all the stories. Here are two funnels with exactly the same average time to convert:
 
-**The average is biased downward.** Entities that have not converted yet have no duration to average, so they fall out of the calculation. The ones that do have a duration are the ones that finished, and finishing early is exactly what makes an entity available to be counted. The statistical name for a duration you have observed only partly, because the clock is still running, is censoring. Dropping the unfinished cases badly underestimates the true average, and the obvious patch of throwing in their elapsed-so-far time still underestimates it [^davidsonpilon-2019]. Your average time to convert is computed only from the people who already converted, so it can only ever tell you about the fast ones.
+![Two funnels with the same thirty-day average. In the first, almost every entity converts near thirty days. In the second, most convert inside two weeks and a quarter are still waiting past ninety days.](figures/same-average-different-funnel.svg)
 
-**Percentiles instead of the mean.** A percentile is the value a given share of cases falls under: the 85th percentile of time to convert is the number that 85 percent of converted entities came in below. Reporting the median and the 85th together says something a mean cannot, because it describes the tail as well as the middle. Keep the whole distribution and forecast from it rather than promising a single number nobody hits [^vacanti-2014] [^vacanti-2020]. Averages, and percentiles computed casually, mislead about how long things take [^tene-2015].
+In the first funnel the average describes almost everyone. In the second it describes almost nobody, and the quarter of entities stuck past ninety days is the entire problem, invisible behind a number that looks identical. A percentile is the value a given share of cases falls under, so the 85th percentile is what 85 percent came in under. It separates these two funnels instantly. The average never will [^vacanti-2014] [^vacanti-2020] [^tene-2015].
 
-A sales example with the same shape: a business with a roughly 60-day average sales cycle, where around 90 percent of deals close somewhere between 30 and 120 days, where wins, losses, and slipped deals have three different average lengths with three different distributions, and where you usually lose faster than you win [^kellogg-2023]. One average over that spread is not a forecast, it is a shrug.
+The average has a second problem: it is computed only from entities that already converted. The ones still waiting have no duration yet, so they drop out of the calculation, and finishing early is exactly what makes an entity available to be counted. Your average time to convert can only ever tell you about the fast ones. The name for a duration whose clock is still running is censoring, and dropping those cases underestimates the truth badly [^davidsonpilon-2019]. Kaplan-Meier, the 1958 product-limit estimator, keeps them in the denominator instead of discarding them [^kaplan-1958] [^bernhardsson-2019].
 
-**The survival view.** The metric is really a curve. Kaplan-Meier, the 1958 product-limit estimator, estimates the curve while keeping the not-yet-finished cases in the denominator instead of discarding them [^kaplan-1958] [^bernhardsson-2019]. It is the same curve the [conversion rate page](conversion-rate.md) draws, read the other way round: not what fraction eventually converts, but how long until half of them have.
+**What to put on a dashboard.** Track the percentiles over time, the 25th, the median and the 85th together, so you see how the whole distribution moves rather than one point on it:
 
-```mermaid
-xychart-beta
-    title "Placeholder sketch: days to convert by cohort week, median and 95th percentile"
-    x-axis "Cohort week" 1 --> 8
-    y-axis "Days to convert (placeholder)" 0 --> 60
-    line [12, 11, 12, 12, 11, 12, 11, 12]
-    line [52, 54, 51, 53, 52, 54, 53, 52]
-```
+![Three percentile lines tracked over twelve months. All three drift downward together.](figures/percentile-trend.svg)
 
-The lower line, starting near 12 days, is the median; the upper line, starting near 52 days, is the 95th percentile. Half the cohort converts inside two weeks while one in twenty takes nearly two months, and a mean would sit between them describing neither. The numbers are round placeholders. The canonical version of this picture is a scatterplot: one dot per converted entity, days to convert up the side, close date across the bottom, with horizontal lines at the median and the 85th percentile [^vacanti-2014]. The dots stranded above those lines are the deals that went sideways.
+What you want to see is the majority moving in the right direction. Equally important, segment by your user dimensions, because the overall trend hides the detailed ones underneath it.
 
-**Rate and speed are two different things, and teams argue about them without knowing it.** A model can fit both at once: a ceiling, meaning the share of a cohort that ever converts, and a speed, meaning how fast the cohort gets there. Fitted separately, they can move in opposite directions, so a cohort's conversion rate can fall while the people who do convert are converting faster than ever [^bernhardsson-2019]. That is the argument a growth team has every quarter and cannot settle from a single blended number. Free implementations of these models exist for a team that wants to run one [^convoys] [^davidsonpilon-2019], and the same delayed-conversion problem turns up in advertising, where conversions arrive weeks after the impression that caused them [^chapelle-2014].
+**Ask who is getting faster, not just how fast.** When someone reports a single average, the second question is about the users who matter most: are the high-value customers converting faster over time? That question has a wrinkle worth naming. You often do not know an entity is high-value until after it converts, so the honest move is retroactive. Once they convert, look back at their onboarding journey and ask whether the time to convert for that kind of customer is improving. Segmenting on an outcome you only learn later is legitimate, as long as you know that is what you are doing.
 
-**The window is the same decision, seen from the other side.** How long you let the clock run before you declare an entity converted or not is the window choice, and the [conversion rate page](conversion-rate.md) already works through when a fixed window is honest and when a curve is worth the effort [^bernhardsson-2017] [^kent-2021]. The link between the two: the window is only defensible once you know the shape of the time-to-convert curve, so you cannot pick the window before you have measured the speed.
+**Rate and speed are two different things, and teams argue about them without knowing it.** A model can fit both at once: a ceiling, meaning the share of a cohort that ever converts, and a speed, meaning how fast the cohort gets there. Fitted separately they can move in opposite directions, so a cohort's conversion rate can fall while the people who do convert are converting faster than ever [^bernhardsson-2019]. That is the argument a growth team has every quarter and cannot settle from one blended number.
 
-**What a team with no analyst can watch on Monday.** Time to convert can only be computed on entities that finished, which is what makes it lagging. Work item age, the elapsed time since an unfinished entity entered, can be computed today on everything still in the funnel, and it is a subtraction: today's date minus the date the entity entered [^kanban-2025]. A list of the oldest entities still in progress needs no statistics, no tooling, and no analyst, and it points at the same stage a full survival analysis would. The chart that carries all of it at once is the cumulative flow diagram: entities entering, sitting in each stage, and finishing, stacked over time, where the vertical thickness of a band is the number in progress and the horizontal distance across it is the time to cross [^vacanti-2014].
+**The window is the same decision from the other side.** How long you let the clock run before declaring an entity converted is the window choice, and the [conversion rate page](conversion-rate.md) works through when a fixed window is honest [^bernhardsson-2017] [^kent-2021]. The link: you cannot defend a window until you know the shape of the curve, so measure the speed first.
 
-- [TODO(heqing): interview — median, 85th percentile, or the whole curve: what would you actually put on a weekly dashboard for a team of eight, and why?]
-- [TODO(heqing): interview — the draft explains the downward bias in one sentence above. Would you say it differently to a founder, and what is the second question you ask when someone reports a single average?]
+**What a team with no analyst can watch on Monday.** Time to convert is lagging, because it can only be computed on entities that finished. Work item age is not: it is today's date minus the date the entity entered, computable right now on everything still in the funnel [^kanban-2025]. A list of the oldest entities still in progress needs no statistics and no tooling, and it points at the same stage a full survival analysis would.
 
 ## The pipeline as a queue
 
@@ -152,7 +144,7 @@ The curve is a sketch of the shape, not measured values. What matters is that it
 
 **Finding the bottleneck.** Understanding where the bottleneck is is the core thesis of the exercise. Once you know where it is, you can ask what the physical mechanism is: whether a page is loading slowly, or the friction is artificial. Most of the measurement work exists so that you can find that and improve it.
 
-- [TODO(heqing): interview — the fuller industrial-engineering treatment: where the queue model earns its keep on a customer funnel, and where you would tell someone it stops being useful.]
+**Where this lens stops working.** The manufacturing view earns its keep when two things are true: the units moving through are relatively uniform, and there are a lot of them. Under those conditions a funnel behaves like a production system and the arithmetic above holds. Neither condition is guaranteed with customers. People are not uniform, and they can be segmented many different ways, each of which may have its own honest answer. When the units stop being interchangeable, the queue stops being the right model, and the question turns into a segmentation question instead. That is the boundary: use the flow lens on high-volume, uniform pipelines, and reach for segmentation when the entities differ more than the stages do.
 
 ## When speed is the wrong goal
 
@@ -167,11 +159,11 @@ Faster is not automatically worse either. Across US mortgage originations from 2
 
 ## Patterns & case studies
 
-No pattern page yet. Candidate case studies from the research round:
+Two stories worth knowing.
 
-<!-- swap for modern story when research lands -->
-- **The 60-day mortgage.** A US mortgage takes roughly 60 days and produces a loan file hundreds of pages long, and the lender's CTO diagnosed the process as manufacturing done by hand. He went at it from both directions at once: modeling the pipeline as a queue and finding that running below full utilization bought large cycle-time improvements, and building models that separate how many convert from how fast they convert, on data where the lag runs to months [^bernhardsson-2017b] [^bernhardsson-2018] [^bernhardsson-2019]. The company's own claims page reports a faster average close than the industry figure it cites, which is a marketing claim rather than an independent measurement [^better-2020].
-- **Twenty-five steps beat three.** A checkout lengthened from 3 steps to 25 and conversion rose about 40 percent, with almost nobody dropping out at any individual step [^mehta-2025].
+**The 60-day mortgage.** Getting a mortgage in the United States takes about 60 days and produces a loan file hundreds of pages long. The lender's chief technology officer looked at that and diagnosed it as manufacturing done by hand: a pipeline with stages, queues between them, and files waiting on people rather than being worked on. He attacked it from two directions at once. First, he modeled the pipeline as a queueing system and found the result any factory would recognize, that running the stages below full capacity bought large improvements in how long a file took, because a stage loaded to its limit makes everything behind it wait [^bernhardsson-2017b] [^bernhardsson-2018]. Second, because the lag between applying and closing runs to months, he built models that separate two questions a single average confuses: what share of applicants ever close, and how fast the ones who close get there [^bernhardsson-2019]. The two answers can move in opposite directions, and a team that tracks only the blended number cannot tell which is happening. This is the clearest published example of a real customer pipeline being run as a flow problem rather than a conversion-rate problem. The company's own claims page reports a faster average close than the industry figure it cites, but that is a marketing claim rather than an independent measurement [^better-2020].
+
+**Twenty-five steps beat three.** A checkout was lengthened from 3 steps to 25, and conversion rose about 40 percent, with almost nobody dropping out at any individual step [^mehta-2025]. The lesson is not that longer is better. It is that the number of steps is the wrong thing to count. Each of the 25 was small, obvious and quick to answer, so the path felt easier despite being longer, while three dense steps asked the customer to do more thinking at once. If you are cutting steps to make a funnel faster, you may be making each remaining step heavier, which is the trade this page's next section is about.
 
 ## Sources & Stories
 
