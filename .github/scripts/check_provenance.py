@@ -16,7 +16,10 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 CONTENT_DIRS = ["docs/modules", "docs/metrics", "reference-architectures", "implementation-guides"]
-KEY_RE = re.compile(r"\[([A-Z][A-Z0-9]*-\d{4}[a-z]?)\]")
+# Citation keys are SURNAME-YEAR, with two extensions in use: multi-name keys
+# joined by hyphens (JIN-CHEN-2018) and a letter suffix that separates two works
+# by the same author in the same year (RIES-2009A).
+KEY_RE = re.compile(r"\[([A-Z][A-Z0-9]*(?:-[A-Z][A-Z0-9]*)*-\d{4}[A-Za-z]?)\]")
 
 errors = []
 
