@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<text x="64" y="22" font-size="14" font-weight="600" fill="#8b8b8b">Days to convert, three percentiles tracked over time (illustrative)</text>
+<line x1="64" y1="306.0" x2="610" y2="306.0" stroke="#8b8b8b" stroke-opacity="0.2"/>
+<text x="55" y="310.0" font-size="11" fill="#8b8b8b" text-anchor="end">0</text>
+<line x1="64" y1="268.0" x2="610" y2="268.0" stroke="#8b8b8b" stroke-opacity="0.2"/>
+<text x="55" y="272.0" font-size="11" fill="#8b8b8b" text-anchor="end">10</text>
+<line x1="64" y1="230.0" x2="610" y2="230.0" stroke="#8b8b8b" stroke-opacity="0.2"/>
+<text x="55" y="234.0" font-size="11" fill="#8b8b8b" text-anchor="end">20</text>
+<line x1="64" y1="192.0" x2="610" y2="192.0" stroke="#8b8b8b" stroke-opacity="0.2"/>
+<text x="55" y="196.0" font-size="11" fill="#8b8b8b" text-anchor="end">30</text>
+<line x1="64" y1="154.0" x2="610" y2="154.0" stroke="#8b8b8b" stroke-opacity="0.2"/>
+<text x="55" y="158.0" font-size="11" fill="#8b8b8b" text-anchor="end">40</text>
+<line x1="64" y1="116.0" x2="610" y2="116.0" stroke="#8b8b8b" stroke-opacity="0.2"/>
+<text x="55" y="120.0" font-size="11" fill="#8b8b8b" text-anchor="end">50</text>
+<line x1="64" y1="78.0" x2="610" y2="78.0" stroke="#8b8b8b" stroke-opacity="0.2"/>
+<text x="55" y="82.0" font-size="11" fill="#8b8b8b" text-anchor="end">60</text>
+<line x1="64" y1="40.0" x2="610" y2="40.0" stroke="#8b8b8b" stroke-opacity="0.2"/>
+<text x="55" y="44.0" font-size="11" fill="#8b8b8b" text-anchor="end">70</text>
+<text x="64.0" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">1</text>
+<text x="109.5" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">2</text>
+<text x="155.0" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">3</text>
+<text x="200.5" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">4</text>
+<text x="246.0" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">5</text>
+<text x="291.5" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">6</text>
+<text x="337.0" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">7</text>
+<text x="382.5" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">8</text>
+<text x="428.0" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">9</text>
+<text x="473.5" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">10</text>
+<text x="519.0" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">11</text>
+<text x="564.5" y="324" font-size="10.5" fill="#8b8b8b" text-anchor="middle">12</text>
+<line x1="64" y1="306" x2="610" y2="306" stroke="#8b8b8b" stroke-opacity="0.5"/>
+<text x="337" y="344" font-size="11.5" fill="#8b8b8b" text-anchor="middle">Month</text>
+<text x="17" y="173" font-size="11.5" fill="#8b8b8b" text-anchor="middle" transform="rotate(-90 17 173)">Days to convert</text>
+<path d="M64.0,100.8 L109.5,97.0 L155.0,104.6 L200.5,100.8 L246.0,108.4 L291.5,104.6 L337.0,112.2 L382.5,108.4 L428.0,116.0 L473.5,112.2 L519.0,119.8 L564.5,116.0" fill="none" stroke="#b3452f" stroke-width="2.3" stroke-linejoin="round"/>
+<text x="572.5" y="120.0" font-size="11" fill="#b3452f">85th percentile</text>
+<path d="M64.0,233.8 L109.5,233.8 L155.0,237.6 L200.5,237.6 L246.0,241.4 L291.5,241.4 L337.0,245.2 L382.5,245.2 L428.0,249.0 L473.5,249.0 L519.0,252.8 L564.5,252.8" fill="none" stroke="#3a7ca5" stroke-width="2.3" stroke-linejoin="round"/>
+<text x="572.5" y="256.8" font-size="11" fill="#3a7ca5">median</text>
+<path d="M64.0,271.8 L109.5,271.8 L155.0,275.6 L200.5,275.6 L246.0,275.6 L291.5,279.4 L337.0,279.4 L382.5,279.4 L428.0,279.4 L473.5,283.2 L519.0,283.2 L564.5,283.2" fill="none" stroke="#2f6f4e" stroke-width="2.3" stroke-linejoin="round"/>
+<text x="572.5" y="287.2" font-size="11" fill="#2f6f4e">25th percentile</text>
+<text x="64" y="326" font-size="11.5" fill="#8b8b8b">All three drift down together, which is what improvement looks like. If only the median fell, the fast half got faster</text>
+<text x="64" y="342" font-size="11.5" fill="#8b8b8b">while the stuck quarter stayed stuck.</text>
+</svg>
