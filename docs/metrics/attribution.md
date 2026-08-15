@@ -132,16 +132,17 @@ flowchart TD
 
 ## When attribution is not worth it
 
-The size guide first. The advice comes from practitioners at different ends of the scale, and they agree on the shape.
+The size guide first. One variable routes it, marketing spend per year, so take the first row that matches and stop. Revenue is a sanity check on where you landed rather than the router: a company spending $200K a year against $80M of revenue is still in the middle band, and the revenue figure only says the spend is likely to grow. The advice comes from practitioners at different ends of the scale, and they agree on the shape.
 
-| Your size | What to do |
+| Yearly marketing spend | What to do |
 |---|---|
-| Under roughly $100K of marketing spend | Skip attribution software. Run one channel test at a time, watch the obvious metrics like demos and signups, and treat "where did you hear about us?" as a sanity check, not a decision driver [^piyush-2025]. |
-| Under roughly $50M of annual revenue | Last-touch plus a working list of channels proven to drive results, and judgment built on real customer knowledge. Attribution software and multi-touch modeling rarely return a profit at this size [^fishkin-2022]. |
-| Above roughly $10M of marketing spend | Skip the attribution-model debates and go to media-mix modeling and controlled experiments [^kaushik-2013]. |
-| Any size | Periodically verify by turning spend off, in a slow season or in one business segment. The holdout is the audit. |
+| Under roughly $100K | Skip attribution software. Run one channel test at a time, watch the obvious metrics like demos and signups, and treat "where did you hear about us?" as a sanity check, not a decision driver [^piyush-2025]. |
+| $100K to roughly $10M | Last-touch plus a working list of channels proven to drive results, and judgment built on real customer knowledge. Attribution software and multi-touch modeling rarely return a profit in this band [^fishkin-2022]. |
+| Above roughly $10M | Skip the attribution-model debates. No per-touch credit rule at all: marketing mix modeling (MMM) plus controlled experiments [^kaushik-2013]. |
 
-Two notes on the sources. The under-$100K advice comes from the CEO of a marketing measurement vendor, arguing against his own interest; his reasoning is that a click after an event does not make the event the cause, so click models over-credit the channels that capture demand rather than create it [^piyush-2025]. And by 2024 the under-$50M argument had hardened from not-worth-it to no-longer-possible: privacy law, walled gardens, and zero-click consumption mean click-level attribution mechanically stops working, and measurement returns to lift methods and influence you cannot trace [^fishkin-2024].
+At every size, verify periodically by turning spend off, in a slow season or in one business segment. The holdout is the audit.
+
+Two notes on the sources. The under-$100K advice comes from the CEO of a marketing measurement vendor, arguing against his own interest; his reasoning is that a click after an event does not make the event the cause, so click models over-credit the channels that capture demand rather than create it [^piyush-2025]. And by 2024 the middle-band argument had hardened from not-worth-it to no-longer-possible: privacy law, walled gardens, and zero-click consumption mean click-level attribution mechanically stops working, and measurement returns to lift methods and influence you cannot trace [^fishkin-2024].
 
 Below some scale, attribution machinery costs more than the decisions it informs are worth. Above some scale, experiments answer the question better. The band where rule-based modeling earns its keep is much narrower than the tooling industry suggests. Last-touch plus honest channel tests carries a small team a long way; the [conversion page](conversion-rate.md) covers where last-touch enters.
 
@@ -151,7 +152,7 @@ Below some scale, attribution machinery costs more than the decisions it informs
 
 ## Where else attribution shows up
 
-Marketing and go-to-market are the two treatments on this page, but the credit-assignment question appears anywhere an outcome has many parents. Product work asks which feature or change gets credit for a [retention](retention.md) or [conversion](conversion-rate.md) move. Partnerships ask which introduction gets credit for a deal. Finance asks which team or product a shared cost belongs to. These will grow into their own treatments as the library expands.
+Marketing and go-to-market are the two treatments on this page, but the credit-assignment question appears anywhere an outcome has many parents. Product work asks which feature or change gets credit for a move in [retention](retention.md), [conversion](conversion-rate.md), or [active users](active-users.md). Partnerships ask which introduction gets credit for a deal. Finance asks which team or product a shared cost belongs to. These will grow into their own treatments as the library expands.
 
 ## Patterns & case studies
 

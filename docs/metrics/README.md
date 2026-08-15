@@ -14,10 +14,10 @@ Topic pages carry a Sources & Stories section like every other content file; cit
 
 | Topic | Status |
 |---|---|
-| [Retention](retention.md) | stub — structure and open questions |
-| [Conversion rate](conversion-rate.md) | drafted — sourced, author answers and voice pass done; one original section reserved |
-| [Time to convert](time-to-convert.md) | stub — deep research round running |
-| [Attribution](attribution.md) | drafted — sourced, author answers and voice pass done; guided skill shipped |
-| [Active users](active-users.md) | drafted — sourced from primary documents; author opening written, seven interview questions open |
+| [Attribution](attribution.md) | drafted; author answers and voice pass done, guided skill shipped |
+| [Conversion rate](conversion-rate.md) | drafted; author answers and voice pass done |
+| [Time to convert](time-to-convert.md) | drafted; author answers folded in, voice pass pending |
+| [Active users](active-users.md) | drafted; author opening written, interview questions open |
+| [Retention](retention.md) | in progress; sources researched, draft next |
 
-Planned next: revenue, cost, margins, usage in no committed order.
+Planned next: segmentation, then benchmarks and how to check a number before you steer by it, then cost and margin. Revenue and usage after those.

@@ -34,6 +34,22 @@ One entry per judgment call: decision, alternatives, why.
 
 **Why:** The prior-art review will show where skills add the most over prose patterns. Amending the fixed spec before that evidence exists inverts the project's own method. Revisit when Phase 0 reports.
 
+## 2026-08-11 — What the first five topic pages taught, written into the rules
+
+**Decision:** Five working rules enter `AGENTS.md`, `docs/pattern-template.md` and `docs/skill-template.md`, each earned by a specific failure this session. (a) Pages are written for a reader who wants to act, never as literature reviews: sourcing status and accounts of what could not be found move to Sources & Stories. (b) Pages organize around decisions rather than concepts; the test reader ranked the page with a size guide first and the concept-shaped page last. (c) Every recommendation carries a version for a team of ten, because the framework kept advising neutral ledgers, holdout tests and controlled experiments to an audience it says has no analyst. (d) Charts that Mermaid cannot draw honestly become committed SVGs under a `figures/` directory, computed from one shared dataset when two figures argue together. (e) Draft notes live in HTML comments, never as visible list items.
+
+**Alternatives:** leave these as per-page editorial judgment; keep forcing charts into Mermaid; keep visible TODOs as an honesty signal.
+
+**Why:** each was found the expensive way. The literature-review register survived four review passes because no rule forbade it. Visible TODO bullets made a finished page read as a published outline. And the cohort-versus-blended argument only became obvious when it was drawn with lines of different lengths, which Mermaid cannot express at all.
+
+## 2026-08-11 — Unverified benchmarks are named, not repeated
+
+**Decision:** When a widely repeated figure cannot be traced to a primary source, the page says no citable number survived checking and gives the reader a way to build their own baseline instead. It does not repeat the number with a caveat attached.
+
+**Alternatives:** cite the popular version with a hedge; stay silent about the number entirely.
+
+**Why:** five famous figures failed tracing during this work, including one whose upper bound appears to have been introduced downstream of the source it is credited to. Repeating a number with a caveat still launders it, since the caveat travels less far than the figure. Saying plainly that it did not survive verification is both more useful and the thing this framework is unusually placed to say.
+
 ## 2026-08-03 — Metrics library added as the knowledge layer
 
 **Decision:** Classical metric knowledge gets its own layer: `docs/metrics/`, one topic page per metric (retention first; active users, revenue, cost, margins, usage to follow). A topic page teaches the metric — definition, why it matters, connections to adjacent metrics, classical visualizations — and patterns become sourced ways of working on a topic, with their case studies attached (the Duolingo state-model pattern is one way to work on retention). Skills are confirmed as the eventual guided layer: developing each metric in a user's specific business context. The four-module set is no longer treated as fixed; modules can expand as the structure evolves. Topic pages carry the same Sources & Stories requirement, and the CI check now covers `docs/metrics/`.

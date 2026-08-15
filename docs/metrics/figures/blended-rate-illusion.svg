@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<text x="64" y="20" font-size="13.5" font-weight="600" fill="#8b8b8b">The same signups as one blended number (illustrative)</text>
+<line x1="64" y1="378.0" x2="578" y2="378.0" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="382.0" font-size="11" fill="#8b8b8b" text-anchor="end">0%</text>
+<line x1="64" y1="328.9" x2="578" y2="328.9" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="332.9" font-size="11" fill="#8b8b8b" text-anchor="end">2%</text>
+<line x1="64" y1="279.7" x2="578" y2="279.7" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="283.7" font-size="11" fill="#8b8b8b" text-anchor="end">4%</text>
+<line x1="64" y1="230.6" x2="578" y2="230.6" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="234.6" font-size="11" fill="#8b8b8b" text-anchor="end">6%</text>
+<line x1="64" y1="181.4" x2="578" y2="181.4" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="185.4" font-size="11" fill="#8b8b8b" text-anchor="end">8%</text>
+<line x1="64" y1="132.3" x2="578" y2="132.3" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="136.3" font-size="11" fill="#8b8b8b" text-anchor="end">10%</text>
+<line x1="64" y1="83.1" x2="578" y2="83.1" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="87.1" font-size="11" fill="#8b8b8b" text-anchor="end">12%</text>
+<line x1="64" y1="34.0" x2="578" y2="34.0" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="38.0" font-size="11" fill="#8b8b8b" text-anchor="end">14%</text>
+<text x="64.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">0</text>
+<text x="128.2" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">1</text>
+<text x="192.5" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">2</text>
+<text x="256.8" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">3</text>
+<text x="321.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">4</text>
+<text x="385.2" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">5</text>
+<text x="449.5" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">6</text>
+<text x="513.8" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">7</text>
+<text x="578.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">8</text>
+<line x1="64" y1="378" x2="578" y2="378" stroke="#8b8b8b" stroke-opacity="0.5"/>
+<text x="321" y="416" font-size="11.5" fill="#8b8b8b" text-anchor="middle">Calendar month</text>
+<text x="17" y="206" font-size="11.5" fill="#8b8b8b" text-anchor="middle" transform="rotate(-90 17 206)">Percent converted, everyone who ever signed up</text>
+<path d="M64.0,193.0 L128.2,196.2 L192.5,209.6 L256.8,228.0 L321.0,246.4 L385.2,261.6 L449.5,272.9 L513.8,280.5 L578.0,285.4" fill="none" stroke="#b3452f" stroke-width="2.8" stroke-linejoin="round"/>
+<circle cx="578.0" cy="285.4" r="3.4" fill="#b3452f"/>
+<text x="592" y="74" font-size="10.5" fill="#8b8b8b">One number for the</text>
+<text x="592" y="89" font-size="10.5" fill="#8b8b8b">whole customer base.</text>
+<text x="592" y="119" font-size="10.5" fill="#8b8b8b">It falls every month,</text>
+<text x="592" y="134" font-size="10.5" fill="#8b8b8b">from about 7.5% to</text>
+<text x="592" y="149" font-size="10.5" fill="#8b8b8b">under 4%.</text>
+<text x="592" y="179" font-size="10.5" fill="#8b8b8b">Every group in the</text>
+<text x="592" y="194" font-size="10.5" fill="#8b8b8b">chart above is healthy.</text>
+<text x="592" y="209" font-size="10.5" fill="#8b8b8b">Signups just grew, so</text>
+<text x="592" y="224" font-size="10.5" fill="#8b8b8b">most of the base has</text>
+<text x="592" y="239" font-size="10.5" fill="#8b8b8b">not had time yet.</text>
+</svg>

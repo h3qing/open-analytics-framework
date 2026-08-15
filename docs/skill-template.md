@@ -19,6 +19,11 @@ The interaction model is the same interview method this framework is written wit
 - **Plain language.** Every term of art gets a one-clause gloss the first time it appears.
 - **Cite the topic page, not the raw sources.** The topic page carries the footnotes and the caveats; the skill links to it and inherits its sourcing.
 - **The output is the point.** If the conversation ends without a filled artifact, the skill did not finish.
+- **Say how to run it, at the top.** The file is read by the person being interviewed as often as by the agent running the interview. Open with two or three sentences telling a reader what this is, how to start it, and who is speaking.
+- **Route on one variable, with bands that cover every case.** Two variables produce companies that match two rows with contradictory advice, or no row at all. Order the bands, take the first match, and demote anything else to a sanity check.
+- **Ask only what the reader can answer.** A question that requires a number they would have to go build is a dead end. Give the fallback in the question, or ask a different question.
+- **Scale the recommendation to their volume.** A holdout test, a neutral reviewer, or a controlled experiment assumes resources the audience often lacks. Make the recommendation conditional and give the version that works without them.
+- **Gloss every term.** The skill reaches the least-informed reader in the library, so it needs more glossing than the topic page it draws on, not less.
 
 ## File shape
 
