@@ -6,7 +6,7 @@ One row per writeable unit; a unit is finishable in one 60–90 minute sitting. 
 |---|---|---|---|---|---|---|---|
 | MX-01 | — | Segmentation | topic | — | ready | Author's own thesis: segmentation is where the manufacturing lens stops working | 1 session |
 | MX-02 | — | Benchmarks, and how to check a number before you steer by it | topic | — | ready | Five failed traces: Reichheld 5%, 5x-cheaper, 7-friends, Groove 71%, DAU/MAU 50% | 1 session |
-| MX-03 | — | Retention | topic | — | in progress | Fader & Hardie sorting effect, NRR filings, author's two-axis split | 1 session |
+| MX-03 | — | Retention | topic | — | drafted | Fader & Hardie sorting effect, NRR filings, author's two-axis split | 1 session |
 | MX-04 | — | Time to convert | topic | — | drafted | Little's Law, flow metrics; merged, author answers folded in | — |
 | SK-01 | — | Defining your definitions (guided skill) | skill | — | ready | Facebook single-definition story (Schultz lecture, S-1) | 1 session |
 | SK-02 | — | Is this a vanity metric? (guided skill) | skill | — | candidate | Ries 2009 posts, data-theater critique, Twitter mDAU story | 1 session |

@@ -18,6 +18,6 @@ Topic pages carry a Sources & Stories section like every other content file; cit
 | [Conversion rate](conversion-rate.md) | drafted; author answers and voice pass done |
 | [Time to convert](time-to-convert.md) | drafted; author answers folded in, voice pass pending |
 | [Active users](active-users.md) | drafted; author opening written, interview questions open |
-| [Retention](retention.md) | in progress; sources researched, draft next |
+| [Retention](retention.md) | drafted; sourced from primary documents, interview questions open and voice pass pending |
 
 Planned next: segmentation, then benchmarks and how to check a number before you steer by it, then cost and margin. Revenue and usage after those.

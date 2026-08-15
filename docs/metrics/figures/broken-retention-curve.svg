@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 414" width="760" height="414" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<text x="64" y="20" font-size="13.5" font-weight="600" fill="#8b8b8b">A cohort retention curve that goes back up, published data (Fader and Hardie 2026)</text>
+<rect x="482.0" y="46" width="36" height="290" fill="#c2683a" fill-opacity="0.09"/>
+<rect x="307.6" y="46" width="36" height="290" fill="#c2683a" fill-opacity="0.09"/>
+<rect x="133.2" y="46" width="36" height="290" fill="#c2683a" fill-opacity="0.09"/>
+<line x1="64" y1="336.0" x2="500" y2="336.0" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="340.0" font-size="11" fill="#8b8b8b" text-anchor="end">0%</text>
+<line x1="64" y1="278.0" x2="500" y2="278.0" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="282.0" font-size="11" fill="#8b8b8b" text-anchor="end">20%</text>
+<line x1="64" y1="220.0" x2="500" y2="220.0" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="224.0" font-size="11" fill="#8b8b8b" text-anchor="end">40%</text>
+<line x1="64" y1="162.0" x2="500" y2="162.0" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="166.0" font-size="11" fill="#8b8b8b" text-anchor="end">60%</text>
+<line x1="64" y1="104.0" x2="500" y2="104.0" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="108.0" font-size="11" fill="#8b8b8b" text-anchor="end">80%</text>
+<line x1="64" y1="46.0" x2="500" y2="46.0" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="50.0" font-size="11" fill="#8b8b8b" text-anchor="end">100%</text>
+<text x="64.0" y="354" font-size="11" fill="#8b8b8b" text-anchor="middle">0</text>
+<text x="151.2" y="354" font-size="11" fill="#8b8b8b" text-anchor="middle">1</text>
+<text x="238.4" y="354" font-size="11" fill="#8b8b8b" text-anchor="middle">2</text>
+<text x="325.6" y="354" font-size="11" fill="#8b8b8b" text-anchor="middle">3</text>
+<text x="412.8" y="354" font-size="11" fill="#8b8b8b" text-anchor="middle">4</text>
+<text x="500.0" y="354" font-size="11" fill="#8b8b8b" text-anchor="middle">5</text>
+<line x1="64" y1="336" x2="500" y2="336" stroke="#8b8b8b" stroke-opacity="0.5"/>
+<text x="282" y="374" font-size="11.5" fill="#8b8b8b" text-anchor="middle">Months since the cohort subscribed</text>
+<text x="17" y="191" font-size="11.5" fill="#8b8b8b" text-anchor="middle" transform="rotate(-90 17 191)">Percent still subscribed</text>
+<path d="M64.0,46.0 L151.2,118.5 L238.4,104.0 L325.6,153.3 L412.8,135.9 L500.0,170.7" fill="none" stroke="#b3452f" stroke-width="2.3" stroke-linejoin="round"/>
+<circle cx="64.0" cy="46.0" r="3.4" fill="#b3452f"/>
+<text x="64.0" y="35.0" font-size="10.5" fill="#b3452f" text-anchor="middle">100%</text>
+<circle cx="151.2" cy="118.5" r="3.4" fill="#b3452f"/>
+<text x="151.2" y="107.5" font-size="10.5" fill="#b3452f" text-anchor="middle">75%</text>
+<circle cx="238.4" cy="104.0" r="3.4" fill="#b3452f"/>
+<text x="238.4" y="93.0" font-size="10.5" fill="#b3452f" text-anchor="middle">80%</text>
+<circle cx="325.6" cy="153.3" r="3.4" fill="#b3452f"/>
+<text x="325.6" y="142.3" font-size="10.5" fill="#b3452f" text-anchor="middle">63%</text>
+<circle cx="412.8" cy="135.9" r="3.4" fill="#b3452f"/>
+<text x="412.8" y="124.9" font-size="10.5" fill="#b3452f" text-anchor="middle">69%</text>
+<circle cx="500.0" cy="170.7" r="3.4" fill="#b3452f"/>
+<text x="500.0" y="159.7" font-size="10.5" fill="#b3452f" text-anchor="middle">57%</text>
+<text x="520" y="70" font-size="10.5" fill="#8b8b8b">Shaded months are the odd</text>
+<text x="520" y="85" font-size="10.5" fill="#8b8b8b">ones. The company sold a</text>
+<text x="520" y="100" font-size="10.5" fill="#8b8b8b">monthly plan and an every-</text>
+<text x="520" y="115" font-size="10.5" fill="#8b8b8b">other-month plan, and the</text>
+<text x="520" y="130" font-size="10.5" fill="#8b8b8b">every-other-month subscribers</text>
+<text x="520" y="145" font-size="10.5" fill="#8b8b8b">have nothing to renew in an</text>
+<text x="520" y="160" font-size="10.5" fill="#8b8b8b">odd month, so they count as</text>
+<text x="520" y="175" font-size="10.5" fill="#8b8b8b">lost and then come back.</text>
+<text x="520" y="205" font-size="10.5" fill="#b3452f">Two plans in one chart.</text>
+<text x="520" y="220" font-size="10.5" fill="#b3452f">Not a business finding.</text>
+<text x="64" y="398" font-size="11.5" fill="#8b8b8b">A subscription cohort can only shrink, so a curve that climbs is reporting a defect in the measurement.</text>
+</svg>

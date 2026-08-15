@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 456" width="760" height="456" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<text x="64" y="20" font-size="13.5" font-weight="600" fill="#8b8b8b">Percent of each cohort still a customer, published data (Fader and Hardie 2007)</text>
+<line x1="64" y1="378.0" x2="556" y2="378.0" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="382.0" font-size="11" fill="#8b8b8b" text-anchor="end">0%</text>
+<line x1="64" y1="310.4" x2="556" y2="310.4" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="314.4" font-size="11" fill="#8b8b8b" text-anchor="end">20%</text>
+<line x1="64" y1="242.8" x2="556" y2="242.8" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="246.8" font-size="11" fill="#8b8b8b" text-anchor="end">40%</text>
+<line x1="64" y1="175.2" x2="556" y2="175.2" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="179.2" font-size="11" fill="#8b8b8b" text-anchor="end">60%</text>
+<line x1="64" y1="107.6" x2="556" y2="107.6" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="111.6" font-size="11" fill="#8b8b8b" text-anchor="end">80%</text>
+<line x1="64" y1="40.0" x2="556" y2="40.0" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="44.0" font-size="11" fill="#8b8b8b" text-anchor="end">100%</text>
+<text x="64.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">0</text>
+<text x="105.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">1</text>
+<text x="146.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">2</text>
+<text x="187.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">3</text>
+<text x="228.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">4</text>
+<text x="269.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">5</text>
+<text x="310.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">6</text>
+<text x="351.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">7</text>
+<text x="392.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">8</text>
+<text x="433.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">9</text>
+<text x="474.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">10</text>
+<text x="515.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">11</text>
+<text x="556.0" y="396" font-size="11" fill="#8b8b8b" text-anchor="middle">12</text>
+<line x1="64" y1="378" x2="556" y2="378" stroke="#8b8b8b" stroke-opacity="0.5"/>
+<text x="310" y="416" font-size="11.5" fill="#8b8b8b" text-anchor="middle">Years since the cohort was acquired</text>
+<text x="17" y="209" font-size="11.5" fill="#8b8b8b" text-anchor="middle" transform="rotate(-90 17 209)">Percent still a customer</text>
+<path d="M64.0,40.0 L105.0,84.3 L146.0,126.9 L187.0,157.3 L228.0,177.6 L269.0,191.8 L310.0,203.3 L351.0,212.0 L392.0,219.8 L433.0,227.6 L474.0,233.7 L515.0,239.8 L556.0,244.8" fill="none" stroke="#3a7ca5" stroke-width="2.1" stroke-linejoin="round"/>
+<circle cx="556.0" cy="244.8" r="3.2" fill="#3a7ca5"/>
+<path d="M64.0,40.0 L105.0,164.7 L146.0,219.8 L187.0,248.9 L228.0,267.8 L269.0,280.3 L310.0,289.4 L351.0,296.5 L392.0,302.6 L433.0,308.0 L474.0,312.4 L515.0,316.1 L556.0,319.5" fill="none" stroke="#2f6f4e" stroke-width="2.1" stroke-linejoin="round"/>
+<circle cx="556.0" cy="319.5" r="3.2" fill="#2f6f4e"/>
+<line x1="576" y1="60" x2="596" y2="60" stroke="#3a7ca5" stroke-width="2.1"/>
+<text x="602" y="64" font-size="10.5" fill="#8b8b8b">High End cohort</text>
+<line x1="576" y1="80" x2="596" y2="80" stroke="#2f6f4e" stroke-width="2.1"/>
+<text x="602" y="84" font-size="10.5" fill="#8b8b8b">Regular cohort</text>
+<text x="576" y="124" font-size="10.5" fill="#8b8b8b">Both curves lose most of</text>
+<text x="576" y="139" font-size="10.5" fill="#8b8b8b">their steepness by year</text>
+<text x="576" y="154" font-size="10.5" fill="#8b8b8b">three and then flatten.</text>
+<text x="576" y="169" font-size="10.5" fill="#8b8b8b">The High End cohort</text>
+<text x="576" y="184" font-size="10.5" fill="#8b8b8b">flattens higher, and the</text>
+<text x="576" y="199" font-size="10.5" fill="#8b8b8b">level it flattens at is the</text>
+<text x="576" y="214" font-size="10.5" fill="#8b8b8b">thing worth reading off</text>
+<text x="576" y="229" font-size="10.5" fill="#8b8b8b">a chart like this one.</text>
+<text x="64" y="440" font-size="11.5" fill="#8b8b8b">Published survival percentages, not placeholder numbers. The next figure is computed from this same table.</text>
+</svg>
