@@ -2,7 +2,7 @@
 id: active-users
 title: Active users
 type: topic
-status: drafted # full sourced draft; awaiting author interview and voice pass per AGENTS.md constraint 6
+status: drafted # author interview answers folded in 2026-08-14; voice pass pending
 summary: >
   What an active user is, why the definition of "active" is the whole
   game, the windows and ratios (DAU, WAU, MAU, stickiness), when the
@@ -57,10 +57,17 @@ It reads like a checklist for anyone writing their own definition.
 
 **Definitions decay unless someone owns them.** One data practitioner's essay describes the mechanism precisely: metric formulas end up scattered across tools and dashboards, and "in the best case, these calculations drift apart over time; in the worst case, they never match in the first place" [^stancil-2021]. The public-company version of drift, definitions that quietly broke and had to be corrected in print, is in [the stories below](#definitions-on-the-public-record).
 
-<!-- TODO(heqing): interview — the default choices you would recommend: what entity and what action for a B2C product vs. a B2B product, where seats, accounts, and workspaces compete for the definition? -->
-<!-- TODO(heqing): interview — logged-in vs. a value action: when is "opened the app" an honest definition of active, and when is it flattering noise? -->
-<!-- TODO(heqing): interview — the seat-vs-account rule in B2B: when does the account count lie while the seat count tells the truth, and vice versa? No good public treatment survived verification, so this slot is yours. -->
-<!-- TODO(heqing): interview — a definition-drift story: have you seen an "active user" definition drift inside one company, and what was the cheapest mechanism that stopped it (a metrics layer, a document, one owner)? -->
+**Pick the definition that matches the goal you have right now.** There is no permanent answer. A pre-revenue company is trying to get as many people using the product as possible, so a registered or logged-in user is the honest definition at that moment. Once the company is trying to make money, active should mean a user with meaningful business impact: they pay for something, or they generate revenue, or they do the thing the business runs on. The definition does not have to stay the same forever. It adjusts as the business does, and changing it deliberately is different from letting it drift.
+
+**"Opened the app" can be an anti-metric.** Opening the app does not mean engaging with it. A user who opened it and did nothing may have been looking for something they could not find, got frustrated, and left. Counting that as active turns a bad experience into a good number. The incentive question sits right behind it: if a growth team is measured on registrations rather than on people reaching the value they came for, pushing that number can serve the team rather than the company.
+
+**Seats and accounts in B2B: keep both, name them differently, and make both teams own both.** You can land as many accounts as you want, but if the people inside those companies are not using the product, the account is unlikely to renew. Different stages of the engagement cycle want different things, and the two numbers belong to different teams by instinct: the account team wants as many accounts as possible, and the customer success or forward-deployed team wants as many people using it as possible. Both are contributing to the same goal. That is workable as long as the two definitions have different names and nobody confuses them for one company-level number. Hold both teams accountable for both metrics, so they are responsible for each other's numbers and everyone is pushing the same direction.
+
+**How definitions drift, and what it looks like on the way down.** It starts aligned: one metric, active user. Then someone says it does not apply to their case, and a prefix appears. High-value active user. Paid active user. Then it drifts again: high-value active users who are not fraudulent. The prefixes and suffixes accumulate, people start using acronyms and shorthand for them, and because these definitions are built from the ground up rather than agreed at the top, nobody notices the sprawl. Before long there are a dozen active-user definitions and no shared understanding of any of them.
+
+The tell is in the code. Look at the SQL and you will find more and more `WHERE` clauses accreting on the same query. The organizational tell is worse: meetings called to improve the business turn into arguments about what the number means.
+
+The fix is not a tool. Get the sub-teams and senior leadership in one room and settle two questions: what actually adds value at the top line, and which sub-team metrics are legitimate internally but should not be surfaced to a wider audience as if they were company numbers.
 
 ## How much of this to build at your size
 
@@ -83,7 +90,7 @@ DAU, WAU, and MAU are the same definition evaluated at three windows: active tod
 
 ```mermaid
 xychart-beta
-    title "Placeholder sketch: power user curve (share of monthly actives by active days)"
+    title "Power user curve: share of monthly actives by active days"
     x-axis "Days active in the month" ["1-3", "4-6", "7-9", "10-12", "13-15", "16-18", "19-21", "22-24", "25-27", "28-30"]
     y-axis "Percent of monthly actives" 0 --> 40
     bar [34, 16, 9, 6, 5, 4, 4, 5, 7, 10]
@@ -91,7 +98,7 @@ xychart-beta
 
 **There is no benchmark to hit.** A good ratio depends entirely on the category. Six-month retention counts as good at 25 percent for consumer social and 75 percent for enterprise software, a threefold spread for the same word [^rachitsky-winters-2020]. Compare your ratio to your own trend, not to someone else's product.
 
-<!-- TODO(heqing): interview — how should a team pick its primary window? What products have you seen goal on DAU when their honest cadence was weekly? -->
+**Pick the window from the journey you designed, then check whether that journey is real.** The window should line up with the customer journey and the happy path you intended, and the team's job is to keep testing whether the path they imagined is the one customers actually take. The signal that a definition should change usually arrives as a correlation: some engagement level, X logins or X activities in a period, turns out to precede a meaningfully higher retention rate. When that shows up, it is worth moving the definition toward it.
 
 ## Worth measuring, or vanity
 
@@ -101,7 +108,7 @@ The modern restatement calls it data theater: reporting that makes a team feel d
 
 An active-user aggregate earns north-star status when the definition is honest (a value action, a window matched to cadence) and when the team works on its [decomposition](#decomposing-the-aggregate) rather than the topline. The strongest statement of the alternative comes from a public company arguing against its own bigger number. When Twitter replaced MAU with the narrower mDAU, it wrote: "our goal was not to disclose just the largest daily active user number we could" [^twitter-2019]. A definition chosen to align everyone on delivering value is the opposite of a vanity metric, whatever the number's size.
 
-<!-- TODO(heqing): interview — a class-level vanity-metric trap you have seen: the number that looked like health and was not. -->
+The trap has a recognizable shape, and it is common. Users up. Registrations up. Logins up. And the number of actives, or of activities that actually contribute to the business, has not moved at all. When the top of the list is climbing and the bottom of it is flat, the climbing numbers are measuring effort rather than progress. The response is a retro rather than a dashboard change: why was this metric defined this way in the first place, and what rules should apply the next time someone defines one.
 
 ## Decomposing the aggregate
 
@@ -128,7 +135,7 @@ The standard visualizations, per the presentation guidance in [the pattern templ
 
 ```mermaid
 xychart-beta
-    title "Placeholder sketch: daily actives with weekend dips, and the rolling view"
+    title "Daily actives with weekend dips, and the rolling view"
     x-axis "Day" 1 --> 28
     y-axis "Active users (placeholder)" 0 --> 120
     line [100, 102, 101, 103, 104, 82, 80, 101, 103, 104, 105, 106, 84, 82, 103, 105, 106, 107, 108, 86, 84, 105, 107, 108, 109, 110, 88, 86]
@@ -143,11 +150,23 @@ The jagged line is raw daily actives with weekend dips; the smooth line is the r
 
 **The power user curve.** The L30 histogram [sketched above](#the-windows-and-the-ratios) is the fourth classical view: the distribution the stickiness ratio compresses [^jin-chen-2018].
 
-<!-- TODO(heqing): interview — rolling vs. calendar windows: is the rolling 28-day window worth the explanation burden for an audience without analysts, or do you accept calendar months and teach the seasonality caveat instead? -->
+**Which to use.** For most teams, start with calendar windows. They are simpler and much easier to communicate, and being understood is most of the value. Rolling windows earn their cost in operations-heavy businesses where every day matters, a ride-hailing marketplace being the obvious shape, but they are not where a small team should begin. Computing them is no longer the hard part, and AI tooling makes it cheaper still. The hard part is that people struggle to hold a rolling number in their heads.
+
+There is a middle option that is easier to explain than either: compare the same point in successive periods. By this date last month we had this many actives; by this date this month we have this many. It answers the question a rolling window is usually reached for, without asking anyone to reason about a window that moves.
 
 ## Definitions on the public record
 
-Two stories, one metric family, and one argument: an active-user definition is load-bearing enough that regulators and investors read it line by line.
+An active-user definition is load-bearing enough that regulators and investors read it line by line. The short version:
+
+| Company | What happened | What to take from it |
+|---|---|---|
+| Twitter, 2019 | Retired MAU and defined mDAU, a narrower daily count on ad-capable surfaces. Through the transition the old number fell while the new one rose [^twitter-2019]. | You can change the headline number on purpose. State the reasoning, admit it is not comparable to anyone else's, and run both for a quarter. |
+| Twitter, 2017 | MAU had counted third-party SMS authentication traffic as activity for three years, roughly 1 to 2 million users a quarter [^twitter-2017]. | The Facebook S-1 caveat about devices contacting servers without user action is not theoretical. Check what reaches your counter without a person behind it. |
+| Twitter, 2022 | An account-linking feature counted one person's action on every linked account, overstating mDAU for three years. The company published a recast series [^twitter-2022]. | Accounts are not people. When the definition breaks, publish the mechanism, the magnitude and the corrected numbers. |
+| Snap, 2017 | Defined DAU on the weakest possible action, opening the app, with the strictest window, a day [^snap-2017]. | The action and the window trade against each other. A weak action with a tight window is a choice, and it should be a stated one. |
+| SEC comment letters | Staff caught a DAU labeled a quarterly average that was computed from the last month alone, and asked another company to clarify that its headline figure included paying and non-paying users [^sec-2016] [^sec-2019]. | The four questions below are not invented here. They are what a regulator asks when it reads a metric. |
+
+The two Twitter stories are worth reading in full, because they are the same failure from opposite ends: one is a definition changed deliberately and well, the other is a definition that broke quietly and stayed broken for three years.
 
 **Twitter retires MAU and invents mDAU (2019).** In one earnings release, Twitter defined a new headline metric, monetizable daily active users: users who logged in or were otherwise authenticated and accessed Twitter on a given day through surfaces able to show ads. The old MAU was wider on two axes at once, a 30-day window and every access path including SMS and third-party clients. The release states the reasoning, admits the new number is not comparable to other companies' more expansive metrics, and announces MAU's retirement after one more quarter [^twitter-2019]. The transition quarter showed both numbers moving in opposite directions:
 
