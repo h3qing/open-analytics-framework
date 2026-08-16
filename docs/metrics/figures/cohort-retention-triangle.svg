@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390" width="760" height="390" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<text x="64" y="20" font-size="13.5" font-weight="600" fill="#8b8b8b">The same five signup groups as a table: percent still active, by months since they signed up</text>
+<text x="64" y="38" font-size="11.5" fill="#8b8b8b">One row per group, one column per month of age. This is the first chart to build.</text>
+
+<text x="120" y="75" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">Signed up</text>
+<text x="222" y="75" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">New users</text>
+<text x="297" y="75" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">1</text>
+<text x="355" y="75" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">2</text>
+<text x="413" y="75" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">3</text>
+<text x="471" y="75" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">4</text>
+<text x="529" y="75" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">5</text>
+<text x="587" y="75" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">6</text>
+<text x="442" y="53" font-size="11" fill="#8b8b8b" text-anchor="middle">Months since signup</text>
+<line x1="268" y1="60" x2="616" y2="60" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<line x1="64" y1="84" x2="616" y2="84" stroke="#8b8b8b" stroke-opacity="0.5"/>
+
+<text x="70" y="105" font-size="11" fill="#8b8b8b">February</text>
+<text x="256" y="105" font-size="11" fill="#8b8b8b" text-anchor="end">210</text>
+<rect x="268" y="84" width="58" height="34" fill="#3a7ca5" fill-opacity="0.74"/>
+<text x="297" y="105" font-size="11" fill="#ffffff" text-anchor="middle">46%</text>
+<rect x="326" y="84" width="58" height="34" fill="#3a7ca5" fill-opacity="0.47"/>
+<text x="355" y="105" font-size="11" fill="#8b8b8b" text-anchor="middle">34%</text>
+<rect x="384" y="84" width="58" height="34" fill="#3a7ca5" fill-opacity="0.36"/>
+<text x="413" y="105" font-size="11" fill="#8b8b8b" text-anchor="middle">29%</text>
+<rect x="442" y="84" width="58" height="34" fill="#3a7ca5" fill-opacity="0.29"/>
+<text x="471" y="105" font-size="11" fill="#8b8b8b" text-anchor="middle">26%</text>
+<rect x="500" y="84" width="58" height="34" fill="#3a7ca5" fill-opacity="0.24"/>
+<text x="529" y="105" font-size="11" fill="#8b8b8b" text-anchor="middle">24%</text>
+<rect x="558" y="84" width="58" height="34" fill="#3a7ca5" fill-opacity="0.22"/>
+<text x="587" y="105" font-size="11" fill="#8b8b8b" text-anchor="middle">23%</text>
+
+<text x="70" y="139" font-size="11" fill="#8b8b8b">March</text>
+<text x="256" y="139" font-size="11" fill="#8b8b8b" text-anchor="end">245</text>
+<rect x="268" y="118" width="58" height="34" fill="#3a7ca5" fill-opacity="0.79"/>
+<text x="297" y="139" font-size="11" fill="#ffffff" text-anchor="middle">48%</text>
+<rect x="326" y="118" width="58" height="34" fill="#3a7ca5" fill-opacity="0.52"/>
+<text x="355" y="139" font-size="11" fill="#8b8b8b" text-anchor="middle">36%</text>
+<rect x="384" y="118" width="58" height="34" fill="#3a7ca5" fill-opacity="0.40"/>
+<text x="413" y="139" font-size="11" fill="#8b8b8b" text-anchor="middle">31%</text>
+<rect x="442" y="118" width="58" height="34" fill="#3a7ca5" fill-opacity="0.33"/>
+<text x="471" y="139" font-size="11" fill="#8b8b8b" text-anchor="middle">28%</text>
+<rect x="500" y="118" width="58" height="34" fill="#3a7ca5" fill-opacity="0.29"/>
+<text x="529" y="139" font-size="11" fill="#8b8b8b" text-anchor="middle">26%</text>
+
+<text x="70" y="173" font-size="11" fill="#8b8b8b">April</text>
+<text x="256" y="173" font-size="11" fill="#8b8b8b" text-anchor="end">268</text>
+<rect x="268" y="152" width="58" height="34" fill="#3a7ca5" fill-opacity="0.70"/>
+<text x="297" y="173" font-size="11" fill="#ffffff" text-anchor="middle">44%</text>
+<rect x="326" y="152" width="58" height="34" fill="#3a7ca5" fill-opacity="0.42"/>
+<text x="355" y="173" font-size="11" fill="#8b8b8b" text-anchor="middle">32%</text>
+<rect x="384" y="152" width="58" height="34" fill="#3a7ca5" fill-opacity="0.31"/>
+<text x="413" y="173" font-size="11" fill="#8b8b8b" text-anchor="middle">27%</text>
+<rect x="442" y="152" width="58" height="34" fill="#3a7ca5" fill-opacity="0.26"/>
+<text x="471" y="173" font-size="11" fill="#8b8b8b" text-anchor="middle">25%</text>
+
+<text x="70" y="207" font-size="11" fill="#8b8b8b">May</text>
+<text x="256" y="207" font-size="11" fill="#8b8b8b" text-anchor="end">402</text>
+<rect x="268" y="186" width="58" height="34" fill="#3a7ca5" fill-opacity="0.86"/>
+<text x="297" y="207" font-size="11" fill="#ffffff" text-anchor="middle">51%</text>
+<rect x="326" y="186" width="58" height="34" fill="#3a7ca5" fill-opacity="0.58"/>
+<text x="355" y="207" font-size="11" fill="#ffffff" text-anchor="middle">39%</text>
+<rect x="384" y="186" width="58" height="34" fill="#3a7ca5" fill-opacity="0.47"/>
+<text x="413" y="207" font-size="11" fill="#8b8b8b" text-anchor="middle">34%</text>
+
+<text x="70" y="241" font-size="11" fill="#8b8b8b">June</text>
+<text x="256" y="241" font-size="11" fill="#8b8b8b" text-anchor="end">431</text>
+<rect x="268" y="220" width="58" height="34" fill="#3a7ca5" fill-opacity="0.81"/>
+<text x="297" y="241" font-size="11" fill="#ffffff" text-anchor="middle">49%</text>
+<rect x="326" y="220" width="58" height="34" fill="#3a7ca5" fill-opacity="0.54"/>
+<text x="355" y="241" font-size="11" fill="#8b8b8b" text-anchor="middle">37%</text>
+
+<line x1="64" y1="118" x2="616" y2="118" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<line x1="64" y1="152" x2="616" y2="152" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<line x1="64" y1="186" x2="616" y2="186" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<line x1="64" y1="220" x2="616" y2="220" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<line x1="64" y1="254" x2="616" y2="254" stroke="#8b8b8b" stroke-opacity="0.5"/>
+<line x1="176" y1="60" x2="176" y2="254" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<line x1="268" y1="60" x2="268" y2="254" stroke="#8b8b8b" stroke-opacity="0.35"/>
+
+<text x="632" y="105" font-size="10.5" fill="#8b8b8b">Read across a</text>
+<text x="632" y="120" font-size="10.5" fill="#8b8b8b">row for one</text>
+<text x="632" y="135" font-size="10.5" fill="#8b8b8b">group's own life.</text>
+<text x="632" y="163" font-size="10.5" fill="#8b8b8b">Read down a</text>
+<text x="632" y="178" font-size="10.5" fill="#8b8b8b">column to compare</text>
+<text x="632" y="193" font-size="10.5" fill="#8b8b8b">groups at the same</text>
+<text x="632" y="208" font-size="10.5" fill="#8b8b8b">age. That is the</text>
+<text x="632" y="223" font-size="10.5" fill="#8b8b8b">comparison that</text>
+<text x="632" y="238" font-size="10.5" fill="#8b8b8b">means something.</text>
+
+<text x="64" y="292" font-size="11.5" fill="#8b8b8b">The shape is a triangle because each group has had less time than the one above it. The blank cells are months that have not</text>
+<text x="64" y="310" font-size="11.5" fill="#8b8b8b">happened yet, not zeros, and filling them in with anything is how a young group gets compared against an old one by accident.</text>
+<text x="64" y="332" font-size="11.5" fill="#8b8b8b">New users sits on the table because one blended retention number is just the weighted average of these rows. May and June are</text>
+<text x="64" y="350" font-size="11.5" fill="#8b8b8b">the big groups here, so they would set that single number almost on their own, whatever the older rows did.</text>
+<text x="64" y="378" font-size="11.5" fill="#8b8b8b">Illustrative numbers, the same set plotted as curves in the figure above. Read the levels off your own cohorts, never off this chart.</text>
+</svg>

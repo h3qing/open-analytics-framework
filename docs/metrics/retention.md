@@ -2,12 +2,13 @@
 id: retention
 title: Retention
 type: topic
-status: drafted # entity retention only; value retention and LTV are separate pages
+status: drafted # entity retention only; author answers folded in 2026-08-16, voice pass pending
 summary: >
   Whether the users, accounts and workspaces you won come back. The
   choices that decide what a retention number means, the window where
-  the number moves most, how to read a cohort curve, and why a
-  flattening curve is a sorting effect rather than growing loyalty.
+  the number moves most, how to read a cohort curve and the cohort
+  table to build before it, and why a flattening curve is a sorting
+  effect rather than growing loyalty.
 keywords:
   - retention
   - churn
@@ -26,7 +27,7 @@ Retention can be measured and tailored to your own business, but the whole point
 
 Where to jump: [what entity retention is](#what-entity-retention-is) fixes the definition, [the retention window](#the-retention-window) is the choice that moves the number most, and [why curves flatten](#why-curves-flatten) is the part most teams have never been shown.
 
-<!-- TODO(heqing): interview — the strongest version of this argument you would make to a founder who only watches signups. -->
+If the only number you watch is signups, here is the argument. You may have a strategy for the top of the funnel that genuinely works, and you still do not want a leaky bucket. Signups only add up to growth if the people already inside stay engaged and keep getting value out of the product. When they do not, every new user you win is replacing one you lost, the economics quietly stop working, and the signup chart keeps looking healthy the whole time.
 
 ## What entity retention is
 
@@ -45,7 +46,7 @@ Two choices turn the idea into a number, and a third is big enough to have its o
 
 Write both down in one place before you compute anything, and hold them. If either changes quietly later, your history changes with it, and nobody will be able to tell a real move from a definition move.
 
-<!-- TODO(heqing): interview — your own story of a retention or engagement definition that drove the wrong behavior on a team, abstracted to class level per AGENTS.md constraint 8. -->
+**A definition I have watched go wrong.** I have worked with teams that drove for logins as the retention metric. In our case, logging in usually meant somebody was curious about what they could do with the product. It did not mean they had done any of the work the product existed for. Measuring retention that way ignores whether people are contributing to the real work, and it blurs the whole picture: the number stays respectable while the thing you actually care about is not happening. A login is the cheapest possible activity event, which is exactly why it is the one that gets picked.
 
 ## The retention window
 
@@ -75,7 +76,15 @@ A flattening curve is the usual evidence for product-market fit, with two condit
 
 The steepest part of every curve is the first period, which is why onboarding is where new-user retention is won or lost [^winters-2017]. On the level, expect roughly half of whatever day-1 retention is by day 7, and half again by day 30, with most products losing more than 90 percent of new users inside the first month [^chen-2025]. Treat that as the shape of the world rather than a bar to clear. This page carries no retention benchmark to measure yourself against; the comparison that means anything is your own earlier cohorts.
 
-<!-- TODO(heqing): interview — which visualization should a team build first, and which are decoration until a certain size? -->
+**Build the triangle first.** Before any of the rest, build the cohort table: signup period down the side, periods since signup across the top, one cell for each group at each age. It comes out as a right triangle, because each group has had less time than the one above it.
+
+![A cohort table of five monthly signup groups. Rows are signup month from February to June with a new-users count for each; columns are months one to six since signup. Each row is shorter than the one above it, so the filled cells form a right triangle. Retention falls steeply in month one, to between 44 and 51 percent, and then flattens into the twenties and thirties. The numbers are illustrative and are the same set plotted as curves above.](figures/cohort-retention-triangle.svg)
+
+The triangle is worth building first because it is the only view that shows both readings at once, and because the shape itself stops the most common mistake. The blank cells are months that have not happened yet. Leave them blank. The moment somebody fills them in, or averages across a row of different ages, a young group is being compared against an old one and the comparison means nothing.
+
+Keep the new-users column on the table too. A single blended retention number is just the weighted average of these rows, so a month that acquired far more entities than the others sets your headline figure by itself, and the column is what makes that visible [^sequoia-2018b] [^berezovsky-2024].
+
+Everything else is decoration until you are big enough to need it. The curves above are the same data and are easier to show to somebody else, so draw them when you have to present. Segmented triangles, one per plan or channel or region, are the next thing worth building, but only once each segment has enough entities per cell that the percentages stop jumping around. Below that size you are reading noise, and a chart that looks precise about noise is worse than no chart.
 
 ## Why curves flatten
 
@@ -114,7 +123,9 @@ Curve shapes, the weighted-average point and the trend-to-zero caveat come from 
 
 Held back for lack of a source. No retention benchmark survived verification, which is why this page publishes none; the practitioner survey that exists is cited here for its existence rather than its numbers [^rachitsky-winters-2020], as is the ratio-reporting piece whose free excerpt covers benchmark caveats [^berezovsky-2025]. The seven-friends-in-ten-days story is folklore rather than a finding: it traces to a single talk in October 2012 with no published analysis, and Facebook's own vice president of growth later gave a different number, attributed it to a different person, and said the causal question was settled by executive decision rather than by analysis [^schultz-2014]. Slack's message-count activation threshold has no first-party source. Superhuman's widely circulated product-market-fit piece is routinely cited as a retention source and is not one. No non-vendor origin story for the startup cohort table survived checking either; the technique's real lineage is demographic, which is why this page reaches for Vaupel and Yashin rather than for a growth blog.
 
-The opening and the definition passages are the author's own, from the session of 2026-08-08. The small-team framing throughout is this framework's position. Interview questions on this page are unanswered by design, per this repository's working method. The first figure is illustrative and says so on its face; the second is computed from published parameters, with the source named on the figure itself.
+The opening and the definition passages are the author's own, from the session of 2026-08-08. The leaky-bucket argument, the account of logins as a retention definition, and the case for building the cohort table before anything else are his as well, from 2026-08-16; the logins account is abstracted to class level, with no employer identified. The small-team framing throughout is this framework's position.
+
+Three figures. The curves and the triangle are the same illustrative dataset drawn two ways, so the table really is what the chart plots, and both say on their face that the numbers are illustrative. The sorting-effect figure is computed from published parameters, with the source named on the figure itself.
 
 <!-- Footnote targets; full entries with links and caveats live in REFERENCES.md -->
 
