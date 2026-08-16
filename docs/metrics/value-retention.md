@@ -120,7 +120,6 @@ Three rules keep the ledger honest, and all three are free:
 
 This framework's position is that you build the ledger before you buy anything that offers to compute this for you, because the ledger is the only thing you will ever have to check the tool against.
 
-
 ## Patterns & case studies
 
 No pattern page yet. Two candidates from the filings above:
