@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 456" width="760" height="456" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<text x="64" y="20" font-size="13.5" font-weight="600" fill="#8b8b8b">One year of contract value from the same set of customers, and where the two retention numbers are read off</text>
+<line x1="64" y1="378.0" x2="556" y2="378.0" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="382.0" font-size="11" fill="#8b8b8b" text-anchor="end">0</text>
+<line x1="64" y1="316.5" x2="556" y2="316.5" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="320.5" font-size="11" fill="#8b8b8b" text-anchor="end">200</text>
+<line x1="64" y1="255.1" x2="556" y2="255.1" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="259.1" font-size="11" fill="#8b8b8b" text-anchor="end">400</text>
+<line x1="64" y1="193.6" x2="556" y2="193.6" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="197.6" font-size="11" fill="#8b8b8b" text-anchor="end">600</text>
+<line x1="64" y1="132.2" x2="556" y2="132.2" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="136.2" font-size="11" fill="#8b8b8b" text-anchor="end">800</text>
+<line x1="64" y1="70.7" x2="556" y2="70.7" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="55" y="74.7" font-size="11" fill="#8b8b8b" text-anchor="end">1,000</text>
+<line x1="64" y1="378" x2="556" y2="378" stroke="#8b8b8b" stroke-opacity="0.5"/>
+<text x="17" y="209" font-size="11.5" fill="#8b8b8b" text-anchor="middle" transform="rotate(-90 17 209)">Contract value, thousands</text>
+
+<rect x="79" y="70.7" width="52" height="307.3" fill="#3a7ca5" fill-opacity="0.85"/>
+<text x="105" y="63" font-size="11" fill="#8b8b8b" text-anchor="middle">1,000</text>
+
+<rect x="161" y="70.7" width="52" height="36.9" fill="#c2683a" fill-opacity="0.9"/>
+<text x="187" y="63" font-size="11" fill="#8b8b8b" text-anchor="middle">-120</text>
+
+<rect x="243" y="107.6" width="52" height="18.4" fill="#c2683a" fill-opacity="0.55"/>
+<text x="269" y="100" font-size="11" fill="#8b8b8b" text-anchor="middle">-60</text>
+
+<rect x="325" y="126.0" width="52" height="252.0" fill="#3a7ca5" fill-opacity="0.5"/>
+<text x="351" y="118" font-size="11" fill="#8b8b8b" text-anchor="middle">820</text>
+
+<rect x="407" y="55.4" width="52" height="70.7" fill="#2f6f4e" fill-opacity="0.8"/>
+<text x="433" y="47" font-size="11" fill="#8b8b8b" text-anchor="middle">+230</text>
+
+<rect x="489" y="55.4" width="52" height="322.6" fill="#2f6f4e" fill-opacity="0.85"/>
+<text x="515" y="47" font-size="11" fill="#8b8b8b" text-anchor="middle">1,050</text>
+
+<line x1="131" y1="70.7" x2="161" y2="70.7" stroke="#8b8b8b" stroke-opacity="0.45" stroke-dasharray="3,3"/>
+<line x1="213" y1="107.6" x2="243" y2="107.6" stroke="#8b8b8b" stroke-opacity="0.45" stroke-dasharray="3,3"/>
+<line x1="295" y1="126.0" x2="325" y2="126.0" stroke="#8b8b8b" stroke-opacity="0.45" stroke-dasharray="3,3"/>
+<line x1="377" y1="126.0" x2="407" y2="126.0" stroke="#8b8b8b" stroke-opacity="0.45" stroke-dasharray="3,3"/>
+<line x1="459" y1="55.4" x2="489" y2="55.4" stroke="#8b8b8b" stroke-opacity="0.45" stroke-dasharray="3,3"/>
+
+<text x="105" y="396" font-size="10.5" fill="#8b8b8b" text-anchor="middle">Value a year</text>
+<text x="105" y="409" font-size="10.5" fill="#8b8b8b" text-anchor="middle">ago</text>
+<text x="187" y="396" font-size="10.5" fill="#8b8b8b" text-anchor="middle">Accounts</text>
+<text x="187" y="409" font-size="10.5" fill="#8b8b8b" text-anchor="middle">that left</text>
+<text x="269" y="396" font-size="10.5" fill="#8b8b8b" text-anchor="middle">Accounts that</text>
+<text x="269" y="409" font-size="10.5" fill="#8b8b8b" text-anchor="middle">cut back</text>
+<text x="351" y="396" font-size="10.5" font-weight="600" fill="#8b8b8b" text-anchor="middle">What is left</text>
+<text x="351" y="409" font-size="10.5" font-weight="600" fill="#8b8b8b" text-anchor="middle">of the old base</text>
+<text x="433" y="396" font-size="10.5" fill="#8b8b8b" text-anchor="middle">Accounts that</text>
+<text x="433" y="409" font-size="10.5" fill="#8b8b8b" text-anchor="middle">grew</text>
+<text x="515" y="396" font-size="10.5" font-weight="600" fill="#8b8b8b" text-anchor="middle">Same accounts,</text>
+<text x="515" y="409" font-size="10.5" font-weight="600" fill="#8b8b8b" text-anchor="middle">worth today</text>
+
+<text x="576" y="70" font-size="12" font-weight="600" fill="#8b8b8b">Gross: 820 / 1,000</text>
+<text x="576" y="87" font-size="12" font-weight="600" fill="#8b8b8b">= 82%</text>
+<text x="576" y="106" font-size="10.5" fill="#8b8b8b">Stops at the fourth bar.</text>
+<text x="576" y="121" font-size="10.5" fill="#8b8b8b">Counts only what you lost,</text>
+<text x="576" y="136" font-size="10.5" fill="#8b8b8b">so it cannot exceed 100%.</text>
+
+<text x="576" y="170" font-size="12" font-weight="600" fill="#8b8b8b">Net: 1,050 / 1,000</text>
+<text x="576" y="187" font-size="12" font-weight="600" fill="#8b8b8b">= 105%</text>
+<text x="576" y="206" font-size="10.5" fill="#8b8b8b">Runs to the last bar.</text>
+<text x="576" y="221" font-size="10.5" fill="#8b8b8b">Growth inside the accounts</text>
+<text x="576" y="236" font-size="10.5" fill="#8b8b8b">that stayed can carry it</text>
+<text x="576" y="251" font-size="10.5" fill="#8b8b8b">past 100%.</text>
+
+<text x="576" y="285" font-size="10.5" fill="#8b8b8b">Same year, same customers.</text>
+<text x="576" y="300" font-size="10.5" fill="#8b8b8b">One number says you kept</text>
+<text x="576" y="315" font-size="10.5" fill="#8b8b8b">82% of what you had. The</text>
+<text x="576" y="330" font-size="10.5" fill="#8b8b8b">other says you grew. Both</text>
+<text x="576" y="345" font-size="10.5" fill="#8b8b8b">are true, and quoting only</text>
+<text x="576" y="360" font-size="10.5" fill="#8b8b8b">the second hides a base</text>
+<text x="576" y="375" font-size="10.5" fill="#8b8b8b">leaking a fifth a year.</text>
+
+<text x="64" y="440" font-size="11.5" fill="#8b8b8b">Illustrative numbers, chosen to make the gap legible. New customers won during the year are not in this picture at all: both</text>
+<text x="64" y="456" font-size="11.5" fill="#8b8b8b">numbers are computed on the set of accounts that already existed a year ago.</text>
+</svg>
