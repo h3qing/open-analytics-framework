@@ -2,15 +2,17 @@
 id: value-retention
 title: Value retention
 type: topic
-status: drafted # sourced draft; author opening and interview answers pending
+status: drafted # author answers folded in 2026-08-16; voice pass pending
 summary: >
-  Whether the contract value you won renews and expands. What net and
-  gross revenue retention each count, why a company can lose a quarter
-  of its customers and grow revenue in the same year, what five public
-  filings mean by the same metric name, and the renewal ledger a team
-  with no analyst can keep by hand.
+  Whether the amount your customers committed to renews and expands,
+  usually money but not only money. What net and gross revenue retention
+  each count, why a company can lose a quarter of its customers and grow
+  revenue in the same year, what five public filings mean by the same
+  metric name, and the renewal ledger a team with no analyst can keep
+  by hand.
 keywords:
   - value retention
+  - quantity retention
   - net revenue retention
   - NRR
   - gross revenue retention
@@ -23,11 +25,11 @@ keywords:
 
 # Value retention
 
-<!-- TODO(heqing): interview — the opening is yours to write, as on the other pages. The argument to land: entity retention asks whether they came back, value retention asks whether the money came back, and a business can be winning one and losing the other at the same time. -->
+The [entity page](retention.md) asks whether the users and accounts you won come back. This page asks a different question about the same customers: not whether they came back, but how much of what they had they kept. A company can be winning one and losing the other at the same time, and most of the trouble on this page comes from reporting whichever half reads better.
 
-The [entity page](retention.md) asks whether the users and accounts you won come back. This page asks whether the money does. Those are different questions, and a company can be winning one while losing the other.
+The thing being retained here is an amount rather than a countable entity. That amount is usually money, and every filing quoted below reports it in money, so this page is written in dollars. The machinery is about quantities though, not about currency, and it works on anything that can grow or shrink inside an account that stays: seats, committed units, credits, consumption, storage. One of the filings below runs the same calculation on desks. Read dollars throughout as a placeholder for whatever amount your customers actually commit to.
 
-The thing being retained here is contract value, so the unit is a dollar rather than a person. ARR is annual recurring revenue, the value of the subscriptions on the books restated as a yearly figure, and MRR is its monthly version.
+ARR is annual recurring revenue, the value of the subscriptions on the books restated as a yearly figure, and MRR is its monthly version.
 
 Where to jump: [gross and net](#gross-and-net-and-why-one-number-is-not-enough) is the pair of numbers and the gap between them, [logo churn and dollar churn](#logo-churn-and-dollar-churn) is why a company can lose a quarter of its customers and grow revenue in the same year, [five filings](#five-filings-five-constructions-one-metric-name) is what the same metric name means in five primary documents, and [the renewal ledger](#what-a-team-of-ten-does) is the version of all this you can keep in a spreadsheet.
 
@@ -47,9 +49,9 @@ The reason to carry both is in the figure. One set of accounts produces 82 perce
 
 **A company that publishes both.** Instructure's annual report for 2022 gives three years of each, with its own definition of how each is computed. Net revenue retention of 117, 109 and 106 percent sits above gross revenue retention of 96, 95 and 94 percent, at the end of 2020, 2021 and 2022 [^instructure-2023]. Read the net series alone and the story is a business growing inside its existing accounts. Read the pair and you learn something the net number cannot tell you: the base lost 4 to 6 percent of its value every year, steadily, and expansion is what covered it. Both series are also falling, which is the second thing the pair shows and either number alone would understate.
 
-There is a second trap sitting inside the net number, and it is about arithmetic rather than judgment. **There are two things called NRR, and only one of them is NRR.** The real one is cohort-based, as above: a fixed set of customers, valued then and now. The imposter, which Dave Kellogg calls lazy NRR, is starting ARR plus net expansion, all over starting ARR. That is a quarterly expansion measure wearing the other metric's name, and it does not answer the question the cohort version answers [^kellogg-2022].
+The most common way a base leaks is not a dramatic departure. It is accounts renewing smaller, year after year, with nobody leaving at all, and that case is [below](#logo-churn-and-dollar-churn).
 
-<!-- TODO(heqing): interview — still open, narrowed. Your PayPal answer went into the logo-vs-dollar section above, because what it is really about is a headline entity count that can be bought and is not tied to revenue. The question here is the narrower one: a team reporting the net number alone while the gross number was quietly bad. If you have not seen that specific failure, say so and this prompt comes out. -->
+There is a second trap sitting inside the net number, and it is about arithmetic rather than judgment. **There are two things called NRR, and only one of them is NRR.** The real one is cohort-based, as above: a fixed set of customers, valued then and now. The imposter, which Dave Kellogg calls lazy NRR, is starting ARR plus net expansion, all over starting ARR. That is a quarterly expansion measure wearing the other metric's name, and it does not answer the question the cohort version answers [^kellogg-2022].
 
 ## Logo churn and dollar churn
 
@@ -69,6 +71,8 @@ The one distinction worth carrying everywhere is logo against dollar, because it
 **A logo count can be bought.** PayPal's headline growth number was net new active accounts. It reported 48.9 million added in 2021, ending the year at 426 million. A footnote records that 3.2 million of those arrived in a single month from acquiring Paidy, and that the prior year's figure included 10.2 million from acquiring Honey [^paypal-2022b]. None of that is hidden and none of it is improper. It is what a count of accounts measures: the logo question, whose answer can be purchased outright, and which says nothing about what any of those accounts is worth. The company reports an engagement figure next to it, payment transactions per active account, and that one moves for entirely different reasons [^paypal-2022a].
 
 A company can lose a quarter of its customers and grow its revenue in the same year, and both statements are honest. That is not a paradox, it is what happens when the accounts that leave are small and the accounts that stay expand. Keep both numbers. Picking whichever one reads better is how a customer base quietly consolidating into three large accounts goes unnoticed for a year.
+
+**The mirror case is the one that hides better.** Nobody leaves, and every contract comes back smaller. Logo retention looks excellent, every renewal conversation ends in a yes, and dollar retention falls anyway because each account renewed at a lower number than it left at. There is no bad meeting anywhere in that year and no moment where anyone has to explain a loss. It is the contraction bar in the [waterfall above](#gross-and-net-and-why-one-number-is-not-enough), the one gross retention counts and no count of logos can see at all. This is the ordinary version of the failure, much more common than a dramatic churn event, and it is the reason no single number tells the story: you need the count and the amount side by side before you know whether a renewal was a win.
 
 ## Five filings, five constructions, one metric name
 
@@ -90,7 +94,7 @@ Four things fall out of that table, and two of them are visible at a glance.
 
 **Dollar retention above 100 percent is not the normal condition of a healthy subscription business.** Every figure HubSpot disclosed is below 100 percent, from 71.6 percent in 2011 to 90.3 percent in the second quarter of 2014, and the word churn does not appear anywhere in the filing [^hubspot-2014].
 
-**The name does not tell you the unit.** WeWork's net membership retention rate counts desks, not dollars, in a filing that says outright it is borrowing conventional subscription-software measurement for a real-estate business [^wework-2019]. One data point, one window, and the offering was withdrawn.
+**The name does not tell you the unit.** WeWork's net membership retention rate counts desks, not dollars, in a filing that says outright it is borrowing conventional subscription-software measurement for a real-estate business [^wework-2019]. Retaining desks is a reasonable thing to measure, and it is exactly the calculation described at the top of this page run on a different quantity. The problem is only that the name sounds like money and the filing has to be read to find out that it is not. One data point, one window, and the offering was withdrawn.
 
 **A redefinition and a decline look identical from outside.** Innovid changed which clients counted, reported 111 percent against prior-year figures of 127 and 121 percent computed the old way, and did not restate the prior years [^innovid-2023]. The drop mixes a real change in the business with a change in the definition, and from outside the two cannot be separated. This is not misconduct. It is what happens whenever a definition moves and history does not move with it, which is a thing metric definitions do quietly and constantly [^stancil-2021]. PayPal states the general policy in its own filings: when it detects a significant volume of illegitimate account activity it removes that activity from its key metrics, and generally does not update previously reported metrics unless management judges the retrospective impact material [^paypal-2022a] [^paypal-2022b]. Written down that plainly it is a reasonable policy. It also means the series you are reading was computed under rules that changed inside it.
 
@@ -137,7 +141,7 @@ The five-filing table is built entirely from primary SEC documents, each verifie
 
 The PayPal passages are from the company's own 10-K and its fourth-quarter 2021 results, both read directly [^paypal-2022a] [^paypal-2022b]. The acquisition additions to net new active accounts are the company's own footnote, and are cited here as an illustration of what an account count measures rather than as any criticism of the disclosure, which is plain on the face of the document. Two verified negatives are worth recording, because the story circulates with numbers attached that these documents do not contain: neither filing states a 750 million active-account target, and neither gives a count of illegitimate accounts removed. Anything of that kind would have to come from the earnings call or an investor-day deck, and neither has been checked, so neither is claimed here.
 
-The gross-versus-net gap as a diagnostic, the logo-versus-dollar blind-spot table, the renewal-ledger procedure and its three rules, the one-sentence definition test, and the small-team framing throughout are this framework's positions rather than sourced claims, and are marked as such where they appear. The author's contributions to this page are from the session of 2026-08-16. The first figure is illustrative and says so on its face. The second plots each company's own disclosed figures, read from the filings cited above; the two panels are drawn separately because the two series are not computed the same way. Interview questions on this page are unanswered by design, per this repository's working method.
+The gross-versus-net gap as a diagnostic, the logo-versus-dollar blind-spot table, the renewal-ledger procedure and its three rules, the one-sentence definition test, and the small-team framing throughout are this framework's positions rather than sourced claims, and are marked as such where they appear. The reading of value retention as retention of a quantity rather than specifically of money is the author's, and WeWork's desk-based rate is the filed example that shows the calculation surviving the change of unit [^wework-2019]. So is the shrinking-renewal case in the logo-versus-dollar section, where every contract renews and every contract renews smaller. The author's contributions to this page are from the session of 2026-08-16. The first figure is illustrative and says so on its face. The second plots each company's own disclosed figures, read from the filings cited above; the two panels are drawn separately because the two series are not computed the same way. Interview questions on this page are unanswered by design, per this repository's working method.
 
 <!-- Footnote targets; full entries with links and caveats live in REFERENCES.md -->
 
