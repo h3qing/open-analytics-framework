@@ -49,13 +49,13 @@ The reason to carry both is in the figure. One set of accounts produces 82 perce
 
 There is a second trap sitting inside the net number, and it is about arithmetic rather than judgment. **There are two things called NRR, and only one of them is NRR.** The real one is cohort-based, as above: a fixed set of customers, valued then and now. The imposter, which Dave Kellogg calls lazy NRR, is starting ARR plus net expansion, all over starting ARR. That is a quarterly expansion measure wearing the other metric's name, and it does not answer the question the cohort version answers [^kellogg-2022].
 
-<!-- TODO(heqing): interview — have you seen a team report the net number alone while the gross number was quietly bad? What did it take for anyone to notice? Abstract to class level per AGENTS.md constraint 8. -->
+<!-- TODO(heqing): interview — still open, narrowed. Your PayPal answer went into the logo-vs-dollar section above, because what it is really about is a headline entity count that can be bought and is not tied to revenue. The question here is the narrower one: a team reporting the net number alone while the gross number was quietly bad. If you have not seen that specific failure, say so and this prompt comes out. -->
 
 ## Logo churn and dollar churn
 
 For one fixed cohort over one fixed window, retention and churn are the same measurement read from opposite ends, and they add to one. A 92 percent annual retention rate is an 8 percent annual churn rate, and neither is more true than the other.
 
-Churn is where the definitional damage concentrates, because a churn rate has more construction choices sitting under it than a retention curve does. Kellogg's enumeration is the useful list: whether you count logos or dollars, where a logo is one customer account regardless of what it pays; whether you measure at the product level or the account level; how much of a shrinking account is offset by expansion elsewhere; when in the period you take the measurement; whether the denominator is your whole revenue pool or only the contracts actually up for renewal that period; and whether a contract is valued at its original or its current price [^kellogg-2016]. The reason to care which one you picked is that the rate compounds: he puts the difference between a 10 percent and a 20 percent churn rate at a 100 percent difference in cohort value after seven years [^kellogg-2016].
+Churn is where the definitional damage concentrates, because a churn rate has more construction choices sitting under it than a retention curve does. Dave Kellogg's enumeration is the useful list: whether you count logos or dollars, where a logo is one customer account regardless of what it pays; whether you measure at the product level or the account level; how much of a shrinking account is offset by expansion elsewhere; when in the period you take the measurement; whether the denominator is your whole revenue pool or only the contracts actually up for renewal that period; and whether a contract is valued at its original or its current price [^kellogg-2016]. The reason to care which one you picked is that the rate compounds: the difference between a 10 percent and a 20 percent churn rate becomes a 100 percent difference in cohort value after seven years [^kellogg-2016].
 
 The one distinction worth carrying everywhere is logo against dollar, because it is the entity-versus-value split wearing different words.
 
@@ -65,6 +65,8 @@ The one distinction worth carrying everywhere is logo against dollar, because it
 | Who feels it first | Support, onboarding, product | Finance, the board |
 | What a bad number means | You are losing customers, usually small ones first | You are losing revenue, usually large accounts |
 | The blind spot | Says nothing about size, so losing your largest account and your smallest read identically | Says nothing about count, so a base collapsing to a handful of whales looks stable |
+
+**A logo count can be bought.** PayPal's headline growth number was net new active accounts. It reported 48.9 million added in 2021, ending the year at 426 million. A footnote records that 3.2 million of those arrived in a single month from acquiring Paidy, and that the prior year's figure included 10.2 million from acquiring Honey [^paypal-2022b]. None of that is hidden and none of it is improper. It is what a count of accounts measures: the logo question, whose answer can be purchased outright, and which says nothing about what any of those accounts is worth. The company reports an engagement figure next to it, payment transactions per active account, and that one moves for entirely different reasons [^paypal-2022a].
 
 A company can lose a quarter of its customers and grow its revenue in the same year, and both statements are honest. That is not a paradox, it is what happens when the accounts that leave are small and the accounts that stay expand. Keep both numbers. Picking whichever one reads better is how a customer base quietly consolidating into three large accounts goes unnoticed for a year.
 
@@ -90,7 +92,7 @@ Four things fall out of that table, and two of them are visible at a glance.
 
 **The name does not tell you the unit.** WeWork's net membership retention rate counts desks, not dollars, in a filing that says outright it is borrowing conventional subscription-software measurement for a real-estate business [^wework-2019]. One data point, one window, and the offering was withdrawn.
 
-**A redefinition and a decline look identical from outside.** Innovid changed which clients counted, reported 111 percent against prior-year figures of 127 and 121 percent computed the old way, and did not restate the prior years [^innovid-2023]. The drop mixes a real change in the business with a change in the definition, and from outside the two cannot be separated. This is not misconduct. It is what happens whenever a definition moves and history does not move with it, which is a thing metric definitions do quietly and constantly [^stancil-2021].
+**A redefinition and a decline look identical from outside.** Innovid changed which clients counted, reported 111 percent against prior-year figures of 127 and 121 percent computed the old way, and did not restate the prior years [^innovid-2023]. The drop mixes a real change in the business with a change in the definition, and from outside the two cannot be separated. This is not misconduct. It is what happens whenever a definition moves and history does not move with it, which is a thing metric definitions do quietly and constantly [^stancil-2021]. PayPal states the general policy in its own filings: when it detects a significant volume of illegitimate account activity it removes that activity from its key metrics, and generally does not update previously reported metrics unless management judges the retrospective impact material [^paypal-2022a] [^paypal-2022b]. Written down that plainly it is a reasonable policy. It also means the series you are reading was computed under rules that changed inside it.
 
 **Five questions to ask before you believe anyone's number**, including your own, drawn from the filings above and from Kellogg's enumeration [^kellogg-2016] [^kellogg-2022]:
 
@@ -99,6 +101,8 @@ Four things fall out of that table, and two of them are visible at a glance.
 3. Are new customers and free-to-paid conversions inside or outside the calculation?
 4. Is the unit dollars, or something else with a dollars-sounding name?
 5. Has the definition changed since the year you are comparing against, and were the prior years restated?
+
+And one more, which is the one to run first at a small company, because it costs nothing and catches most of the others: write the definition down in a single sentence, hand it to a friend, and see whether they get it quickly. If the sentence needs a second sentence to rescue it, the definition is not settled yet, and every number you compute from it will inherit the confusion.
 
 **One disclosure decision worth borrowing.** In its first-quarter 2024 shareholder letter, Netflix announced it would stop reporting quarterly membership numbers and average revenue per membership. The stated reason is a measurement argument rather than a retention one: with several price tiers in the market, each additional membership now has a very different business impact, so a count of memberships no longer maps onto value [^netflix-2024]. When your units stop being interchangeable, counting them stops being informative.
 
@@ -116,7 +120,6 @@ Three rules keep the ledger honest, and all three are free:
 
 This framework's position is that you build the ledger before you buy anything that offers to compute this for you, because the ledger is the only thing you will ever have to check the tool against.
 
-<!-- TODO(heqing): interview — of the five questions above, which one actually catches problems at a company of ten or twenty people, and which are only worth asking once there is a board deck? -->
 
 ## Patterns & case studies
 
@@ -133,7 +136,9 @@ Gross revenue retention is defined on this page from a filing rather than from t
 
 The five-filing table is built entirely from primary SEC documents, each verified directly against the filing rather than through a secondary account [^snowflake-2020] [^slack-2019] [^hubspot-2014] [^wework-2019] [^innovid-2023]. The Netflix disclosure change is likewise from the shareholder letter itself [^netflix-2024], and it is a change in what the company reports rather than an admission that the metric was wrong. One caveat belongs on the record: HubSpot is the company most often named when negative churn is taught, and its own prospectus does not support that teaching. This page therefore states only what the filing says and draws no conclusion about any secondary source. The definition-drift mechanism is Benn Stancil's [^stancil-2021], noted here with his BI-vendor affiliation.
 
-The gross-versus-net gap as a diagnostic, the logo-versus-dollar blind-spot table, the renewal-ledger procedure and its three rules, and the small-team framing throughout are this framework's positions rather than sourced claims, and are marked as such where they appear. The first figure is illustrative and says so on its face. The second plots each company's own disclosed figures, read from the filings cited above; the two panels are drawn separately because the two series are not computed the same way. Interview questions on this page are unanswered by design, per this repository's working method.
+The PayPal passages are from the company's own 10-K and its fourth-quarter 2021 results, both read directly [^paypal-2022a] [^paypal-2022b]. The acquisition additions to net new active accounts are the company's own footnote, and are cited here as an illustration of what an account count measures rather than as any criticism of the disclosure, which is plain on the face of the document. Two verified negatives are worth recording, because the story circulates with numbers attached that these documents do not contain: neither filing states a 750 million active-account target, and neither gives a count of illegitimate accounts removed. Anything of that kind would have to come from the earnings call or an investor-day deck, and neither has been checked, so neither is claimed here.
+
+The gross-versus-net gap as a diagnostic, the logo-versus-dollar blind-spot table, the renewal-ledger procedure and its three rules, the one-sentence definition test, and the small-team framing throughout are this framework's positions rather than sourced claims, and are marked as such where they appear. The author's contributions to this page are from the session of 2026-08-16. The first figure is illustrative and says so on its face. The second plots each company's own disclosed figures, read from the filings cited above; the two panels are drawn separately because the two series are not computed the same way. Interview questions on this page are unanswered by design, per this repository's working method.
 
 <!-- Footnote targets; full entries with links and caveats live in REFERENCES.md -->
 
@@ -143,6 +148,8 @@ The gross-versus-net gap as a diagnostic, the logo-versus-dollar blind-spot tabl
 [^kellogg-2016]: [[KELLOGG-2016]](../../REFERENCES.md)
 [^kellogg-2022]: [[KELLOGG-2022]](../../REFERENCES.md)
 [^netflix-2024]: [[NETFLIX-2024]](../../REFERENCES.md)
+[^paypal-2022a]: [[PAYPAL-2022A]](../../REFERENCES.md)
+[^paypal-2022b]: [[PAYPAL-2022B]](../../REFERENCES.md)
 [^slack-2019]: [[SLACK-2019]](../../REFERENCES.md)
 [^snowflake-2020]: [[SNOWFLAKE-2020]](../../REFERENCES.md)
 [^stancil-2021]: [[STANCIL-2021]](../../REFERENCES.md)
