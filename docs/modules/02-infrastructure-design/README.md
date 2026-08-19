@@ -1,16 +1,30 @@
 # Module 2 — Analytics infrastructure design for rapid growth
 
-> Scope: designing analytics infrastructure that holds up as the organization scales — stack composition by category, centralized metric logic, change management, stage-appropriate builds. Does not cover: named products or vendor comparisons; data quality measurement (Module 1); AI agent deployment (Module 3).
+> Scope: the analytics system itself — what to set up, in what order, and what has to stay true as the company grows. Covers stack composition by category, ingestion and modeling, change management, reliability, ownership, and the prerequisites for pointing an agent at your data. Does not cover: named products or vendor comparisons; whether a metric is defined right (Module 1A) or whether a number is accurate (Module 1B); agent deployment and validation (Module 3); governance policy and financial reporting (Module 4).
 
 **Status:** build order set, no units written yet. Statuses live in [CONTENT_BACKLOG.md](../../../CONTENT_BACKLOG.md).
+
+## Two halves
+
+Infrastructure fails in two independent ways. It can be built wrong, and it can be run wrong. A company can buy a stack that answers nothing and a company can run a well-designed stack until it quietly stops being true. The causes and the fixes have nothing in common, so this module names them separately.
+
+| | 2A — What you build | 2B — How you run it |
+|---|---|---|
+| The question | What should exist at my size, in what order, and what should I not build yet? | Does it keep returning the right answer as the company grows, and who owns it? |
+| Fails as | Money spent on a stack that answers nothing, or a foundation you cannot retrofit because the history is already gone | A correct build that drifts, breaks without anyone noticing, or stops working the week one person leaves |
+| DMAIC phase | Improve — designing the process that produces the number | Control — holding it as volume, headcount and sources grow |
+| Knowledge layer | The [reference architectures](../../../reference-architectures/README.md): what a whole stack looks like at a stage | [`templates/02-infrastructure-design/`](../../../templates/02-infrastructure-design/) control plans |
+| Guided layer | [TODO(heqing): a stack-selection skill, or none] | The verification skill in 2B, and the [skills](../../../skill/README.md) layer generally |
+
+Read 2A first, and inside it start with what you cannot get back. Most of this module is reversible: a warehouse can be migrated, a tool can be cancelled, a model can be rewritten. History cannot be recovered once a source system has overwritten it, which is why the build order below leads with the units that expire rather than the units that matter most.
 
 ## Why this module exists
 
 With the rapid improvement of AI capabilities, it may feel like AI can do everything, but the reality is that if you don't have the right setup or infrastructure for your AI, you can still do very minimal. Your complexity, cost, and efficacy will degrade dramatically. Setting up the right foundation and infrastructure is still vital for any business, for short-term analysis needs, mid-term growth needs, and long-term compliance needs. This module will help guide you on how to set up the best infrastructure for future growth, growing from a small company to a big company. It also gives you an expert opinion for when AI gives you a valid answer and you still don't know what to do.
 
-## The build order
+## 2A — What you build
 
-Ordered by what you lose if you skip it, not by how important it sounds. Track 0 is the history you cannot buy back later. Everything after it you can still fix with money or time.
+Ordered by what you lose if you skip it. Track 0 expires; everything after it you can still fix with money or time.
 
 ### Track 0 — What you cannot get back
 
@@ -64,14 +78,18 @@ Ordered by what you lose if you skip it, not by how important it sounds. Track 0
 | What breaks a revenue query: plans, proration, trials, discounts | How each one miscounts, and what to do about it | topic |
 | Refunds, chargebacks, currency, and three different revenue numbers | Which of invoiced, collected and recognized you are reporting, and why it will not match finance exactly | topic |
 | What was this customer paying in March? | How to model subscription state over time | guide |
-| Fifteen minutes a week to tie revenue to the bank | The cadence, the tolerance, and what goes in the break log | pattern |
 | Do you actually need a ledger? | When double-entry earns its cost, and the smaller thing that usually does instead | pattern |
 | Count what a model call costs: tokens, retries, tool calls | One event schema for a model call | pattern |
+
+## 2B — How you run it
+
+Nothing here expires, and nothing here is worth doing before 2A exists. These are the units that keep a built system true.
 
 ### Track 5 — Operating it
 
 | Unit | What it resolves | Type |
 |---|---|---|
+| Fifteen minutes a week to tie revenue to the bank | The cadence, the tolerance, and what goes in the break log | pattern |
 | Get your SQL out of the BI tool and into git | What moves first, and what to do with the dashboards left behind | guide |
 | Code review when you are the only person who writes SQL | What substitutes for a second reader | pattern |
 | What runs when you open a pull request | What to check automatically, and how long a solo maintainer will tolerate it taking | guide |
@@ -107,9 +125,9 @@ Module 2 owns the prerequisites. Deployment and validation are [Module 3](../03-
 | Who can read what in the warehouse | Roles, timeouts and masking, for a person or an agent alike | pattern |
 | How to tell whether a number is wrong before you bet money on it | Which checks to run, and when to stop | skill |
 
-### Track 8 — Reference architectures
+`Land it raw, and never edit it` sits on the seam. It is a 2A decision whose entire value is paid out in 2B: without an untouched copy of what arrived, you cannot tell whether a wrong number came from the design or from the run, and the two halves stop being distinguishable.
 
-Slower than one sitting each, so they sit outside the tracks above.
+## Reference architectures
 
 | Architecture | Covers | Status |
 |---|---|---|
@@ -118,8 +136,8 @@ Slower than one sitting each, so they sit outside the tracks above.
 
 ## Patterns
 
-_None written yet._ Units land in the order above.
+_None written yet._ Units enter [CONTENT_BACKLOG.md](../../../CONTENT_BACKLOG.md) as they are scheduled, in the order above, rather than all at once.
 
 ## Control-plan template
 
-Home: [`templates/02-infrastructure-design/`](../../../templates/02-infrastructure-design/).
+Every module ships at least one. Home: [`templates/02-infrastructure-design/`](../../../templates/02-infrastructure-design/), empty until the tracking plan lands.
