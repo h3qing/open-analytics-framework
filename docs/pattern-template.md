@@ -13,6 +13,10 @@ Every pattern document uses this shape. Eight sections, several of which are one
 7. **Failure modes** — how this gets implemented badly.
 8. **Sources & Stories** — where this comes from. List the key sources and stories using natural references (e.g. "the Duolingo growth model as described by the practitioners who built it", "practices described by Benn Stancil", "similar patterns at early Uber"). The pattern itself is the primary artifact; these are for traceability if the reader wants to go deeper. All citation keys must resolve in [REFERENCES.md](../REFERENCES.md).
 
+## Frontmatter: which module, and for Module 1, which half
+
+Every pattern's `module:` field names its home. Module 1 patterns use `1A` or `1B`, never bare `1`: `1A` for definition quality (what to measure), `1B` for data integrity (whether the number is right). See [the Module 1 charter](modules/01-ai-data-quality/README.md).
+
 ## DMAIC mapping
 
 The Six Sigma thread is structural, not claimed. Each template section is a DMAIC stage:
