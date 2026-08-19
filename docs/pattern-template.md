@@ -13,9 +13,9 @@ Every pattern document uses this shape. Eight sections, several of which are one
 7. **Failure modes** — how this gets implemented badly.
 8. **Sources & Stories** — where this comes from. List the key sources and stories using natural references (e.g. "the Duolingo growth model as described by the practitioners who built it", "practices described by Benn Stancil", "similar patterns at early Uber"). The pattern itself is the primary artifact; these are for traceability if the reader wants to go deeper. All citation keys must resolve in [REFERENCES.md](../REFERENCES.md).
 
-## Frontmatter: which module, and for Module 1, which half
+## Frontmatter: which module, and which half
 
-Every pattern's `module:` field names its home. Module 1 patterns use `1A` or `1B`, never bare `1`: `1A` for definition quality (what to measure), `1B` for data integrity (whether the number is right). See [the Module 1 charter](modules/01-ai-data-quality/README.md).
+Every pattern's `module:` field names its home. Modules 1 and 2 are split into halves, and their patterns use the letter, never the bare number. Module 1: `1A` for definition quality (what to measure), `1B` for data integrity (whether the number is right). Module 2: `2A` for what you build (the system and the order you build it in), `2B` for how you run it (keeping it true as the company grows). See the [Module 1](modules/01-ai-data-quality/README.md) and [Module 2](modules/02-infrastructure-design/README.md) charters.
 
 ## DMAIC mapping
 

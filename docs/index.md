@@ -25,6 +25,13 @@ Four modules, fixed by the project specification, plus three layers that cut acr
 
 A number can be wrong in either direction independently, and the fixes have nothing in common. See [the Module 1 charter](modules/01-ai-data-quality/README.md).
 
+**Module 2 has two named halves** for the same reason, since infrastructure fails as a build or as an operation:
+
+- **2A, what you build** — what should exist at your size, in what order, and what not to build yet. DMAIC's Improve phase.
+- **2B, how you run it** — whether it keeps returning the right answer as the company grows, and who owns it. Control.
+
+Inside 2A the order is what expires, not what matters most: history is the only thing on the list you cannot buy back later. See [the Module 2 charter](modules/02-infrastructure-design/README.md).
+
 **The layers:**
 
 - **Knowledge** — the [metrics library](metrics/README.md): classical metric knowledge, one topic page per metric. This is Module 1A's reference layer, not a fifth module; the revenue, cost and margin pages will also serve Module 4.
