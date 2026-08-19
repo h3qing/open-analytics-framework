@@ -14,12 +14,26 @@ These systems do not fail at the model layer. They fail at deployment. Query gen
 
 ## How the framework is organized
 
-- Four modules, read in order: [data quality](modules/01-ai-data-quality/README.md), [infrastructure](modules/02-infrastructure-design/README.md), [agent integration](modules/03-ai-agent-integration/README.md), [governance and financial reporting](modules/04-governance-and-financial-reporting/README.md).
-- The [metrics library](metrics/README.md): classical metric knowledge, one topic page per metric, with patterns and case studies hanging off each topic.
-- Every pattern uses the same eight-section shape: [the pattern template](pattern-template.md), which maps onto DMAIC.
-- Reference and guide are separate: the canonical statement of a pattern lives in `docs/modules/`; the longer walkthroughs live in [`implementation-guides/`](../implementation-guides/README.md) and [`reference-architectures/`](../reference-architectures/README.md).
-- Something to adopt, not just read: every module ships copyable artifacts in [`templates/`](../templates/README.md).
-- Patterns cite the stories and research they draw from: see [the prior-art review](prior-art.md) and [REFERENCES.md](../REFERENCES.md).
+Four modules, fixed by the project specification, plus three layers that cut across them.
+
+**The modules,** read in order: [data quality](modules/01-ai-data-quality/README.md), [infrastructure](modules/02-infrastructure-design/README.md), [agent integration](modules/03-ai-agent-integration/README.md), [governance and financial reporting](modules/04-governance-and-financial-reporting/README.md). Four is a commitment, not a working guess: new material finds its home inside a module rather than becoming a fifth one.
+
+**Module 1 has two named halves,** because "data quality" is two questions that get confused with each other:
+
+- **1A, definition quality** — are you measuring the right thing, defined once and defined well. DMAIC's Define phase.
+- **1B, data integrity** — does the pipeline return that number correctly, and stay in control. Measure through Control.
+
+A number can be wrong in either direction independently, and the fixes have nothing in common. See [the Module 1 charter](modules/01-ai-data-quality/README.md).
+
+**The layers:**
+
+- **Knowledge** — the [metrics library](metrics/README.md): classical metric knowledge, one topic page per metric. This is Module 1A's reference layer, not a fifth module; the revenue, cost and margin pages will also serve Module 4.
+- **Patterns** — `docs/modules/`: sourced ways of working on a metric, with case studies attached. Every pattern uses the same eight-section shape, [the pattern template](pattern-template.md), which maps onto DMAIC.
+- **Artifacts** — something to adopt, not just read: copyable [`templates/`](../templates/README.md) and guided [`skill/`](../skill/README.md) interviews. Every module ships at least one.
+
+Reference and guide are separate: the canonical statement of a pattern lives in `docs/modules/`; the longer walkthroughs live in [`implementation-guides/`](../implementation-guides/README.md) and [`reference-architectures/`](../reference-architectures/README.md).
+
+Patterns cite the stories and research they draw from: see [the prior-art review](prior-art.md) and [REFERENCES.md](../REFERENCES.md).
 
 ## Available now
 
