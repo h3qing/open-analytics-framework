@@ -1,7 +1,7 @@
 ---
 id: M1-11
 title: State-based retention measurement
-module: 1
+module: 1A
 type: pattern
 status: drafted # full sourced draft; awaiting author voice pass per AGENTS.md constraint 6
 sources:

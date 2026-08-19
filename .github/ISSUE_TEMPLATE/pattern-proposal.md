@@ -7,7 +7,7 @@ labels: pattern-proposal
 
 ## Module
 
-Which of the four modules does this belong to, and why?
+Which of the four modules does this belong to, and why? For Module 1, say which half: 1A (definition quality — what to measure) or 1B (data integrity — whether the number is right).
 
 ## Problem
 

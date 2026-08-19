@@ -6,7 +6,7 @@ Single maintainer, for now. The framework has one author who makes final decisio
 
 ## How decisions are made and recorded
 
-- Scope is fixed by the four-module specification in [README.md](README.md); changes to it are rare and deliberate.
+- Scope is fixed by the four-module specification in [README.md](README.md); changes to it are rare and deliberate. New material finds a home inside an existing module or an existing layer — knowledge, patterns, artifacts — rather than becoming a fifth module. Naming a division *within* a module, as Module 1 does with 1A and 1B, is not a scope change.
 - Every judgment call is recorded in [DECISIONS.md](DECISIONS.md): the decision, the alternatives, and why.
 - Disagreements with a pattern are argued in public — issues and PRs — so the record is durable and attributable.
 

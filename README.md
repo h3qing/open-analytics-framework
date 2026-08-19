@@ -5,7 +5,7 @@ Structured foundations for building analytics operations, for organizations that
 ## Start here
 
 - **Read the first pattern:** [State-based retention measurement](docs/modules/01-ai-data-quality/state-based-retention-measurement.md) — decompose DAU into user states and find the one retention rate worth a team's focus, drawn from the Duolingo growth story.
-- **Learn a metric:** the [metrics library](docs/metrics/README.md). Classical metric knowledge, one page per topic. The two finished pages are [attribution](docs/metrics/attribution.md) and [conversion rate](docs/metrics/conversion-rate.md); start with either.
+- **Learn a metric:** the [metrics library](docs/metrics/README.md), the knowledge layer of Module 1A. Classical metric knowledge, one page per topic. The two finished pages are [attribution](docs/metrics/attribution.md) and [conversion rate](docs/metrics/conversion-rate.md); start with either.
 - **No analyst, ninety minutes:** read [attribution](docs/metrics/attribution.md), then [conversion rate](docs/metrics/conversion-rate.md). Between them they cover who gets credit for an outcome and how to find the step that is losing you the most people.
 - **Copy something usable:** [templates](templates/README.md) — control plans, machine-readable specs, and agent prompts to drop into your own stack.
 - **Browse the framework:** [reading guide](docs/index.md), then the four modules — [data quality](docs/modules/01-ai-data-quality/README.md) · [infrastructure](docs/modules/02-infrastructure-design/README.md) · [agent integration](docs/modules/03-ai-agent-integration/README.md) · [governance & financial reporting](docs/modules/04-governance-and-financial-reporting/README.md).
@@ -18,9 +18,29 @@ Two versions of the same gap. Early-stage and AI-native companies rebuild the sa
 
 These systems fail at deployment, not at the model layer. Model capability is generalized and largely solved; what it lacks is opinion and industry experience — consistent metric definitions, schemas that hold, outputs that can be trusted without re-checking, and the organizational adoption that follows. That is a process and systems problem, which is why this framework applies industrial-engineering methodology (Six Sigma, DMAIC) to analytics.
 
+## How it is organized
+
+Four modules, fixed. Three layers cut across them: knowledge, patterns, artifacts.
+
+```text
+Modules   1. AI data quality   2. Infrastructure   3. Agent integration   4. Governance & finance
+              1A definition
+              1B integrity
+              |
+Knowledge  docs/metrics/        one page per classical metric — what it is, why it matters, how to see it
+Patterns   docs/modules/        sourced ways of working, eight fixed sections, DMAIC-shaped
+Artifacts  templates/ skill/    control plans, specs and prompts to copy; guided interviews to run
+           reference-architectures/  implementation-guides/
+```
+
+- **Modules** are the framework's spine and match the four committed in the project specification. They do not change.
+- **Knowledge** is the [metrics library](docs/metrics/README.md). It is a layer, not a fifth module: its home is Module 1A, and the revenue, cost and margin pages will also serve Module 4.
+- **Patterns** hang off a metric. Retention is the metric; [state-based retention measurement](docs/modules/01-ai-data-quality/state-based-retention-measurement.md) is one sourced way of working on it.
+- **Artifacts** are what you take with you. Every module ships at least one copyable control plan.
+
 ## The four modules
 
-1. **AI data quality measurement and improvement** — measuring and improving the quality of data feeding AI-assisted analytics.
+1. **AI data quality measurement and improvement** — the quality of the whole measurement system, in two halves. **1A, definition quality:** are you measuring the right thing, defined once and defined well. **1B, data integrity:** does the pipeline return that number correctly and stay in control. A precisely computed wrong metric and a correctly defined bad join are both quality defects, and they have different fixes.
 2. **Analytics infrastructure design for rapid growth** — infrastructure that holds up as the organization scales.
 3. **AI agent integration into analytics workflows** — deployment, validation, governance, and adoption of AI analytics agents. Integration, not agent-building.
 4. **Data governance and financial reporting specific to AI companies** — both halves; the financial-reporting patterns are the least likely to exist anywhere else in public.
