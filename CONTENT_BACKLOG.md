@@ -24,6 +24,8 @@ The Module column uses `1A` (definition quality) and `1B` (data integrity) for t
 | M1-09 | 1B | Measuring trust, not just accuracy | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-10 | 1B | Data incident root cause analysis | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-11 | 1A | State-based retention measurement | pattern | v0.2.0 | drafted | Duolingo growth model (Gustafson, Mazal) | 1 session |
+| M1-12 | 1A | Redefining a metric in the open | pattern | v0.2.0 | drafted | Twitter mDAU redefinition and two recasts; Facebook S-1; SEC comment letters | 1 session |
+| M1-13 | 1A | Check attribution by turning it off | pattern | v0.2.0 | drafted | eBay geographic holdout (Tadelis, Blake); Uber pause (Frisch); Fishkin; Kellogg | 1 session |
 | M2-01 | 2A | Do you need a warehouse yet? | pattern | v0.3.0 | candidate | Redset query telemetry from 400 production clusters; Tigani on warehouse sizes | 1 session |
 | M2-02 | 2A | Pick one file for your metric definitions | pattern | v0.3.0 | candidate | Semantic-layer research round; contested by M1-01 and IG-01, see DECISIONS | 1 session |
 | M2-03 | 2B | Code review when you are the only person who writes SQL | pattern | v0.3.0 | candidate | Analytics-engineering practice; DORA delivery metrics as the transfer question | 1 session |

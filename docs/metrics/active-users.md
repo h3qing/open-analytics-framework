@@ -186,7 +186,7 @@ Both corrections are the [four-question audit](#what-an-active-user-is) failing 
 ## Patterns & case studies
 
 - [State-based retention measurement](../modules/01-ai-data-quality/state-based-retention-measurement.md), the Duolingo growth model: decompose DAU into states, goal one transition rate [^gustafson-2023] [^mazal-2023].
-- Two candidate patterns sit in [the stories above](#definitions-on-the-public-record), not yet written as pattern pages. **Redefine in the open**: state the new definition, state why, admit non-comparability, run both numbers through a transition [^twitter-2019]. **Publish the recast**: when the definition breaks, disclose the mechanism, the magnitude, and the corrected series, and say plainly where data retention ends the correction [^twitter-2017] [^twitter-2022].
+- [Redefining a metric in the open](../modules/01-ai-data-quality/redefining-a-metric-in-the-open.md), built from [the stories above](#definitions-on-the-public-record). One pattern covers both directions, because they are handled the same way: a deliberate redefinition states the new definition, says why, admits non-comparability and runs both numbers through a transition [^twitter-2019]; a discovered break discloses the mechanism, the magnitude and the corrected series, and says plainly where data retention ends the correction [^twitter-2017] [^twitter-2022].
 - Missing from the public record: any small team, this framework's audience, writing up a change to its own active-user definition. What exists is vendor content and the filings above.
 
 ## Sources & Stories

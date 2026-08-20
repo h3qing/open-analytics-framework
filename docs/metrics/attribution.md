@@ -156,7 +156,9 @@ Marketing and go-to-market are the two treatments on this page, but the credit-a
 
 ## Patterns & case studies
 
-No pattern page yet. Candidate case studies from the research rounds, each traced to a first-party or near-first-party account:
+- [Check attribution by turning it off](../modules/01-ai-data-quality/checking-attribution-by-turning-it-off.md). Remove the spend in a bounded slice, compare the outcome against what the model predicted, and move the budget rather than re-tuning the model. Case studies: eBay and Uber, below.
+
+The case studies from the research rounds, each traced to a first-party or near-first-party account:
 
 - **eBay's holdout audit.** The attribution belief said 5 percent, the geographic holdout said roughly zero, and $100 million a year of spend moved [^freakonomics-2020] [^blake-2015].
 - **Uber's fraud discovery.** The attribution was not just wrong but gamed, and pausing spend, not reading the dashboard, is what surfaced it [^frisch-2020].
