@@ -24,8 +24,8 @@ Four modules, fixed. Three layers cut across them: knowledge, patterns, artifact
 
 ```text
 Modules   1. AI data quality   2. Infrastructure   3. Agent integration   4. Governance & finance
-              1A definition       2A what you build
-              1B integrity        2B how you run it
+              1A definition       2A what you build   3A what it can reach   4A what you can show
+              1B integrity        2B how you run it   3B what it tells you   4B the money numbers
               |
 Knowledge  docs/metrics/        one page per classical metric — what it is, why it matters, how to see it
 Patterns   docs/modules/        sourced ways of working, eight fixed sections, DMAIC-shaped
