@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 456" width="760" height="456" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<text x="64" y="20" font-size="13.5" font-weight="600" fill="#8b8b8b">Two companies' own dollar retention figures, as disclosed in their registration statements</text>
+<text x="64" y="38" font-size="11.5" fill="#8b8b8b">Each panel is one company's own series on its own definition. The two are not comparable to each other.</text>
+
+<text x="70" y="66" font-size="12" font-weight="600" fill="#8b8b8b">Slack S-1, 2019</text>
+<text x="70" y="81" font-size="10.5" fill="#8b8b8b">Net dollar retention, trailing twelve months, on MRR</text>
+
+<line x1="70" y1="360" x2="340" y2="360" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="62" y="364" font-size="10.5" fill="#8b8b8b" text-anchor="end">0%</text>
+<line x1="70" y1="285" x2="340" y2="285" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="62" y="289" font-size="10.5" fill="#8b8b8b" text-anchor="end">50%</text>
+<line x1="70" y1="210" x2="340" y2="210" stroke="#8b8b8b" stroke-opacity="0.55" stroke-dasharray="4,3"/>
+<text x="62" y="214" font-size="10.5" font-weight="600" fill="#8b8b8b" text-anchor="end">100%</text>
+<line x1="70" y1="135" x2="340" y2="135" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="62" y="139" font-size="10.5" fill="#8b8b8b" text-anchor="end">150%</text>
+<line x1="70" y1="60" x2="340" y2="60" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<text x="62" y="64" font-size="10.5" fill="#8b8b8b" text-anchor="end">200%</text>
+<line x1="70" y1="360" x2="340" y2="360" stroke="#8b8b8b" stroke-opacity="0.5"/>
+
+<path d="M100,103.5 L200,132.0 L300,145.5" fill="none" stroke="#c2683a" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="100" cy="103.5" r="3.6" fill="#c2683a"/>
+<circle cx="200" cy="132.0" r="3.6" fill="#c2683a"/>
+<circle cx="300" cy="145.5" r="3.6" fill="#c2683a"/>
+<text x="100" y="95" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">171%</text>
+<text x="200" y="123" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">152%</text>
+<text x="300" y="137" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">143%</text>
+<text x="100" y="378" font-size="10.5" fill="#8b8b8b" text-anchor="middle">Jan 2017</text>
+<text x="200" y="378" font-size="10.5" fill="#8b8b8b" text-anchor="middle">Jan 2018</text>
+<text x="300" y="378" font-size="10.5" fill="#8b8b8b" text-anchor="middle">Jan 2019</text>
+
+<text x="430" y="66" font-size="12" font-weight="600" fill="#8b8b8b">HubSpot S-1, 2014</text>
+<text x="430" y="81" font-size="10.5" fill="#8b8b8b">Subscription Dollar Retention Rate, monthly, annualized</text>
+
+<line x1="430" y1="360" x2="700" y2="360" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<line x1="430" y1="285" x2="700" y2="285" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<line x1="430" y1="210" x2="700" y2="210" stroke="#8b8b8b" stroke-opacity="0.55" stroke-dasharray="4,3"/>
+<text x="422" y="214" font-size="10.5" font-weight="600" fill="#8b8b8b" text-anchor="end">100%</text>
+<line x1="430" y1="135" x2="700" y2="135" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<line x1="430" y1="60" x2="700" y2="60" stroke="#8b8b8b" stroke-opacity="0.22"/>
+<line x1="430" y1="360" x2="700" y2="360" stroke="#8b8b8b" stroke-opacity="0.5"/>
+
+<path d="M460,252.6 L537,236.4 L614,235.7 L691,224.6" fill="none" stroke="#3a7ca5" stroke-width="2.4" stroke-linejoin="round"/>
+<circle cx="460" cy="252.6" r="3.6" fill="#3a7ca5"/>
+<circle cx="537" cy="236.4" r="3.6" fill="#3a7ca5"/>
+<circle cx="614" cy="235.7" r="3.6" fill="#3a7ca5"/>
+<circle cx="691" cy="224.6" r="3.6" fill="#3a7ca5"/>
+<text x="460" y="270" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">71.6%</text>
+<text x="537" y="254" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">82.4%</text>
+<text x="614" y="253" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">82.9%</text>
+<text x="691" y="242" font-size="11" font-weight="600" fill="#8b8b8b" text-anchor="middle">90.3%</text>
+<text x="460" y="378" font-size="10.5" fill="#8b8b8b" text-anchor="middle">2011</text>
+<text x="537" y="378" font-size="10.5" fill="#8b8b8b" text-anchor="middle">2012</text>
+<text x="614" y="378" font-size="10.5" fill="#8b8b8b" text-anchor="middle">2013</text>
+<text x="691" y="378" font-size="10.5" fill="#8b8b8b" text-anchor="middle">Q2 2014</text>
+
+<text x="64" y="404" font-size="11.5" fill="#8b8b8b">Left: the widely quoted figure is the last one in a falling series, not a standing achievement.</text>
+<text x="64" y="420" font-size="11.5" fill="#8b8b8b">Right: every figure this company disclosed sits below 100 percent, and it went public anyway.</text>
+<text x="64" y="436" font-size="11.5" fill="#8b8b8b">Each series is read from that company's own filing, cited on this page. The dashed 100 percent line is all they share.</text>
+</svg>

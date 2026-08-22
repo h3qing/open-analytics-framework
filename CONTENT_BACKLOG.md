@@ -42,3 +42,4 @@ One row per writeable unit; a unit is finishable in one 60–90 minute sitting. 
 | RA-02 | 3 | AI analytics agent deployment with a validation layer | reference architecture | v0.3.0 | candidate | [TODO: prior art] | 1 session |
 | IG-01 | 1 | Standing up a metric definitions repository | implementation guide | v0.3.0 | candidate | [TODO: prior art] | 1 session |
 | IG-02 | 1 | Building your first golden question set | implementation guide | v0.3.0 | candidate | [TODO: prior art] | 1 session |
+| SK-02 | 1 | Aligning a metric definition to the company goal | skill | v0.3.0 | ready | The six audit questions on the value retention page, generalized past NRR; attribution skill is the shipped model to follow | 1 session |
