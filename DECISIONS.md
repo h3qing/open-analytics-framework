@@ -2,6 +2,14 @@
 
 One entry per judgment call: decision, alternatives, why.
 
+## 2026-08-22 — The lifetime value page leads with the calculation, and puts payback ahead of the ratio
+
+**Decision:** Three calls on the lifetime value page. (a) The page teaches the calculation before the failure modes: the survival curve times contribution margin, discounted and added up off the reader's own cohort table, with a worked table and an explicitly labelled horizon. (b) For a company without an analyst the payback month comes ahead of the LTV-to-CAC ratio, and the page says so. (c) Two sources whose hosts were unreachable from the working session are cited at thesis level, with the block and what is being cited recorded in their `REFERENCES.md` entries and a `[TODO: verify]` attached, following the precedent set by [BALFOUR-2018].
+
+**Alternatives:** keep the page organized around the two famous errors with the calculation left implied; lead with the ratio, which is the convention readers arrive holding; hold the two blocked sources out of the page entirely until a session can fetch them.
+
+**Why:** the failure modes only mean something to a reader who can see which term in the sum each one corrupts, and a page that explains why a number is wrong without showing how to compute a right one leaves the reader where it found them. Payback first because a small company dies of timing rather than of a bad ratio, and because the month is computable from data that already exists, while a defensible lifetime value needs a curve that has flattened. Thesis-level citation with the block recorded keeps the attribution honest without repeating specifics nobody in this repository has read.
+
 ## 2026-07-31 — First content unit as source-synthesis, ahead of Phase 0 (M1-11)
 
 **Decision:** Four calls made while synthesizing the Duolingo growth model into pattern M1-11. (a) The unit was written as a full sourced draft — an author-approved exception to hard constraints 6–7 for source-synthesis units, where every claim cites public sources rather than author experience; the author's own input (retention as a reverse acquisition funnel; coarse-first bottleneck instrumentation) was captured via interview and is marked original in the doc. Status is `drafted`, never `published`, until the author's voice pass. (b) Placement: Module 1, as a measurement-architecture pattern (decomposing an untrustworthy aggregate into auditable states), with ID M1-11 targeting v0.2.0. (c) Pattern docs may carry YAML frontmatter for agent consumption — metadata above the template, not a ninth section; prompt templates and JSON specs live in the `templates/` artifact so the eight-section shape stays intact. (d) Its prior-art row was recorded individually ahead of the full Phase 0 sweep, which is what licenses the `Adapted` tag.

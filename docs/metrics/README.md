@@ -22,6 +22,6 @@ Topic pages carry a Sources & Stories section like every other content file; cit
 | [Value retention](value-retention.md) | drafted; author answers folded in, voice pass pending |
 | [Lifetime value](ltv.md) | drafted; author opening and interview questions open |
 
-Retention was too big for one page. [Retention](retention.md) covers the entity: users, accounts and workspaces, and whether they come back. [Value retention](value-retention.md) covers the money: whether contract value renews and expands. [Lifetime value](ltv.md) is where the two meet and where acquisition cost enters, and it is the third.
+Retention was too big for one page. [Retention](retention.md) covers the entity: users, accounts and workspaces, and whether they come back. [Value retention](value-retention.md) covers the money: whether contract value renews and expands. [Lifetime value](ltv.md) is where the two meet and where acquisition cost enters: how to compute the number from a cohort table, and what it decides about what you can pay for the next customer.
 
 Planned next: segmentation, then benchmarks and how to check a number before you steer by it, then cost and margin. Revenue and usage after those.
