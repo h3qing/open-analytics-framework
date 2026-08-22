@@ -2,7 +2,7 @@
 
 One row per writeable unit; a unit is finishable in one 60–90 minute sitting. Statuses: `candidate` (pre prior-art review), `ready`, `in progress`, `drafted`, `published`. Rows at `candidate` are provisional until the Phase 0 prior-art review runs and the candidate list is cut by the author.
 
-The Module column uses `1A` (definition quality) and `1B` (data integrity) for the two halves of Module 1, `2A` (what you build) and `2B` (how you run it), and `3A` (what it can reach) and `3B` (what it tells you) — see the [Module 1](docs/modules/01-ai-data-quality/README.md), [Module 2](docs/modules/02-infrastructure-design/README.md) and [Module 3](docs/modules/03-ai-agent-integration/README.md) charters. Metric topic pages (`MX-*`) and guided skills (`SK-*`) are 1A work, except where a topic serves Module 4; no row is homeless.
+The Module column uses `1A` (definition quality) and `1B` (data integrity) for the two halves of Module 1, `2A` (what you build) and `2B` (how you run it), `3A` (what it can reach) and `3B` (what it tells you), and `4A` (what you must be able to show) and `4B` (the money numbers) — see the [Module 1](docs/modules/01-ai-data-quality/README.md), [Module 2](docs/modules/02-infrastructure-design/README.md), [Module 3](docs/modules/03-ai-agent-integration/README.md) and [Module 4](docs/modules/04-governance-and-financial-reporting/README.md) charters. Metric topic pages (`MX-*`) and guided skills (`SK-*`) are 1A work, except where a topic serves Module 4; no row is homeless.
 
 | ID | Module | Working title | Type | Target | Status | Key sources | Effort |
 |---|---|---|---|---|---|---|---|
@@ -44,11 +44,15 @@ The Module column uses `1A` (definition quality) and `1B` (data integrity) for t
 | M3-09 | 3A | Your support tickets can tell your AI what to do | pattern | v0.3.0 | candidate | The unit of sensitivity is the row, and it was written by someone you do not employ | 1 session |
 | M3-10 | 3A | What to write down every time your AI answers a data question | pattern | v0.3.0 | candidate | You cannot go back and record an answer you did not log | 1 session |
 | RA-02 | 3 | AI analytics agent deployment with a validation layer | reference architecture | v0.3.0 | candidate | Assembled last, from what the units actually said | 1 session |
-| M4-01 | 4 | Metric definition change control | pattern | v1.0.0 | candidate | [TODO: prior art] | 1 session |
-| M4-02 | 4 | Minimum viable data governance | pattern | v1.0.0 | candidate | [TODO: prior art] | 1 session |
-| M4-03 | 4 | Revenue metrics under usage-based pricing | pattern | v1.0.0 | candidate | [TODO: prior art + source list] | 1 session |
-| M4-04 | 4 | Cost and margin reporting for AI products | pattern | v1.0.0 | ready | Author's stated differentiator; inference cost per user, margin under usage-based pricing | 1 session |
-| M4-05 | 4 | The investor reporting pack | pattern | v1.0.0 | candidate | [TODO: prior art + source list] | 1 session |
+| M4-01 | 4A | Before you edit the metric doc, make the agent re-derive last quarter's revenue | pattern | v1.0.0 | candidate | Author's own position; the hole is the edit that legitimately moves the number | 1 session |
+| M4-02 | 4A | The five governance artifacts a ten-person company actually needs | pattern | v1.0.0 | candidate | Build the evidence once: diligence, audit and security questionnaire want the same things | 1 session |
+| M4-03 | 4B | What you can honestly call ARR when customers pay for what they use | pattern | v1.0.0 | candidate | Invoiced, collected and recognized are three numbers for the same month | 1 session |
+| M4-04 | 4B | What goes in cost of goods sold when your product is a model call | pattern | v1.0.0 | ready | Author's stated differentiator; feeds on Module 2's model-call metering | 1 session |
+| M4-05 | 4B | The investor pack: every number, its definition, and what backs it | template | v1.0.0 | candidate | Diligence asks for history that cannot be manufactured later | 1 session |
+| M4-06 | 4A | A prompt is not a permission | pattern | v1.0.0 | ready | Author's position, sharpened: name the artifact that stops the agent if the model output were attacker-controlled | 1 session |
+| M4-07 | 4A | The eight other things you can't change later | reference architecture | v1.0.0 | candidate | Beyond billing: consent, access logs, deletion receipts, the eval that gated a ship | 1 session |
+| M4-08 | 4A | Show me the query, or don't send me the number | pattern | v1.0.0 | ready | The executable query is the artifact, not the reasoning trace | 1 session |
+| M4-09 | 4A | Do you actually need SOC 2 yet? | pattern | v1.0.0 | candidate | Routes on written evidence that a named deal is blocked on it | 1 session |
 | RA-01 | 2A | Analytics stack for an AI-native startup, pre-first-data-hire | reference architecture | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | IG-01 | 1A | Standing up a metric definitions repository | implementation guide | v0.3.0 | candidate | [TODO: prior art] | 1 session |
 | IG-02 | 1B | Building your first golden question set | implementation guide | v0.3.0 | candidate | [TODO: prior art] | 1 session |
