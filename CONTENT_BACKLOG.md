@@ -2,7 +2,7 @@
 
 One row per writeable unit; a unit is finishable in one 60–90 minute sitting. Statuses: `candidate` (pre prior-art review), `ready`, `in progress`, `drafted`, `published`. Rows at `candidate` are provisional until the Phase 0 prior-art review runs and the candidate list is cut by the author.
 
-The Module column uses `1A` (definition quality) and `1B` (data integrity) for the two halves of Module 1, and `2A` (what you build) and `2B` (how you run it) for the two halves of Module 2 — see the [Module 1](docs/modules/01-ai-data-quality/README.md) and [Module 2](docs/modules/02-infrastructure-design/README.md) charters. Metric topic pages (`MX-*`) and guided skills (`SK-*`) are 1A work, except where a topic serves Module 4; no row is homeless.
+The Module column uses `1A` (definition quality) and `1B` (data integrity) for the two halves of Module 1, `2A` (what you build) and `2B` (how you run it), and `3A` (what it can reach) and `3B` (what it tells you) — see the [Module 1](docs/modules/01-ai-data-quality/README.md), [Module 2](docs/modules/02-infrastructure-design/README.md) and [Module 3](docs/modules/03-ai-agent-integration/README.md) charters. Metric topic pages (`MX-*`) and guided skills (`SK-*`) are 1A work, except where a topic serves Module 4; no row is homeless.
 
 | ID | Module | Working title | Type | Target | Status | Key sources | Effort |
 |---|---|---|---|---|---|---|---|
@@ -33,18 +33,22 @@ The Module column uses `1A` (definition quality) and `1B` (data integrity) for t
 | M2-07 | 2A | Do you need change data capture, or is a nightly copy fine? | pattern | v0.3.0 | candidate | The unit whose sourcing already resolves; Kimball on CDC and late-arriving data | 1 session |
 | M2-08 | 2A | Tracking plan | template | v0.3.0 | candidate | Module 2's first control plan; the templates directory is empty today | 1 session |
 | M2-09 | 2B | How to tell whether a number is wrong before you bet money on it | skill | v0.3.0 | candidate | Text-to-SQL accuracy evidence; the checks a person without SQL can actually run | 1 session |
-| M3-01 | 3 | The readiness gate | pattern | v0.3.0 | candidate | [TODO: prior art] | 1 session |
-| M3-02 | 3 | The validation harness | pattern | v0.3.0 | candidate | [TODO: prior art] | 1 session |
-| M3-03 | 3 | Escalation design | pattern | v1.0.0 | candidate | [TODO: prior art] | 1 session |
-| M3-04 | 3 | Staged organizational rollout | pattern | v1.0.0 | candidate | [TODO: prior art] | 1 session |
-| M3-05 | 3 | Agent output governance | pattern | v1.0.0 | candidate | [TODO: prior art] | 1 session |
+| M3-01 | 3 | The readiness gate | pattern | v0.3.0 | candidate | Written after both halves exist; it checks 3A Track 0 and the context file at once | 1 session |
+| M3-02 | 3B | How to tell whether the agent's answer counts as right | pattern | v0.3.0 | candidate | Splits from the runtime reconciliation unit; see the evaluation settlement in DECISIONS | 1 session |
+| M3-03 | 3B | Teaching your data agent to say "I don't know" | pattern | v1.0.0 | candidate | [TODO: author interview — no input behind this row yet] | 1 session |
+| M3-04 | 3B | Who should get your AI data assistant first, and it is not the executives | pattern | v1.0.0 | candidate | [TODO: author interview — no input behind this row yet] | 1 session |
+| M3-05 | 3B | How far an AI-generated number is allowed to travel | pattern | v1.0.0 | candidate | [TODO: author interview — no input behind this row yet] | 1 session |
+| M3-06 | 3B | The one file your AI should read before it answers anything | pattern | v0.3.0 | ready | A 4 KB context file moved three frontier models by the same large margin; the tool was not the variable | 1 session |
+| M3-07 | 3A | What login should the AI use on your data? | pattern | v0.3.0 | ready | Merges four proposals; OAuth holds but fails on over-privileged humans, on scheduled work, and on stdio transport | 1 session |
+| M3-08 | 3A | Decide which tables the AI can reach, before deciding who can ask | pattern | v0.3.0 | ready | Table-granular selection fails when sensitivity lives in a free-text column | 1 session |
+| M3-09 | 3A | Your support tickets can tell your AI what to do | pattern | v0.3.0 | candidate | The unit of sensitivity is the row, and it was written by someone you do not employ | 1 session |
+| M3-10 | 3A | What to write down every time your AI answers a data question | pattern | v0.3.0 | candidate | You cannot go back and record an answer you did not log | 1 session |
+| RA-02 | 3 | AI analytics agent deployment with a validation layer | reference architecture | v0.3.0 | candidate | Assembled last, from what the units actually said | 1 session |
 | M4-01 | 4 | Metric definition change control | pattern | v1.0.0 | candidate | [TODO: prior art] | 1 session |
 | M4-02 | 4 | Minimum viable data governance | pattern | v1.0.0 | candidate | [TODO: prior art] | 1 session |
 | M4-03 | 4 | Revenue metrics under usage-based pricing | pattern | v1.0.0 | candidate | [TODO: prior art + source list] | 1 session |
 | M4-04 | 4 | Cost and margin reporting for AI products | pattern | v1.0.0 | ready | Author's stated differentiator; inference cost per user, margin under usage-based pricing | 1 session |
-| M3-06 | 3 | Handing a metric definition to an agent | pattern | v0.3.0 | ready | M1-11's machine-readable spec and prompts as the model; closes the library's AI gap | 1 session |
 | M4-05 | 4 | The investor reporting pack | pattern | v1.0.0 | candidate | [TODO: prior art + source list] | 1 session |
 | RA-01 | 2A | Analytics stack for an AI-native startup, pre-first-data-hire | reference architecture | v0.2.0 | candidate | [TODO: prior art] | 1 session |
-| RA-02 | 3 | AI analytics agent deployment with a validation layer | reference architecture | v0.3.0 | candidate | [TODO: prior art] | 1 session |
 | IG-01 | 1A | Standing up a metric definitions repository | implementation guide | v0.3.0 | candidate | [TODO: prior art] | 1 session |
 | IG-02 | 1B | Building your first golden question set | implementation guide | v0.3.0 | candidate | [TODO: prior art] | 1 session |
