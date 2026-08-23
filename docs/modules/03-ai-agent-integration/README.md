@@ -20,23 +20,23 @@ Read 3A first. Both halves matter, but only one of them fails in a way you canno
 
 ## What decides the order
 
-Module 2 orders by what expires: history a source system has overwritten is gone, so the units that expire come first. Nothing in this module expires, because you can always turn the agent off. What this module orders by instead is whether you can still pay the cost later.
+The units are ordered by whether you can still fix the damage later. A wrong number can be corrected. A leaked customer list cannot be un-leaked, and a question nobody logged has no answer three weeks later when someone asks how a number was produced. The units that protect you from permanent damage come first, and the units that make answers better come after.
 
-The difference is worth stating plainly, because it is the thing this module knows that the others do not. Granting a credential is perfectly reversible right up until the moment a row leaves under it, and then nothing you do reverses anything. A wrong number can be corrected. A leaked customer list cannot be un-leaked, and a question you never logged has no answer three weeks later when someone asks how a number was produced. The test is the same as Module 2's, and the clock is different: Module 2 asks whether the decision can be taken back, and this module asks whether the consequence can.
-
-That is why 3A's first track exists and why it comes before everything, including the work that makes answers good.
+Module 2 orders by what expires. Nothing here expires, because you can always turn the agent off. The risk here is different: granting a credential feels reversible, and it is, right up until a row leaves under it. That is why 3A's first track comes before everything else.
 
 ## Why this module exists
 
-[TODO(heqing): interview-driven, written in session. The research answers most of the module but not this. Two things to say in your own voice: what you have actually watched go wrong when an agent was pointed at production data, and why you think the access half has to be settled before the trust half, since most writing on this subject does the reverse.]
+It seems easy to integrate an AI agent with your database. In practice, in an enterprise environment, there is much more to consider: security, compliance, reliability, factuality, the reusability of your knowledge, and the organization of your context. Many things can go wrong with the integration. This module helps you use AI securely, safely, and in a way you can trust, so that it adds value to your work.
+
+<!-- TODO(heqing): two optional additions in your voice: a story of what you watched go wrong when an agent met production data, and why you settle access before trust when most writing does the reverse. -->
 
 ## 3A — What it can reach
 
-The spine is four questions in order: what identity does it carry, what may that identity reach, what can the untrusted rows inside that reach make it do, and what record survives of what it did.
+3A asks four questions, in order: what identity does the agent carry, what can that identity reach, what can untrusted rows make it do, and what record survives of what it did.
 
 ### Track 0 — Before you connect anything
 
-This track holds seven units, and they are the only ones in the module that are mandatory before an agent touches production data. Everything else can be added in the second month.
+There are seven units in this track, and they are strongly recommended before your agent touches production data. Everything else can be added in the second month.
 
 | Unit | What goes wrong without it | Type |
 |---|---|---|
