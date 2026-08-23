@@ -39,6 +39,13 @@ Inside 2A the order is what expires, not what matters most: history is the only 
 
 Read 3A first. Both matter, but only one fails in a way you cannot take back. See [the Module 3 charter](modules/03-ai-agent-integration/README.md).
 
+**Module 4 has two named halves,** and they fail in front of different outsiders:
+
+- **4A, what you must be able to show** — can you produce the evidence without manufacturing it. Control.
+- **4B, the money numbers themselves** — are the figures defined correctly for an AI business and reported consistently. Define and Measure.
+
+The money definitions carry a disclosure consequence: changing what counts as an active user is internal, and changing what counts as ARR between two board decks is a restatement. See [the Module 4 charter](modules/04-governance-and-financial-reporting/README.md).
+
 **The layers:**
 
 - **Knowledge** — the [metrics library](metrics/README.md): classical metric knowledge, one topic page per metric. This is Module 1A's reference layer, not a fifth module; the revenue, cost and margin pages will also serve Module 4.
