@@ -46,7 +46,7 @@ Read 3A first. Both matter, but only one fails in a way you cannot take back. Wh
 
 4B is not Module 1A applied to money. These definitions carry a disclosure consequence: changing what counts as an active user is internal, and changing what counts as ARR between two board decks is a restatement. See [the Module 4 charter](modules/04-governance-and-financial-reporting/README.md).
 
-**Where Module 3 stops and Module 4 starts.** Module 3 owns the run, Module 4 owns the record. If a defect shows up inside a running agent session and is fixed by changing the runtime, it is Module 3. If it only shows up when an outsider asks you to produce something that already left the building, it is Module 4. The version that decides most cases on sight: Module 3's rules are about the agent specifically, and Module 4's rules bind every identity, including the founder's.
+**Where Module 3 stops and Module 4 starts.** Module 3 owns the run, and Module 4 owns the record. If a defect shows up inside a running agent session and is fixed by changing the runtime, it is Module 3. If it only shows up when an outsider asks you to produce something that already left the building, it is Module 4. The version that decides most cases on sight is that Module 3's rules are about the agent specifically, and Module 4's rules bind every identity, including the founder's.
 
 **The layers:**
 

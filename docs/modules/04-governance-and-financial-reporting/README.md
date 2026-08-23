@@ -8,13 +8,13 @@
 
 The two modules overlap on governance and the line between them is worth stating once, because it decides every future unit without another argument.
 
-**Module 3 owns the run. Module 4 owns the record.** A unit belongs to Module 3 if its defect shows up inside a running agent session and is repaired by changing the runtime: a credential, a tool, a retrieval step, a check before the answer is shown. It belongs here if the defect only shows up when somebody outside the team asks you to produce or defend something that already left the building, and repair means a standing rule plus an artifact you had to keep in advance.
+**Module 3 owns the run, and Module 4 owns the record.** A unit belongs to Module 3 if its defect shows up inside a running agent session and is repaired by changing the runtime: a credential, a tool, a retrieval step, a check before the answer is shown. It belongs here if the defect only shows up when somebody outside the team asks you to produce or defend something that already left the building, and repair means a standing rule plus an artifact you had to keep in advance.
 
-When a rule binds the agent, ask what generates the rule. If the generator is "the agent must not exceed its caller, and must not be talked into something", it is Module 3. If it is "this record must be producible unaltered to an outsider", it is Module 4, and Module 2 or Module 3 implements it. The cruder version, which decides most cases on sight: Module 3's rules are about the agent specifically, and Module 4's rules bind every identity, including the founder's.
+When a rule binds the agent, ask what generates the rule. If the generator is "the agent must not exceed its caller, and must not be talked into something", it is Module 3. If it is "this record must be producible unaltered to an outsider", it is Module 4, and Module 2 or Module 3 implements it. The cruder version decides most cases on sight: Module 3's rules are about the agent specifically, and Module 4's rules bind every identity, including the founder's.
 
 ## Two halves
 
-Both halves fail in front of an outsider, but not the same outsider and not for the same reason. One is a failure of evidence, the other of definition, and neither fix helps the other. A perfect audit trail does not tell you what belongs in ARR, and a defensible revenue definition does not survive a request to show how last March's figure was produced.
+Both halves fail in front of an outsider, but not the same outsider and not for the same reason. One half fails on evidence, the other fails on definition, and neither fix helps the other. A perfect audit trail does not tell you what belongs in ARR, and a defensible revenue definition does not survive a request to show how last March's figure was produced.
 
 | | 4A — What you must be able to show | 4B — The money numbers themselves |
 |---|---|---|
@@ -34,7 +34,7 @@ Both halves fail in front of an outsider, but not the same outsider and not for 
 
 ### Track 0 — Who and what can reach the data
 
-The standing rule Module 3 implements. One access-control population, humans and agents together, with one privilege ceiling and two lifecycles, because you cannot put multi-factor authentication on a service account.
+This track states the standing rule that Module 3 implements: humans and agents form one access-control population, with one privilege ceiling and two lifecycles, because you cannot put multi-factor authentication on a service account.
 
 | Unit | What goes wrong without it | Type |
 |---|---|---|
