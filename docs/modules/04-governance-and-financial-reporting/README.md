@@ -134,7 +134,3 @@ Code has been version-controlled and reviewed for decades. The context you hand 
 | Build the evidence once: diligence, the audit and the security questionnaire want the same things | The same facts are assembled three times, from scratch, under three deadlines | implementation guide |
 | What changes the day you sign your first enterprise customer | The obligations arrive with the contract and nothing was ready | pattern |
 | The investor pack: every number, its definition, and what backs it | Each pack is rebuilt by hand and no two are consistent | template |
-
-## Control-plan template
-
-Every module ships at least one. Home: [`templates/04-governance-and-financial-reporting/`](../../../templates/04-governance-and-financial-reporting/), empty until the definitions sheet lands.
