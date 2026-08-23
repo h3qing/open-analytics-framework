@@ -137,7 +137,3 @@ Module 2 owns the prerequisites. Deployment and validation are [Module 3](../03-
 ## Patterns
 
 _None written yet._ Units enter [CONTENT_BACKLOG.md](../../../CONTENT_BACKLOG.md) as they are scheduled, in the order above, rather than all at once.
-
-## Control-plan template
-
-Every module ships at least one. Home: [`templates/02-infrastructure-design/`](../../../templates/02-infrastructure-design/), empty until the tracking plan lands.

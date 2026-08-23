@@ -149,7 +149,3 @@ The context file sits on the seam. It belongs to 3B by ownership, since its whol
 `M3-01`, the readiness gate, is the ceremony that checks both halves at once and refuses deployment until 3A's Track 0 exists and the context file is written. It is the module's front door and should be written after both halves are drafted, not before.
 
 `RA-02`, the deployed shape with its validation layer, is assembled last, from whatever the units actually said.
-
-## Control-plan template
-
-Every module ships at least one. Home: [`templates/03-ai-agent-integration/`](../../../templates/03-ai-agent-integration/), empty until the access sheet lands.
