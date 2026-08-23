@@ -54,6 +54,10 @@ All citation keys must resolve in `REFERENCES.md`. CI still requires a "Sources 
 - **Every recommendation needs a version for a team of ten.** The audience has no sales ops, no traffic for a clean holdout, and nobody spare to keep a neutral ledger. A recommendation that assumes staff the reader does not have is not advice, and the small-company version belongs beside it.
 - **Do not repeat a number the framework has not verified.** Famous benchmarks in this field frequently fail tracing. Say plainly that no citable figure survived checking rather than passing folklore along with a caveat.
 
+## Git conventions
+
+Branch names are plain and descriptive (`entity-retention`), never tool-prefixed. Commits and pull requests carry no co-author trailers and no generated-by footers. Messages lead with the problem the change solves, in ordinary prose, so the history reads as one maintainer's work.
+
 ## When to stop and ask
 
 Ask rather than guess if: the repo name is taken, a fixed-specification item seems wrong, a tooling choice adds a dependency I would have to maintain, you cannot verify a citation, a question you want to ask would require me to disclose something employer-specific, or anything is ambiguous enough that guessing wrong costs a rewrite.
