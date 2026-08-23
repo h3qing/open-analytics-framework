@@ -6,7 +6,7 @@
 
 ## Where this module starts, and Module 3 stops
 
-The two modules overlap on governance and the line between them is worth stating once, because it decides every future unit without another argument.
+The two modules overlap on governance, so the line between them is stated here once.
 
 **Module 3 owns the run, and Module 4 owns the record.** A unit belongs to Module 3 if its defect shows up inside a running agent session and is repaired by changing the runtime: a credential, a tool, a retrieval step, a check before the answer is shown. It belongs here if the defect only shows up when somebody outside the team asks you to produce or defend something that already left the building, and repair means a standing rule plus an artifact you had to keep in advance.
 
