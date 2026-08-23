@@ -31,7 +31,7 @@ keywords:
 
 The [entity page](retention.md) asks whether customers came back. The [value page](value-retention.md) asks how much of what they had they kept. This page is where the two meet: lifetime value, LTV, is what one customer is worth in total before they leave, and it is a survival curve multiplied by a margin.
 
-That makes it the most useful number on these three pages and the easiest one to get badly wrong, because every error in the two inputs arrives here multiplied. It is also the number that decides how much you can pay for the next customer, which is the largest recurring spending decision most companies make. CAC is customer acquisition cost: the acquisition spend divided by the customers that spend produced.
+That makes it the most useful number on these three pages, and the easiest one to get badly wrong. Every error in the two inputs arrives here multiplied. It is also the number that decides how much you can pay for the next customer, and for most companies that is the largest recurring spending decision they make. CAC is customer acquisition cost: the acquisition spend divided by the customers that spend produced.
 
 Where to jump: [what the number is](#what-lifetime-value-is) fixes the four decisions that set what your figure means, [how to compute it](#how-to-compute-it-from-your-own-cohort-table) is the arithmetic with a worked example, [the two ways it goes wrong](#the-two-ways-the-number-goes-wrong) is where almost everyone loses it, [what the number is for](#what-the-number-is-for) is the acquisition ceiling and the payback window, and [the five percent claim](#what-the-five-percent-claim-actually-says) is the most quoted sentence in this subject read against its source.
 
@@ -47,7 +47,7 @@ flowchart LR
     V --> P["The payback month<br/>when the money comes back"]
 ```
 
-Four decisions fix what your number actually means. Each has a common wrong answer, and all four move the figure in a direction you can predict.
+There are four decisions that fix what your number means. Each one has a common wrong answer, and each wrong answer moves the figure in a direction you can predict.
 
 | The decision | The common answer, and what it costs | Use instead |
 |---|---|---|
@@ -56,23 +56,23 @@ Four decisions fix what your number actually means. Each has a common wrong answ
 | One customer or the average one | A single company-wide figure. There is no average customer; a base is a mixture, which is the whole subject of [why curves flatten](retention.md#why-curves-flatten). | One figure per segment that behaves differently, and never a blended figure divided by a blended CAC. |
 | How far into the future | Silence about the horizon. A sum that stops at month 24 gets quoted as the lifetime value. | Compute over the periods you can actually see, and label it: that number is a floor, because the value beyond your data is real and missing from it [^fader-hardie-2014]. |
 
-One more thing is true of every version of this number. It is a forecast about people who have not left yet, so it is an expected value with a range around it rather than a fact about a customer, which is why the careful notation is E(LTV) [^fader-hardie-2014].
+Every version of this number is a forecast about people who have not left yet. That makes it an expected value with a range around it rather than a fact about any customer. The careful notation is E(LTV), and it is worth using [^fader-hardie-2014].
 
 ## How to compute it from your own cohort table
 
 The formula is one line, and every term in it comes off a spreadsheet you can already build:
 
-> **E(LTV) = the sum, over each period _t_ = 0, 1, 2 and so on, of margin in period _t_ x share of the cohort still paying in period _t_, divided by (1 + _d_) to the power _t_**, where _d_ is the discount rate for one period and period 0 is the period the customer arrives in, which is why the first period is not discounted.
+> **E(LTV) = the sum, over each period _t_ = 0, 1, 2 and so on, of margin in period _t_ x share of the cohort still paying in period _t_, divided by (1 + _d_) to the power _t_**, where _d_ is the discount rate for one period. Period 0 is the period the customer arrives in, so the first period is not discounted.
 
-Five steps, none of which need a model.
+There are five steps to calculating lifetime value, and no model is needed.
 
-1. **Take the survival curve off your cohort table.** One cohort, period by period, the share of it still paying. This is the [triangle](retention.md#reading-a-cohort-curve) from the entity page. Use the survival curve, the share still subscribed, rather than an activity curve, because a customer who stops paying does not come back into the count.
-2. **Compute margin per surviving customer per period.** Revenue in that period minus what it costs to serve that customer: infrastructure, payment fees, support, anything third-party that scales with them. Leave sales and marketing out; that is CAC, and double-counting it here is the most common way this number gets quietly deflated.
-3. **Pick a discount rate and write it down.** Money three years out is worth less than money now. If nobody in the company can tell you a cost of capital, run the arithmetic at 5 and at 15 percent a year and see whether the decision you are making flips between them. If it does, the decision was too close to call on this number.
+1. **Take the survival curve off your cohort table.** Take one cohort and write down the share of it still paying in each period. This is the [triangle](retention.md#reading-a-cohort-curve) from the entity page. Use the survival curve, which is the share still subscribed, rather than an activity curve. A customer who stops paying does not come back into the count.
+2. **Compute margin per surviving customer per period.** Take the revenue that customer produced in the period and subtract what it costs to serve them: infrastructure, payment fees, support, and anything third-party that scales with them. Leave sales and marketing out. That spend is CAC, and counting it here as well is the most common way this number gets quietly deflated.
+3. **Pick a discount rate and write it down.** Money three years out is worth less than money now. If nobody in the company can tell you a cost of capital, run the arithmetic at 5 percent a year and again at 15 percent, and see whether your decision flips between them. If it does, the decision was too close to call on this number.
 4. **Multiply the three columns together and add them up.** That is the whole calculation.
-5. **Stop where your data stops, and label what you stopped at.** A sum that ends at month 24 is the value of the first 24 months. Calling it the lifetime value is how a floor turns into a forecast [^fader-hardie-2014].
+5. **Stop where your data stops, and label what you stopped at.** A sum that ends at month 24 is the value of the first 24 months. Say so. Call it the lifetime value instead and a floor quietly becomes a forecast [^fader-hardie-2014].
 
-**Worked, on an illustrative cohort.** Monthly survival off the cohort table, $20 of contribution margin a month per surviving customer, discounted at 10 percent a year, which is a factor of about 0.992 per month:
+**A worked example.** The numbers here are illustrative. Monthly survival comes off the cohort table, each surviving customer leaves $20 of contribution margin a month, and future money is discounted at 10 percent a year, which works out to a factor of about 0.992 a month.
 
 | Month | Still paying | Margin that month | Discount factor | Discounted | Running total |
 |---|---|---|---|---|---|
@@ -83,49 +83,49 @@ Five steps, none of which need a model.
 | 5 | 66.5% | $13.30 | 0.969 | $12.89 | $79.95 |
 | 6 | 62.1% | $12.42 | 0.961 | $11.94 | $91.89 |
 
-Carried out to month 24 the same three columns reach $236, and the curve is still climbing when the data runs out. That is the entire method. It assumes nothing about the shape of the curve, which is the point, and it is arithmetic a spreadsheet does in a column.
+Carry the same three columns out to month 24 and the total reaches $236, with the curve still climbing when the data runs out. That is the entire method. It assumes nothing about the shape of the curve, and a spreadsheet does it in one column.
 
-**The shortcut that looks like a formula.** If retention really were constant at rate _r_ every period and margin constant at _m_, the sum above collapses to _m_ x _r_ / (1 + _d_ − _r_), the version taught as the lifetime value formula. The algebra is exact; the premise is what fails, and it fails in the direction described in the next section. Use it as a sanity check on a number you computed the long way, never as the number itself.
+**The shortcut that looks like a formula.** If retention really were constant at rate _r_ every period, and margin constant at _m_, the sum above collapses to _m_ x _r_ / (1 + _d_ − _r_). That is the version usually taught as the lifetime value formula. The algebra is exact. The premise is what fails, and it fails in the direction the next section describes. Use it as a sanity check on a number you computed the long way, and never as the number itself.
 
 <!-- TODO(heqing): interview — how deep into the math should this page go for a reader with no analyst? The worked table above, or the formulas with a diagram? This was left open on the old combined page too. -->
 
 ## The two ways the number goes wrong
 
-**One over the churn rate is not a lifetime.** The standard way to get from a churn rate to a lifetime is to divide one by the churn rate: 5 percent monthly churn becomes a 20-month average lifetime, and it is quick enough that it rarely gets questioned. It holds only if lifetimes follow a geometric distribution, meaning every customer really does have the same constant chance of leaving in every period, and real customer bases do not look like that. Under the formula, a Netflix 8-K reporting 7.2 percent monthly churn implies an average lifetime of 13.9 months, and a Peloton S-1 implies 154 months [^fader-hardie-2026a].
+**One over the churn rate is not a lifetime.** Most people get from a churn rate to a lifetime by dividing one by the churn rate. A 5 percent monthly churn rate becomes a 20-month average lifetime, and the calculation is quick enough that it rarely gets questioned. It holds only if customer lifetimes follow a geometric distribution. That means every customer has the same constant chance of leaving in every period, and real customer bases do not work that way. Run the formula on real filings and it shows. A Netflix 8-K reporting 7.2 percent monthly churn comes out at an average lifetime of 13.9 months. A Peloton S-1 comes out at 154 months [^fader-hardie-2026a].
 
-The mechanism is the [sorting effect](retention.md#why-curves-flatten): your churn rate is a mixture rather than a constant, and it keeps re-weighting itself underneath you as the fragile customers leave first. In the worked cohort above, first-month churn is 12 percent, so the shortcut gives an 8.3-month lifetime and an LTV of $167. The two years actually observed are worth $236, and that figure is itself a floor with the curve still climbing. The shortcut does not shave the number; it loses a third of it before the horizon even runs out.
+The reason is the [sorting effect](retention.md#why-curves-flatten). Your churn rate is a mixture rather than a constant, and the mixture keeps re-weighting itself as the fragile customers leave first. Take the worked cohort above. First-month churn is 12 percent, so the shortcut gives an 8.3-month lifetime and a lifetime value of $167. The two years actually observed are worth $236, and that figure is still a floor, because the curve has not stopped climbing. The shortcut does not shave the number. It loses a third of it before the horizon even runs out.
 
-**Pooling cohorts understates the base, which is unusually good news.** Collapsing a multi-cohort retention table into one aggregate retention rate, 0.6912 in one published worked example, understated the residual value of the customer base by 38 percent. The bias runs the same way whenever cohort-level rates rise, which is whenever the base is heterogeneous, which is essentially always [^fader-hardie-2010]. For a small team that is worth more than it sounds: the pooled number is not merely noisy, it is systematically low, so you know which way you are wrong before you do any work.
+**Pooling cohorts understates the base, and that is unusually good news.** Collapse a multi-cohort retention table into one aggregate retention rate and you understate what the base is worth. In one published example the aggregate rate came out at 0.6912, and the residual value of the customer base was understated by 38 percent. The bias runs the same way every time cohort-level rates rise. Rates rise whenever the base is a mixture of different customers, and a base is a mixture almost always [^fader-hardie-2010]. For a small team that is worth more than it sounds. The pooled number is not just noisy, it is systematically low, so you know which way you are wrong before you do any work.
 
-Both errors are worth knowing together, because they do not cancel. Skipping the discount inflates the answer, by about 8 percent over the two years in the worked example and more over a longer horizon. Dividing one by a churn rate deflates it, by a third over the same two years and by more the flatter the curve gets. A company that makes both mistakes lands on a plausible-looking number and is wrong twice.
+Know both errors together, because they do not cancel out. Skipping the discount inflates the answer by about 8 percent over the two years in the worked example, and by more over a longer horizon. Dividing one by a churn rate deflates it by a third over the same two years, and by more as the curve flattens. A company that makes both mistakes lands on a plausible-looking number and is wrong twice.
 
 ## What the number is for
 
-An LTV nobody spends against is trivia. The number exists to answer planning questions, and the biggest one is what you are allowed to pay for the next customer.
+A lifetime value nobody spends against is trivia. The number exists to answer planning questions, and the biggest one is how much you are allowed to pay for the next customer.
 
-**It sets the ceiling on acquisition cost.** Break-even is CAC equal to LTV. Nobody sensible works there, because LTV is a forecast and CAC is a receipt: one of those two numbers can be wrong by half. The convention is to require lifetime value of at least three times acquisition cost [^skok-2013], which buys the margin for error. Treat the three as a convention rather than a finding: it is practitioner guidance rather than a result from a study, and checking a travelling number before steering by it is the reason [benchmarks](README.md) are on this library's list.
+**It sets the ceiling on acquisition cost.** You break even when acquisition cost equals lifetime value. Nobody sensible works at break-even, because lifetime value is a forecast and acquisition cost is a receipt. One of those two numbers can be wrong by half. The convention is to require a lifetime value of at least three times acquisition cost [^skok-2013], and the extra two thirds is the margin for error. Treat the three as a convention rather than a finding. It comes from practitioner writing rather than from a study, and this library plans a [benchmarks](README.md) page because numbers like it travel further than their evidence does.
 
-**The ratio does not tell you whether you can afford it.** A ratio compares totals; a company dies of timing. The second number is the payback month: how long until the cumulative margin from a customer covers what you paid to get them.
+**The ratio does not tell you whether you can afford the price.** A ratio compares two totals, and companies run out of cash on timing rather than on totals. The second number you need is the payback month. It is how long it takes for the margin from a customer to cover what you paid to get them.
 
 ![One cumulative discounted margin curve for an illustrative cohort over 24 months, with two acquisition prices drawn across it. At a CAC of $90 the curve crosses in month 6; at $220 it crosses in month 22. The curve is still climbing at month 24, where the observed data ends. The numbers are illustrative.](figures/cac-payback-curve.svg)
 
-Same customer, same curve, two prices. Both sit below what that customer is worth over the full relationship, so neither loses money in the end. Only one of them is a price a company with ten people can actually pay, because the other is a 22-month loan it has to fund out of its own cash before any of it comes back. The commonly cited threshold is to recover acquisition cost inside twelve months [^skok-2013]; the useful discipline is simply to know the month, and to know it per channel.
+The chart above runs one cohort against two different acquisition prices. The customer and the curve are the same in both cases, and only the price changes. Both prices sit below what that customer is worth over the full relationship, so neither one loses money in the end. Only one of them is a price a ten-person company can actually pay. The other is a 22-month loan, and the company has to fund it out of its own cash before any of it comes back. The commonly cited threshold is to recover acquisition cost inside twelve months [^skok-2013]. The more useful discipline is to know the month at all, and to know it for each channel separately.
 
-**Prices are per channel and per segment, and they move while you spend.** A blended LTV divided by a blended CAC is the single most misleading slide in this subject, because the decision is never about the average customer already bought — it is about the next one. As spend goes up in a channel, acquisition cost goes up with it, and the customers the extra spend buys tend to retain worse, so both sides of the ratio move against you at once. Lifetime value earns its keep as a tool for comparing one channel or campaign against another, and stops being one the moment it becomes the plan itself [^gurley-2012].
+**Prices differ by channel and by segment, and they move while you spend.** A blended lifetime value divided by a blended acquisition cost is the most misleading slide in this subject. The decision it gets used for is never about the average customer you already bought. It is about the next one. Push more spend into a channel and the acquisition cost goes up with it, and the customers that extra spend buys tend to retain worse, so both sides of the ratio move against you at the same time. Lifetime value earns its keep as a way to compare one channel or campaign against another. It stops earning it the moment the number becomes the plan [^gurley-2012].
 
-Two rules keep the comparison honest, and both are free: compute CAC and LTV over the same cohort, so this quarter's spend is not being divided by customers won last year, and compute both per channel and per segment before averaging anything.
+Two rules keep the comparison honest, and both are free. Compute acquisition cost and lifetime value over the same cohort, so that this quarter's spend is not divided by customers you won last year. And compute both of them per channel and per segment before you average anything.
 
-**Where the next dollar goes.** Retention, margin and acquisition cost are three levers on the same number, and they are not the same size. Improving customer retention by 1 percent improves customer and firm value by 3 to 7 percent; the same 1 percent improvement in margin is worth about 1 percent, and in acquisition cost between 0.02 and 0.3 percent [^gupta-2004]. Two caveats travel with that finding, and both are the authors' own: the cost of buying the retention improvement is not in the number, so it does not follow that a firm should always improve retention, and eliminating churn entirely is not advisable, because a firm with 100 percent customer loyalty may simply be underpricing [^gupta-2004].
+**Where the next dollar goes.** Retention, margin and acquisition cost are three levers on the same number, and they are not the same size. Improving customer retention by 1 percent improves customer and firm value by 3 to 7 percent. The same 1 percent improvement in margin is worth about 1 percent, and in acquisition cost it is worth between 0.02 and 0.3 percent [^gupta-2004]. Two caveats come with that finding, and both are the authors' own. The cost of buying the retention improvement is not in the number, so it does not follow that a firm should always improve retention. And eliminating churn entirely is not advisable, because a firm with 100 percent customer loyalty may simply be underpricing [^gupta-2004].
 
-**What else the number decides**, once it exists and is trusted: what a price change is worth, since a margin improvement compounds over the same lifetime; how much service and support a segment justifies; which segments the product should be built for next, because the spread between segment lifetime values is usually wider than the spread between channels; and what the customer base you already have is worth, which is the residual-value question and the one the [pooling bias](#the-two-ways-the-number-goes-wrong) distorts [^fader-hardie-2010].
+**What else the number decides.** Once it exists and people trust it, the same number tells you what a price change is worth, because a margin improvement compounds over the whole lifetime. It tells you how much service and support a segment justifies. It tells you which segments the product should be built for next, since the spread between segment lifetime values is usually wider than the spread between channels. And it tells you what the customer base you already have is worth. That last one is the residual-value question, and it is the one the [pooling bias](#the-two-ways-the-number-goes-wrong) distorts [^fader-hardie-2010].
 
-**When not to compute it at all.** With a year of data and a curve that has not flattened, an LTV is a forecast with an error bar wider than the number, and it will still get quoted to two decimal places. You do not need lifetime value to know that retention is bad, that a channel is expensive, or that payback is longer than your runway; all three are visible in the cohort table and the payback month, which is why both come first on this page.
+**When not to compute it at all.** With one year of data and a curve that has not flattened, a lifetime value is a forecast with an error bar wider than the number itself. It will still get quoted to two decimal places. You do not need a lifetime value to know that retention is bad, that a channel is expensive, or that payback takes longer than your runway. The cohort table and the payback month show all three, and that is why both of them come first on this page.
 
 <!-- TODO(heqing): interview — at what size does a company actually need LTV as a number, rather than just needing to know that retention is bad? You have made the argument before that a lot of small companies compute this far too early. -->
 
 ## What the five percent claim actually says
 
-Almost every argument for spending on retention ends at one sentence: a 5 percent increase in retention increases profits by 25 to 95 percent. The document behind it does not say that.
+Almost every argument for spending on retention ends at one sentence: increasing customer retention by 5 percent increases profits by 25 to 95 percent. The document behind that sentence does not say it.
 
 | | The source | The version in circulation |
 |---|---|---|
@@ -133,9 +133,9 @@ Almost every argument for spending on retention ends at one sentence: a 5 percen
 | The sentence | "In financial services, for example, a 5% increase in customer retention produces more than a 25% increase in profit." | "increasing customer retention rates by 5% increases profits by 25% to 95%" |
 | What moved | One named sector, offered as an example, stated as a floor. The number 95 appears nowhere in the document. | The sector is dropped, the "for example" is dropped, the floor becomes a range, and a 95 percent ceiling arrives from nowhere. |
 
-**And the arithmetic nobody does.** A 5 percent increase in retention means moving a retention rate from 90 percent to 95 percent, which is cutting churn in half. Halving churn is the hardest thing most subscription businesses ever attempt, and a company that could do it on demand would have done it already. Read that way the claim is far less surprising and much less useful as a target. That reading is this framework's, and it needs no citation, because it is arithmetic you can check in your head.
+**And the arithmetic nobody does.** A 5 percent increase in retention means moving a retention rate from 90 percent to 95 percent. That is cutting churn in half. Halving churn is the hardest thing most subscription businesses ever attempt, and a company that could do it on demand would have done it already. Read the claim that way and it is far less surprising, and much less useful as a target. That reading is this framework's own. It needs no citation, because it is arithmetic you can check in your head.
 
-The defensible version of the same argument is the elasticity finding in [where the next dollar goes](#what-the-number-is-for): retention is the strongest of the three levers, by a factor you can defend, with the authors' own caveats attached.
+The defensible version of the same argument is the elasticity finding in [where the next dollar goes](#what-the-number-is-for). Retention is the strongest of the three levers, the size of the gap is published, and the authors' own caveats come with it.
 
 **One line to stop repeating.** You will also hear that keeping a customer costs five times less than winning one. No primary source for it is traceable. Keep it as a slogan if it helps you argue, but do not put it in a plan as a number.
 
@@ -143,14 +143,14 @@ The defensible version of the same argument is the elasticity finding in [where 
 
 ## What a team of ten does
 
-Do not build a customer-base valuation model. Four steps, in this order, all of them free:
+Do not build a customer-base valuation model. There are four steps, they go in this order, and all of them are free.
 
-- **Compute the payback month before you compute anything else.** Margin per customer per month, acquisition spend per channel over the window that produced those customers, and the month the first covers the second. If it is past twelve months you have a cash problem now, and you did not need an LTV to find it.
-- **Run the survivor-ratio check** on your own cohort table: each period's survivors divided by the period before. Rising ratios mean the base is a mixture and no single churn rate describes it [^fader-hardie-2026a].
-- **If they rise, know which way you are wrong.** Any lifetime from dividing one by a churn rate is too short, any LTV built on it is too low, and any LTV-to-CAC ratio you are steering by is understated. Direction and rough size is most of what a model would have bought you.
-- **Then add up the three columns** — survival, margin, discount factor — stop where your data stops, and label the result as the value of the first _N_ months rather than as the lifetime.
+- **Compute the payback month before anything else.** You need three things: margin per customer per month, acquisition spend per channel over the window that produced those customers, and the month where the first covers the second. If that month is past twelve, you have a cash problem now, and you did not need a lifetime value to find it.
+- **Run the survivor-ratio check on your own cohort table.** Divide each period's survivors by the period before. If those ratios rise, the base is a mixture and no single churn rate describes it [^fader-hardie-2026a].
+- **If they rise, know which way you are wrong.** Any lifetime you got by dividing one by a churn rate is too short, any lifetime value built on it is too low, and any LTV-to-CAC ratio you are steering by is understated. Knowing the direction and the rough size is most of what a model would have bought you.
+- **Then add up the three columns.** Survival, margin and discount factor, stopped where your data stops. Label the result the value of the first _N_ months, not the lifetime.
 
-One thing not to do: put a blended LTV over a blended CAC on a slide. It is the number most likely to be quoted back at you in a board meeting and least likely to survive being asked which customers it describes.
+There is one thing not to do. Never put a blended lifetime value over a blended acquisition cost on a slide. It is the number most likely to be quoted back at you in a board meeting, and the least likely to survive the question of which customers it describes.
 
 ## Patterns & case studies
 
