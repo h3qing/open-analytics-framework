@@ -37,7 +37,7 @@ Inside 2A the order is what expires, not what matters most: history is the only 
 - **3A, what it can reach** — can it only see and do what this asker is already entitled to. Control.
 - **3B, what it tells you** — can we trust the answer, and does the company act like it. Measure and Analyze.
 
-Read 3A first. Both matter, but only one fails in a way you cannot take back. Where Module 2 orders by whether a decision can be reversed, this one orders by whether the consequence can: granting a credential is reversible right up until a row leaves under it. See [the Module 3 charter](modules/03-ai-agent-integration/README.md).
+Read 3A first. Both matter, but only one fails in a way you cannot take back. See [the Module 3 charter](modules/03-ai-agent-integration/README.md).
 
 **The layers:**
 
