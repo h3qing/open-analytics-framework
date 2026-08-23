@@ -22,7 +22,7 @@ Read 3A first. Both halves matter, but only one of them fails in a way you canno
 
 Module 2 orders by what expires: history a source system has overwritten is gone, so the units that expire come first. Nothing in this module expires, because you can always turn the agent off. What this module orders by instead is whether you can still pay the cost later.
 
-The difference is worth stating plainly, because it is the thing this module knows that the others do not. Granting a credential is perfectly reversible right up until the moment a row leaves under it, and then nothing you do reverses anything. A wrong number can be corrected. A leaked customer list cannot be un-leaked, and a question you never logged has no answer three weeks later when someone asks how a number was produced. Same test as Module 2, different clock: Module 2 asks whether the decision can be taken back, this one asks whether the consequence can.
+The difference is worth stating plainly, because it is the thing this module knows that the others do not. Granting a credential is perfectly reversible right up until the moment a row leaves under it, and then nothing you do reverses anything. A wrong number can be corrected. A leaked customer list cannot be un-leaked, and a question you never logged has no answer three weeks later when someone asks how a number was produced. The test is the same as Module 2's, and the clock is different: Module 2 asks whether the decision can be taken back, and this module asks whether the consequence can.
 
 That is why 3A's first track exists and why it comes before everything, including the work that makes answers good.
 
@@ -36,7 +36,7 @@ The spine is four questions in order: what identity does it carry, what may that
 
 ### Track 0 — Before you connect anything
 
-Seven units, and the only set in the module that is mandatory before an agent touches production data. Everything else here can be added in the second month.
+This track holds seven units, and they are the only ones in the module that are mandatory before an agent touches production data. Everything else can be added in the second month.
 
 | Unit | What goes wrong without it | Type |
 |---|---|---|
@@ -91,11 +91,11 @@ Permission parity is the rule that a person must not learn through the agent any
 
 ## 3B — What it tells you
 
-Grounding first, then knowing whether it worked, then what the company is allowed to do with the answer.
+This half moves from grounding, to checking whether the grounding worked, to what the company is allowed to do with the answer.
 
 ### Track 5 — Getting the answers right
 
-The most consequential finding in the research sits here. In a paired evaluation, three frontier models from two vendors were statistically indistinguishable from each other, and a small written context file moved every one of them by the same large margin. The tool is replaceable. The file is the asset.
+One result matters more than everything else in this half. In a paired evaluation, three frontier models from two vendors were statistically indistinguishable from each other, and a small written context file moved every one of them by the same large margin. The tool is replaceable, and the file is the asset.
 
 | Unit | What goes wrong without it | Type |
 |---|---|---|
