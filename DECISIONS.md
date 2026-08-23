@@ -2,6 +2,14 @@
 
 One entry per judgment call: decision, alternatives, why.
 
+## 2026-08-23 — Plain sentences become a working rule
+
+**Decision:** A sentence-level register rule enters `AGENTS.md` and `docs/pattern-template.md`, at the author's request after a review pass on the lifetime value page. Every sentence gets a subject and a verb. A sentence is not built as a noun phrase with a qualifier hung off the end, a finished thought does not get “, which is…” trailed after it, fragments do not stand in for sentences, and abbreviations stay expanded in running prose. The reference edit: “Five steps, none of which need a model” becomes “There are five steps to calculating lifetime value, and no model is needed.”
+
+**Alternatives:** leave register to per-page editorial judgment, as it had been; put the rule only in the template, where drafters read it but reviewers do not.
+
+**Why:** the author reviewed the two versions side by side and judged the plain-sentence page easier to read and less machine-voiced, and the failure pattern is specific enough to name and check. The earlier register rule from 2026-08-11 covered what the pages talk about; this one covers how the sentences are built, and it earns a place in the same list for the same reason: the pattern survived several review passes because no rule forbade it.
+
 ## 2026-08-22 — The lifetime value page leads with the calculation, and puts payback ahead of the ratio
 
 **Decision:** Three calls on the lifetime value page. (a) The page teaches the calculation before the failure modes: the survival curve times contribution margin, discounted and added up off the reader's own cohort table, with a worked table and an explicitly labelled horizon. (b) For a company without an analyst the payback month comes ahead of the LTV-to-CAC ratio, and the page says so. (c) Two sources whose hosts were unreachable from the working session are cited at thesis level, with the block and what is being cited recorded in their `REFERENCES.md` entries and a `[TODO: verify]` attached, following the precedent set by [BALFOUR-2018].
