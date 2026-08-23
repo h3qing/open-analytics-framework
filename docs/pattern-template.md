@@ -15,7 +15,7 @@ Every pattern document uses this shape. Eight sections, several of which are one
 
 ## Frontmatter: which module, and which half
 
-Every pattern's `module:` field names its home. Modules 1 and 2 are split into halves, and their patterns use the letter, never the bare number. Module 1: `1A` for definition quality (what to measure), `1B` for data integrity (whether the number is right). Module 2: `2A` for what you build (the system and the order you build it in), `2B` for how you run it (keeping it true as the company grows). See the [Module 1](modules/01-ai-data-quality/README.md) and [Module 2](modules/02-infrastructure-design/README.md) charters.
+Every pattern's `module:` field names its home. Modules 1 and 2 are split into halves, and their patterns use the letter, never the bare number. Module 1: `1A` for definition quality (what to measure), `1B` for data integrity (whether the number is right). Module 2: `2A` for what you build, `2B` for how you run it. Module 3: `3A` for what the agent can reach, `3B` for what it tells you. See the [Module 1](modules/01-ai-data-quality/README.md), [Module 2](modules/02-infrastructure-design/README.md) and [Module 3](modules/03-ai-agent-integration/README.md) charters.
 
 ## DMAIC mapping
 
