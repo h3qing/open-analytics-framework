@@ -1,20 +1,12 @@
 # Module 4 — Data governance and financial reporting specific to AI companies
 
-> Scope: what has to be true whether or not anyone ever asks, and what you must be able to produce when they do. Covers the standing access rules, the records that cannot be edited, governing the context your agents read, explaining a number months later, the compliance regimes a small company actually faces, and the money numbers themselves. Does not cover: building the warehouse (Module 2); what happens inside a running agent session (Module 3); whether a number is accurate (Module 1B).
+> This module covers what a company must be able to show an outsider: the standing access rules, the records that cannot be edited, governing the context your agents read, explaining a number months later, the compliance regimes a small company actually faces, and the money numbers themselves.
 
 **Status:** build order set, no units written yet. Statuses live in [CONTENT_BACKLOG.md](../../../CONTENT_BACKLOG.md).
 
-## Where this module starts, and Module 3 stops
-
-The two modules overlap on governance, so the line between them is stated here once.
-
-**Module 3 owns the run, and Module 4 owns the record.** A unit belongs to Module 3 if its defect shows up inside a running agent session and is repaired by changing the runtime: a credential, a tool, a retrieval step, a check before the answer is shown. It belongs here if the defect only shows up when somebody outside the team asks you to produce or defend something that already left the building, and repair means a standing rule plus an artifact you had to keep in advance.
-
-When a rule binds the agent, ask what generates the rule. If the generator is "the agent must not exceed its caller, and must not be talked into something", it is Module 3. If it is "this record must be producible unaltered to an outsider", it is Module 4, and Module 2 or Module 3 implements it. The cruder version decides most cases on sight: Module 3's rules are about the agent specifically, and Module 4's rules bind every identity, including the founder's.
-
 ## Two halves
 
-Both halves fail in front of an outsider, but not the same outsider and not for the same reason. One half fails on evidence, the other fails on definition, and neither fix helps the other. A perfect audit trail does not tell you what belongs in ARR, and a defensible revenue definition does not survive a request to show how last March's figure was produced.
+4A focuses on the evidence side of governance: who and what can reach the data, the records that cannot be edited, and explaining a number months later. 4B focuses on the money numbers: defining revenue, cost and margin for an AI business, and reporting them the same way every period.
 
 | | 4A — What you must be able to show | 4B — The money numbers themselves |
 |---|---|---|
@@ -24,7 +16,7 @@ Both halves fail in front of an outsider, but not the same outsider and not for 
 | Knowledge layer | [`templates/04-governance-and-financial-reporting/`](../../../templates/04-governance-and-financial-reporting/) control plans | The investor pack and the definitions sheets |
 | Guided layer | [TODO(heqing): a reproduction drill, or none] | [TODO(heqing): a revenue-definition skill, or none] |
 
-4B is not Module 1A applied to money. The difference is that these definitions carry a disclosure consequence: changing what counts as an active user is an internal problem, and changing what counts as ARR between two board decks is a restatement.
+The money definitions carry a disclosure consequence: changing what counts as an active user is an internal problem, and changing what counts as ARR between two board decks is a restatement.
 
 ## Why this module exists
 
@@ -34,7 +26,7 @@ Both halves fail in front of an outsider, but not the same outsider and not for 
 
 ### Track 0 — Who and what can reach the data
 
-This track states the standing rule that Module 3 implements: humans and agents form one access-control population, with one privilege ceiling and two lifecycles, because you cannot put multi-factor authentication on a service account.
+Humans and agents form one access-control population, with one privilege ceiling and two lifecycles, because you cannot put multi-factor authentication on a service account.
 
 | Unit | What goes wrong without it | Type |
 |---|---|---|
