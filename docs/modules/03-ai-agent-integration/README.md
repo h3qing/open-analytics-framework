@@ -1,12 +1,12 @@
 # Module 3 — AI agent integration into analytics workflows
 
-> Scope: pointing an AI agent at your data and living with the consequences. Covers what the agent may reach, how it authenticates, what untrusted rows can make it do, what it records, whether its answers can be trusted, and how a company adopts it. Does not cover: building agents or the models underneath them; whether a metric is defined right (Module 1A) or a number accurate (Module 1B); the warehouse and models the agent reads from (Module 2); what you must be able to show an outsider afterwards (Module 4).
+> This module covers pointing an AI agent at your company's data: what the agent may reach, how it authenticates, what untrusted rows can make it do, what it records, whether its answers can be trusted, and how a company adopts it.
 
 **Status:** build order set, no units written yet. Statuses live in [CONTENT_BACKLOG.md](../../../CONTENT_BACKLOG.md).
 
 ## Two halves
 
-Agent integration fails in two ways that have nothing to do with each other. An agent can be accurate and still be a side door, and it can be perfectly locked down and confidently wrong. Golden questions do not stop a leak, and a careful login does not make an answer right. So this module names the two separately.
+3A focuses on access: what identity the agent carries, what it can reach, and what record survives. 3B focuses on trust: whether its answers are right, and what the company does with them. An agent can be accurate and still leak, and it can be locked down and still confidently wrong, so each half needs its own work.
 
 | | 3A — What it can reach | 3B — What it tells you |
 |---|---|---|
@@ -20,9 +20,7 @@ Read 3A first. Both halves matter, but only one of them fails in a way you canno
 
 ## What decides the order
 
-The units are ordered by whether you can still fix the damage later. A wrong number can be corrected. A leaked customer list cannot be un-leaked, and a question nobody logged has no answer three weeks later when someone asks how a number was produced. The units that protect you from permanent damage come first, and the units that make answers better come after.
-
-Module 2 orders by what expires. Nothing here expires, because you can always turn the agent off. The risk here is different: granting a credential feels reversible, and it is, right up until a row leaves under it. That is why 3A's first track comes before everything else.
+The units are ordered by whether you can still fix the damage later. A wrong number can be corrected. A leaked customer list cannot be un-leaked, and a question nobody logged has no answer three weeks later when someone asks how a number was produced. Granting a credential feels reversible, and it is, right up until a row leaves under it. The units that protect you from permanent damage come first, and the units that make answers better come after.
 
 ## Why this module exists
 
@@ -31,8 +29,6 @@ It seems easy to integrate an AI agent with your database. In practice, in an en
 <!-- TODO(heqing): two optional additions in your voice: a story of what you watched go wrong when an agent met production data, and why you settle access before trust when most writing does the reverse. -->
 
 ## 3A — What it can reach
-
-3A asks four questions, in order: what identity does the agent carry, what can that identity reach, what can untrusted rows make it do, and what record survives of what it did.
 
 ### Track 0 — Before you connect anything
 
@@ -91,8 +87,6 @@ Permission parity is the rule that a person must not learn through the agent any
 
 ## 3B — What it tells you
 
-This half moves from grounding, to checking whether the grounding worked, to what the company is allowed to do with the answer.
-
 ### Track 5 — Getting the answers right
 
 One result matters more than everything else in this half. In a paired evaluation, three frontier models from two vendors were statistically indistinguishable from each other, and a small written context file moved every one of them by the same large margin. The tool is replaceable, and the file is the asset.
@@ -142,10 +136,8 @@ Two mechanisms live here and they are easy to confuse. One constrains the input 
 | Explaining a number the AI got wrong three weeks ago | You have the log and still cannot reconstruct the answer | implementation guide |
 | What the agent costs you, on one line a week | The cost is invisible until it is annual | template |
 
-The context file sits on the seam. It belongs to 3B by ownership, since its whole purpose is making answers right, but its cost is paid in the first week alongside 3A's Track 0, and it is also the highest-privilege object in the company: anyone who can edit it changes every answer the agent gives. It is the one unit that has to be read from both halves.
+The context file is the one unit to read from both halves. Its purpose is making answers right, and it is also the highest-privilege object in the company: anyone who can edit it changes every answer the agent gives.
 
-## The entrance and the exit
+## The readiness gate
 
-`M3-01`, the readiness gate, is the ceremony that checks both halves at once and refuses deployment until 3A's Track 0 exists and the context file is written. It is the module's front door and should be written after both halves are drafted, not before.
-
-`RA-02`, the deployed shape with its validation layer, is assembled last, from whatever the units actually said.
+`M3-01`, the readiness gate, checks both halves at once. It refuses deployment until Track 0 exists and the context file is written.
