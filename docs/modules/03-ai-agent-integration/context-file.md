@@ -44,7 +44,6 @@ When the wrong numbers surface, the fix everyone reaches for is a better model, 
 
 - You are connecting an AI agent of any category to your company's data, or still deciding which one. Write the file first either way: it is the input to a fair tool evaluation, and it survives the choice.
 - You have no analyst. The file costs one afternoon and no money, and it moves whole when you switch tools.
-- When it does **not** apply: if your definitions already live in a modeled semantic layer, the file shrinks to what the layer cannot express, such as synonyms, quirks, and what the agent should refuse. And if a number feeds financial reporting, this file advises the agent and enforces nothing.
 
 ## The pattern
 
@@ -64,11 +63,13 @@ Swapping the agent moved answer quality within noise. Adding the file moved ever
 
 ## Position
 
-Write the context file before you change tools or models, and before you buy anything, not after. The practitioner this argues with is competent: capability is what vendors sell, and a model upgrade asks nothing of anyone while the file is an afternoon of work. But the paired benchmark found the models interchangeable and the document not.[^rumiantsau-2026] A transformation-tool vendor's own benchmark points the same way: its two frontier models performed almost identically, and the gains came from modeling and context work.[^ganz-2026]
+Write the context file before you change tools or models, and before you buy anything, not after.
 
-The file is not an artifact for the machine. On a benchmark that ships a sentence of written business knowledge with each question, people gained almost exactly as much from it as the strongest model did, 20.6 points against 20.0.[^li-2023] The file is onboarding material for anyone who answers questions about your data, and the agent is the newest hire who reads it.
+The common order is the reverse. A team connects a tool, gets wrong answers, and upgrades the model or shops for a better tool, because a wrong answer looks like a capability problem and an upgrade asks nothing of anyone. Writing the file is an afternoon of work, so it loses by default.
 
-Where the file lives is the position's second half. Author it in plain text in a repository you control, and treat everything a tool derives from it as a rebuildable cache. One dated event shows the exposure: a platform vendor retired its hosted assistant objects and provided no automated migration for the conversations inside them.[^openai-2026] A plain-text file in your own repository moves anywhere in an afternoon.
+The evidence says the file is the fix. The paired benchmark found the models interchangeable and the document not.[^rumiantsau-2026] A transformation-tool vendor's own benchmark points the same way: its two frontier models performed almost identically, and the gains came from modeling and context work.[^ganz-2026] And the file is not only for the machine. On a benchmark that ships a sentence of written business knowledge with each question, people gained almost exactly as much from it as the strongest model did, 20.6 points against 20.0.[^li-2023] The file is onboarding material for anyone who answers questions about your data, and the agent is the newest hire who reads it.
+
+Where the file lives is the position's second half. Keep it wherever your context already lives and your agent can already read: a git repository is the default, and the wiki or shared document workspace your team writes in works too, as long as you can export the file whole. What matters is that the working copy is plain text you control, with everything a tool derives from it treated as a rebuildable cache. One dated event shows the exposure: a platform vendor retired its hosted assistant objects and provided no automated migration for the conversations inside them.[^openai-2026] A plain-text file you can export moves anywhere in an afternoon.
 
 ## Implementation
 
