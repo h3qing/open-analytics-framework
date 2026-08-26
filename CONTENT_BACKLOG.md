@@ -7,7 +7,7 @@ The Module column uses `1A` (definition quality) and `1B` (data integrity) for t
 | ID | Module | Working title | Type | Target | Status | Key sources | Effort |
 |---|---|---|---|---|---|---|---|
 | MX-01 | 1A | Segmentation | topic | — | ready | Author's own thesis: segmentation is where the manufacturing lens stops working | 1 session |
-| MX-02 | 1A | Benchmarks, and how to check a number before you steer by it | topic | — | ready | Five failed traces: Reichheld 5%, 5x-cheaper, 7-friends, Groove 71%, DAU/MAU 50% | 1 session |
+| MX-02 | 1A | Benchmarks, and how to check a number before you steer by it | topic | — | drafted | Five failed traces: Reichheld 5%, 5x-cheaper, 7-friends, Groove 71%, DAU/MAU 50% | 1 session |
 | MX-03 | 1A | Retention | topic | — | in progress | Fader & Hardie sorting effect, NRR filings, author's two-axis split | 1 session |
 | MX-04 | 1A | Time to convert | topic | — | drafted | Little's Law, flow metrics; merged, author answers folded in | — |
 | SK-01 | 1A | Defining your definitions (guided skill) | skill | — | ready | Facebook single-definition story (Schultz lecture, S-1) | 1 session |
