@@ -1,14 +1,14 @@
 # Business context file
 
-Control artifact for the pattern [The one file your AI should read before it answers anything (M3-06)](../../docs/modules/03-ai-agent-integration/context-file.md). MIT licensed — copy this file into your own repository, replace every `[TODO: …]` field, and delete the guidance blockquotes. The section shape follows the one hand-authored document a paired benchmark measured, which covered measures, conventions, and disambiguation rules and was about four kilobytes [RUMIANTSAU-2026] (see [REFERENCES.md](../../REFERENCES.md)); everything organization-specific is a `[TODO]`.
+Control artifact for the pattern [The one file your AI should read before it answers anything (M3-06)](../../docs/modules/03-ai-agent-integration/context-file.md). MIT licensed — copy this file into your own repository, replace every `[TODO: …]` field, and delete the guidance blockquotes. The section shape follows the hand-authored document a paired benchmark measured, about four kilobytes [RUMIANTSAU-2026] (see [REFERENCES.md](../../REFERENCES.md)); everything organization-specific is a `[TODO]`.
 
-> **How to use with an AI analytics agent:** sections 1–3 are the interface: send them to the agent, in full, with every question. Section 4 is the prompt library. Section 5 stays with a human owner. Keep the filled-in file short enough that sending all of it every time is never in question, roughly one to three pages. If it outgrows that, split it by business domain and route questions to the right part; do not index it and do not retrieve fragments of it.
+> **How to use with an AI analytics agent:** send sections 1–3 to the agent, in full, with every question. Section 4 is the prompt library, and section 5 stays with a human owner. Keep the filled-in file to one to three pages. If it outgrows that, split it by business domain; do not index it and do not retrieve fragments of it.
 >
-> **What never goes in this file:** named customers, contract values, salaries, or any personal detail. The file travels to your model vendor with every question, so anything written here leaks continuously rather than once. Write "our largest account", never the name.
+> **What never goes in this file:** named customers, contract values, salaries, or any personal detail, because the file travels to your model vendor with every question. Write "our largest account", never the name.
 
 ## 1. Definitions
 
-The metrics your company actually quotes, three to ten of them. One row per metric; if you cannot fill a cell, that is the ambiguity the agent is currently guessing at.
+The three to ten metrics your company actually quotes. If you cannot fill a cell, that is the ambiguity the agent is currently guessing at.
 
 | Metric | Formula in one sentence | Grain | Filters that always apply | Source of truth |
 |---|---|---|---|---|
@@ -72,7 +72,7 @@ Terms that mean something specific here:
 }
 ```
 
-> This block restates sections 1–2 in a form any agent can parse without guessing at your table layout. Keep the two in step in the same edit; the JSON is the copy an agent should trust when the prose is ambiguous.
+> This block restates sections 1–2 in a form any agent can parse. Keep the two in step in the same edit; the JSON wins when the prose is ambiguous.
 
 ## 4. Agent prompt guidance
 
@@ -112,7 +112,7 @@ Questions:
 [TODO: five questions whose answers the owner already knows]
 ```
 
-> Run Prompt B after every change to the file or to a table it names, and compare against the answers you already know. A wrong answer to a known question is the staleness alarm. Keep the five questions and their answers out of the file itself, or the check passes by construction.
+> Run Prompt B after every change to the file or to a table it names. A wrong answer to a known question is the staleness alarm. Keep the questions and answers out of the file itself, or the check passes by construction.
 
 ## 5. Ownership and review
 
@@ -124,4 +124,4 @@ Questions:
 | Change binding | The file changes in the same commit or pull request as the thing it describes. |
 | Staleness check | Prompt B, after every change, against the five known answers. |
 
-> Treat this file as privileged configuration, not documentation. Anyone who can edit it can change every answer your AI gives, silently, so it belongs somewhere with review on write, not on a wiki page the whole company can edit.
+> This file is privileged configuration, not documentation. Anyone who can edit it changes every answer your AI gives, so it belongs somewhere with review on write.
