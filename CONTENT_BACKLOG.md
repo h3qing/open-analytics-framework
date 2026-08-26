@@ -38,7 +38,7 @@ The Module column uses `1A` (definition quality) and `1B` (data integrity) for t
 | M3-03 | 3B | Teaching your data agent to say "I don't know" | pattern | v1.0.0 | candidate | [TODO: author interview — no input behind this row yet] | 1 session |
 | M3-04 | 3B | Who should get your AI data assistant first, and it is not the executives | pattern | v1.0.0 | candidate | [TODO: author interview — no input behind this row yet] | 1 session |
 | M3-05 | 3B | How far an AI-generated number is allowed to travel | pattern | v1.0.0 | candidate | [TODO: author interview — no input behind this row yet] | 1 session |
-| M3-06 | 3B | The one file your AI should read before it answers anything | pattern | v0.3.0 | ready | A 4 KB context file moved three frontier models by the same large margin; the tool was not the variable | 1 session |
+| M3-06 | 3B | The one file your AI should read before it answers anything | pattern | v0.3.0 | drafted | A 4 KB context file moved three frontier models by the same large margin; the tool was not the variable | 1 session |
 | M3-07 | 3A | What login should the AI use on your data? | pattern | v0.3.0 | ready | Merges four proposals; OAuth holds but fails on over-privileged humans, on scheduled work, and on stdio transport | 1 session |
 | M3-08 | 3A | Decide which tables the AI can reach, before deciding who can ask | pattern | v0.3.0 | ready | Table-granular selection fails when sensitivity lives in a free-text column | 1 session |
 | M3-09 | 3A | Your support tickets can tell your AI what to do | pattern | v0.3.0 | candidate | The unit of sensitivity is the row, and it was written by someone you do not employ | 1 session |

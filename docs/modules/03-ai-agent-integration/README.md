@@ -93,7 +93,7 @@ One result matters more than everything else in this half. In a paired evaluatio
 
 | Unit | What goes wrong without it | Type |
 |---|---|---|
-| The one file your AI should read before it answers anything | The agent guesses at ambiguous tables, and the fix everyone reaches for is a better model rather than a written definition | pattern |
+| [The one file your AI should read before it answers anything](context-file.md) | The agent guesses at ambiguous tables, and the fix everyone reaches for is a better model rather than a written definition | pattern |
 | Write your company's context file in an afternoon | You agree the file matters and never sit down to write it | template |
 | What to write first so an AI agent gets your numbers right | The effort goes into describing every column, which is the highest-cost lowest-return work available | pattern |
 | The pairs you feed it are the pairs you can no longer test it with | Your examples and your answer key are the same set, so the test passes by construction | pattern |
