@@ -40,24 +40,22 @@ The clearest example right now comes from AI. Language models are scored against
 
 A benchmark you can rerun is a benchmark you can check. When researchers suspected that models were being trained on a popular arithmetic test set, they built a fresh set of matching problems and scored the same models again: accuracy dropped by up to 8 percent for some model families, which is what overfitting looks like, while frontier models barely moved [^zhang-2024]. The audit only works because the original tasks are public.
 
-The same principle applies in about any business area, and the same anatomy exists in published business benchmarks, though far less often than the folklore suggests. Two examples survived checking for this page.
+The same principle applies in just about any business area, and the same anatomy exists in published business benchmarks, though far less often than the folklore suggests. Two examples survived checking for this page.
 
 **Advertising cost per lead, by industry.** The 2026 median cost per lead in US search advertising is $66.69, and the industry medians run from about $27 in arts and entertainment to about $132 in legal services [^wordstream-2026]. That five-fold spread is the finding: a cost-per-lead benchmark only means something inside one industry. The report earns its place by stating its sample, 13,474 US campaigns reported as medians, and two conditions travel with the numbers: the sample is one vendor's client base, skewed to small US advertisers, and a lead is whatever the ad platform counted as one.
 
 **Software gross margin.** The common expectation that a software company runs near an 80 percent gross margin is, for once, a claim with a stated sample behind it. An annual survey of more than 800 private software companies puts the median near 80 percent above $5 million of annual recurring revenue and in the mid-70s below that, with the definition attached and quartiles around every median [^highalpha-2025]. Three conditions attach: respondents selected themselves in, the figures are self-reported, and the publisher invests in the category it benchmarks.
 
-Those two reports cover different worlds and share a shape. Before trusting any published benchmark, look for the same four features:
+Before trusting any published benchmark, look for the four features those two reports share:
 
 - The sample is stated: who is in it, how many, over what period.
 - The definition is attached to the metric, so you can compute yours the same way.
 - The figures are medians and quartiles by segment, not one impressive number.
 - The publisher and its interest are named, so you know which way the number would lean if it leaned.
 
-A report with all four can be used with its conditions written next to it. A report with none of them goes to [the audit below](#check-a-number-before-you-steer-by-it).
+A report with all four can be used with its conditions written next to it, and a report with none of them goes to [the audit below](#check-a-number-before-you-steer-by-it).
 
 ## Setting a goal from a benchmark
-
-This section is the framework's own method, drafted from the author's practice.
 
 **Compare only what is highly comparable.** A goal set from a benchmark is only as good as the match between the benchmark's sample and your company. The margin survey above segments by revenue band because a company under $1 million and a company above $50 million are not comparable even inside the same industry, and the advertising report segments by industry because the medians differ five-fold across industries. Check the definition first, since the [retention](retention.md) and [active users](active-users.md) pages show how far definition choices alone move a number, then check segment and size. A goal taken from a sample that does not look like you is an artificial goal, and teams can tell.
 
