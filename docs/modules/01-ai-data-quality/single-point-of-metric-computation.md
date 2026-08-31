@@ -36,7 +36,7 @@ keywords:
 
 The same metric computed in three tools returns three numbers, and every disagreement burns trust that a correct dashboard cannot buy back. At Airbnb, the CEO could ask which city had the most bookings last week and get diverging answers from Data Science and Finance, because each side used slightly different tables and slightly different definitions; over time even the data scientists began second-guessing their own numbers.[^chang-2021] At Uber, one rider-activity metric read 6.53 million sessions in one internal tool and 6.20 million in another for the same city and the same window, and the cause was a stale filter in one tool's private query.[^yu-2021] LinkedIn describes its reporting before centralization as fragmented and ad hoc, with different stakeholders calculating the same metric in different ways and arriving at slightly different results.[^linkedin-ump] Spotify found the same inconsistency in how its experiments were analyzed.[^rydberg-2020]
 
-Nobody in these meetings can say which number is wrong, because each copy faithfully implements its own private variant of the definition, so every number is defensible. A wrong number cannot even be investigated: with three computations there are three definitions and three pipelines, and the question of whether the definition is wrong or the pipeline is broken has no single object to be asked of. A team with no analyst sits in this failure by default, because every tool ships with its own place to write a formula, and metric formulas end up scattered across tools and rewritten without oversight.[^stancil-2021]
+Nobody in these meetings can say which number is wrong, because each copy faithfully implements its own private variant of the definition, so every number is defensible. A wrong number cannot even be investigated, because with three computations there are three definitions and three pipelines, and there is no single place to ask whether the definition is wrong or the pipeline is broken. A team with no analyst sits in this failure by default, because every tool ships with its own place to write a formula, and metric formulas end up scattered across tools and rewritten without oversight.[^stancil-2021]
 
 <!-- TODO(heqing): a class-level story from your own work of the same metric returning two numbers in two tools: who noticed first, and how long the reconciliation took. -->
 
@@ -69,7 +69,7 @@ Airbnb states the same rule as its metric platform's vision: define metrics once
 
 Compute each metric that matters in one place from the day it first leaves the room, and do not wait until you are big enough for a metric platform.
 
-The competent advice runs the other way. The product manager who ran Airbnb's metric platform advises smaller companies to standardize core tables first and expect metric standardization later, as the organization matures, and he is careful to say Airbnb's success may not transfer.[^chang-2021b] The market seems to agree with the caution: of at least six companies building a standalone metrics-layer product by the end of 2021, two pivoted, one was acquired, one stalled, and none became a standard, a failure the idea's best-known advocate now reads as economic rather than technical.[^stancil-2025] So the advice a small team actually hears is to let each tool compute its own copy for now and centralize later.
+The competent advice runs the other way. The product manager who ran Airbnb's metric platform advises smaller companies to standardize core tables first and expect metric standardization later, as the organization matures, and he is careful to say Airbnb's success may not transfer.[^chang-2021b] The market seems to agree with the caution: of at least six companies building a standalone metrics-layer product by the end of 2021, two pivoted, one was acquired, one stalled, and none became a standard. The idea's best-known advocate now reads that failure as economic rather than technical.[^stancil-2025] So the advice a small team actually hears is to let each tool compute its own copy for now and centralize later.
 
 The evidence says the companies that waited spent years buying the rule back. Each one published the failure that forced it and the rule it converged on.
 
@@ -79,9 +79,9 @@ The evidence says the companies that waited spent years buying the rule back. Ea
 | Uber | The same metric 0.33 million apart in two tools; popular metrics spun off "10X or 100X" named copies[^yu-2021] | A metric and its business logic map "strictly ONE to ONE"[^yu-2021] |
 | LinkedIn | Fragmented, siloed reporting; one metric calculated differently by different stakeholders[^linkedin-ump] | One pipeline as "the single source of truth for all business metrics"[^linkedin-ump] |
 
-Unwinding the duplicates at that scale was the expensive part. Uber had to build an algorithm that proves two SQL queries mean the same thing, then convene standing committees of domain experts to decide which copy of each business-critical metric survives, a process its own account calls time-consuming.[^yu-2021] But the rule those platforms enforce is not scale technology. It is one sentence, and a ten-person team can adopt the sentence for the price of one view per metric. What the deferral advice defers is the cheap part, and what it accrues is the expensive one.
+Unwinding the duplicates at that scale was the expensive part. Uber had to build an algorithm that proves two SQL queries mean the same thing, then convene standing committees of domain experts to decide which copy of each business-critical metric survives, a process its own account calls time-consuming.[^yu-2021] But the rule those platforms enforce is not scale technology. It is one sentence, and a ten-person team can adopt the sentence for the price of one view per metric. The advice to wait saves one afternoon now, and the duplicates it tolerates are what took those companies years to unwind.
 
-The honest counter is that duplication plus a test is cheaper than any central anything. That holds right up until two copies disagree. A test can tell you a copy changed; it cannot tell you which copy is right, because right means matches the reference, and a reference is exactly what a team with three copies does not have. Designating the reference is this pattern, in the framework's judgment the whole of it, and once a reference exists the second copy has no remaining job.
+The honest counter is that duplication plus a test is cheaper than any central anything. That holds right up until two copies disagree. A test can tell you a copy changed; it cannot tell you which copy is right, because right means matches the reference, and a reference is exactly what a team with three copies does not have. Designating the reference is this pattern, and in the framework's judgment it is the whole of it: once a reference exists, the second copy has no remaining job.
 
 ## Implementation
 
@@ -99,9 +99,9 @@ The [template](../../../templates/01-ai-data-quality/metric-computation-control-
 ## How you know it is working
 
 - Any two surfaces asked for the same metric over the same window return the same number.
-- When a number looks wrong, there is one query to open, and the question of bad definition against bad pipeline has a single object to be asked of.
+- When a number looks wrong, there is one query to open, and one place to ask whether the definition or the pipeline is at fault.
 - The duplicate column in the registry shrinks month over month.
-- **Anti-signal:** the blessed views exist and the number in the meeting still comes from a spreadsheet with its own formula. That is decoration; adoption is the pattern.
+- **Anti-signal:** the blessed views exist and the number in the meeting still comes from a spreadsheet with its own formula. The views are decoration until the meetings read from them.
 
 ## Failure modes
 
