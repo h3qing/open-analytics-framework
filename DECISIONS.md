@@ -9,6 +9,13 @@ One entry per judgment call: decision, alternatives, why.
 **Alternatives:** argue with the semantic-layer product category itself, which this audience is not buying anyway; or argue with per-tool duplication alone, which no competent practitioner defends in print, so the Position would contest a strawman.
 
 **Why:** a Position should contest the best advice the reader will actually hear, and the advice this audience hears from the strongest sources is to wait. The evidence supports the rule at any size and the platform only at scale, so the honest pattern separates them.
+## 2026-08-31 — M1-02 argues with the guessed threshold, teaches one chart, and handles seasonality by splitting
+
+**Decision:** three calls made while drafting the SPC pattern. (a) The Position argues with hand-picked thresholds, and takes their strongest defense head-on: the site-reliability literature's rule to avoid systems that learn thresholds and keep alerting rules simple. The page answers it by locating XmR limits as simple and history-derived at once, three auditable spreadsheet columns with nothing learned, so the simplicity argument transfers to the framework's side. (b) XmR is the only chart type taught. The tutorial literature teaches four chart types and the drift-sensitive alternatives (EWMA, CUSUM) are real, but one arithmetic is what a team with no analyst will actually maintain, and the run-of-eight rule buys drift detection without new math. (c) Seasonality is handled by splitting charts (weekday against weekend) and by charting today against the same weekday last week, the framework's small-team form of the published deseasonalize-or-difference advice; seasonal-factor arithmetic stays out.
+
+**Alternatives:** argue with the observability-tool purchase instead, which this audience mostly has not made, or with doing nothing, which is not a competent practice; teach p-charts for proportions and EWMA for drift, which doubles the arithmetic for marginal sensitivity; teach seasonal factors, which the audience will compute once and never update.
+
+**Why:** a Position should argue with the practice the reader is actually following, and the guessed threshold is the default every alert form invites; one chart type kept the whole discipline inside one spreadsheet; and the seasonality choices keep the load-bearing small-team version honest, since a method the reader cannot maintain is not a method for this audience.
 
 ## 2026-08-26 — M3-06 argues tool ordering; retrieval demoted to a failure mode; the artifact doubles as the afternoon template
 
