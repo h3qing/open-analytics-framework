@@ -34,11 +34,11 @@ Topic pages currently drafted: [attribution](../../metrics/attribution.md), [con
 
 ## 1B — Data integrity
 
-Whether the number the pipeline returns is the number the definition asks for. All rows below are `candidate` until the Phase 0 prior-art review cuts the list; the backlog is the source of truth.
+Whether the number the pipeline returns is the number the definition asks for. Rows below are `candidate` until the Phase 0 prior-art review cuts the list, except where the title links to a drafted pattern; the backlog is the source of truth.
 
 | ID | Working title | Target |
 |---|---|---|
-| M1-01 | Single point of metric computation | v0.1.0 |
+| M1-01 | [Single point of metric computation](single-point-of-metric-computation.md) | v0.1.0 |
 | M1-02 | Statistical process control for data pipelines | v0.1.0 |
 | M1-03 | Detecting plausible-but-wrong outputs | v0.1.0 |
 | M1-04 | Golden question sets for AI analytics validation | v0.1.0 |
