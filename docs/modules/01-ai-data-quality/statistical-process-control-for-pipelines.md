@@ -47,9 +47,19 @@ I think the failure underneath both is the same. Nobody separated the variation 
 
 ## When this applies
 
-- Your pipeline emits at least one number per day that you care about. The daily row count of the most important table is the usual first chart, with freshness lag and null share behind it, and a spreadsheet is enough.
-- You have some history. Twenty to twenty-five daily values make the limits firm,[^mohammed-2008] and provisional limits can be computed from as few as six to ten,[^wheeler-2012] so a three-week-old pipeline qualifies.
-- When it does **not** apply: invariants. A rule that a key is never null, or that states must sum to the topline, has no routine variation to respect. A violation is a defect at any size, and checking it is a test, not a chart.
+Reach for this pattern when a number arrives on a schedule and you cannot tell whether today's value is news. The problems that bring teams here look like these:
+
+- A daily row count, freshness lag, or null share that moves a little every day, and nobody knows how much movement is normal.
+- An alert on one of those signals that fires so often it has been muted, or that has never fired and nobody trusts.
+- A business number such as daily signups or revenue that dipped this morning, and a meeting about whether to do something about it.
+- A job that gets re-run whenever a count looks low, with no record of whether the re-run ever changed anything.
+- A number that moved after a definition or pipeline change, and the question of whether the change moved it or the day did.
+
+It needs some history. Twenty to twenty-five daily values make the limits firm,[^mohammed-2008] and provisional limits can be computed from as few as six to ten,[^wheeler-2012] so a three-week-old pipeline qualifies, and a spreadsheet is enough.
+
+It does **not** apply to invariants. A rule that a key is never null, or that states must sum to the topline, has no routine variation to respect. A violation is a defect at any size, and checking it is a test, not a chart.
+
+Whenever another page in this library asks whether a number moved or only wiggled, this is the page it points to.
 
 ## The pattern
 
