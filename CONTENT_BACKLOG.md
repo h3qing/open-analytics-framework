@@ -14,7 +14,7 @@ The Module column uses `1A` (definition quality) and `1B` (data integrity) for t
 | SK-02 | 1A | Is this a vanity metric? (guided skill) | skill | — | candidate | Ries 2009 posts, data-theater critique, Twitter mDAU story | 1 session |
 | SK-03 | 1A | Attribution design (guided skill) | skill | — | drafted | Attribution topic page (size guide, incentive checks) | 1 session |
 | M1-01 | 1B | Single point of metric computation | pattern | v0.1.0 | drafted | Airbnb, Uber and LinkedIn each built the single computation after trust broke; Stancil's category retrospective | 1 session |
-| M1-02 | 1B | Statistical process control for data pipelines | pattern | v0.1.0 | candidate | [TODO: prior art] | 1 session |
+| M1-02 | 1B | Statistical process control for data pipelines | pattern | v0.1.0 | drafted | Shewhart's limits-from-history; Wheeler's XmR arithmetic; the observability category re-derives the same move | 1 session |
 | M1-03 | 1B | Detecting plausible-but-wrong outputs | pattern | v0.1.0 | candidate | [TODO: prior art] | 1 session |
 | M1-04 | 1B | Golden question sets for AI analytics validation | pattern | v0.1.0 | candidate | [TODO: prior art] | 1 session |
 | M1-05 | 1B | Agreement measurement for analytics QA | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
