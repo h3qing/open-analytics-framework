@@ -19,7 +19,7 @@ The Module column uses `1A` (definition quality) and `1B` (data integrity) for t
 | M1-04 | 1B | Golden question sets for AI analytics validation | pattern | v0.1.0 | candidate | [TODO: prior art] | 1 session |
 | M1-05 | 1B | Agreement measurement for analytics QA | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-06 | 1B | Data quality SLOs and error budgets | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
-| M1-07 | 1B | Schema drift detection and data contracts | pattern | v0.1.0 | candidate | [TODO: prior art] | 1 session |
+| M1-07 | 1B | Schema drift detection and data contracts | pattern | v0.1.0 | drafted | Google's anomaly frequencies: type errors almost never fire, new columns and new category values do; GoCardless's six-month report on what a producer-side programme costs; Avro resolution as the mechanism | 1 session |
 | M1-08 | 1B | The reconciliation protocol | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-09 | 1B | Measuring trust, not just accuracy | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-10 | 1B | Data incident root cause analysis | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |

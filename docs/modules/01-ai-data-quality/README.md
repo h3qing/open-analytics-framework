@@ -42,7 +42,7 @@ Whether the number the pipeline returns is the number the definition asks for. R
 | M1-02 | [Statistical process control for data pipelines](statistical-process-control-for-pipelines.md) | v0.1.0 |
 | M1-03 | Detecting plausible-but-wrong outputs | v0.1.0 |
 | M1-04 | Golden question sets for AI analytics validation | v0.1.0 |
-| M1-07 | Schema drift detection and data contracts | v0.1.0 |
+| M1-07 | [Schema drift detection and data contracts](schema-drift-and-data-contracts.md) | v0.1.0 |
 | M1-05 | Agreement measurement for analytics QA | v0.2.0 |
 | M1-06 | Data quality SLOs and error budgets | v0.2.0 |
 | M1-08 | The reconciliation protocol | v0.2.0 |
