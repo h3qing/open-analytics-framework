@@ -16,7 +16,7 @@ The Module column uses `1A` (definition quality) and `1B` (data integrity) for t
 | M1-01 | 1B | Single point of metric computation | pattern | v0.1.0 | drafted | Airbnb, Uber and LinkedIn each built the single computation after trust broke; Stancil's category retrospective | 1 session |
 | M1-02 | 1B | Statistical process control for data pipelines | pattern | v0.1.0 | drafted | Shewhart's limits-from-history; Wheeler's XmR arithmetic; the observability category re-derives the same move | 1 session |
 | M1-03 | 1B | Detecting plausible-but-wrong outputs | pattern | v0.1.0 | candidate | [TODO: prior art] | 1 session |
-| M1-04 | 1B | Golden question sets for AI analytics validation | pattern | v0.1.0 | candidate | [TODO: prior art] | 1 session |
+| M1-04 | 1B | Golden question sets for AI analytics validation | pattern | v0.1.0 | drafted | Half the gold answers in public text-to-SQL benchmarks are wrong; LinkedIn and Uber built hand-verified sets from their own logs; 80 answers from 1,000 identical runs | 1 session |
 | M1-05 | 1B | Agreement measurement for analytics QA | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-06 | 1B | Data quality SLOs and error budgets | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-07 | 1B | Schema drift detection and data contracts | pattern | v0.1.0 | candidate | [TODO: prior art] | 1 session |

@@ -6,7 +6,7 @@ In the DMAIC mapping ([pattern template](../docs/pattern-template.md)), the arti
 
 | Directory | Module | Contents |
 |---|---|---|
-| `01-ai-data-quality/` | AI data quality | [Retention-state control plan](01-ai-data-quality/retention-state-control-plan.md) (M1-11) · [Metric-computation control plan](01-ai-data-quality/metric-computation-control-plan.md) (M1-01) · [SPC control plan](01-ai-data-quality/spc-control-plan.md) (M1-02) |
+| `01-ai-data-quality/` | AI data quality | [Retention-state control plan](01-ai-data-quality/retention-state-control-plan.md) (M1-11) · [Metric-computation control plan](01-ai-data-quality/metric-computation-control-plan.md) (M1-01) · [SPC control plan](01-ai-data-quality/spc-control-plan.md) (M1-02) · [Golden question set](01-ai-data-quality/golden-question-set.md) (M1-04) |
 | `02-infrastructure-design/` | Infrastructure design | _pending_ |
 | `03-ai-agent-integration/` | AI agent integration | [Business context file](03-ai-agent-integration/context-file.md) (M3-06) |
 | `04-governance-and-financial-reporting/` | Governance and financial reporting | _pending_ |
