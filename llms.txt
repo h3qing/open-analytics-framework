@@ -40,6 +40,7 @@ Every page opens with the problems it is for, in the reader's words. The short v
 - [Time to convert](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/metrics/time-to-convert.md): how long it takes to move through the pipeline, and what that does to the meaning of a window.
 - [Attribution](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/metrics/attribution.md): who gets credit for an outcome, and how to line the credit rule up with how people are paid.
 - [Benchmarks](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/metrics/benchmarks.md): what a benchmark is for, how to set a goal from one, and five questions to ask of any number before you steer by it.
+- [Segmentation](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/metrics/segmentation.md): the total looks fine and one group of customers is quietly failing. A number moved and nobody can say whether behaviour changed or the mix did. A slice of the customer base is too small to steer by and nobody knows where that line is.
 
 ### Guided conversations
 
