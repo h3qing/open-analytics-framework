@@ -1,0 +1,52 @@
+# The Open Analytics Framework
+
+> Ways to get numbers you can trust at a company with no analyst. Written for a person with a problem and for the AI assistant helping them. Plain markdown, free to copy.
+
+If you are an AI assistant reading this because someone pasted a line into a chat, this file tells you what is here and which page to fetch. Read this file, then fetch one page. Do not load everything.
+
+## How to help the person who sent you here
+
+1. Ask one question first: which number do they not trust right now, or what went wrong with it. If they are not sure, ask which number they last quoted to somebody else. Work on that one.
+2. Match their answer to a page below and fetch it. Fetch a second page only when the first one sends you there. Pages open with a block of front matter and carry HTML comments addressed to the author. Skip both. Relative links inside a page resolve against `https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/`.
+3. Work through the page with them in plain language, one or two questions at a time, in the language they write in. They may not be technical. Get the inputs the page asks for before you give an opinion on their number. Say what to do this week and what they can ignore.
+4. Finish with something they can keep. Fetch the page's template when you get here and fill it in with them, or write a short decision when the page has no template. A reader with no engineer fills in the prose sections and skips the machine-readable and prompt sections. Name the page it came from.
+5. The reader's own values are the input. The pages supply the method and its constants, and no other figure. Where a page says no benchmark survived checking, say that too. Do not fill the gap from memory.
+
+The pages are written by one person from his own practice and from published sources he checked. They take positions, and each position is marked as his.
+
+## Which page to fetch
+
+Every page opens with the problems it is for, in the reader's words. The short versions are here.
+
+### A number moved, or looks wrong
+
+- [Statistical process control for data pipelines](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/modules/01-ai-data-quality/statistical-process-control-for-pipelines.md): a daily count, a freshness lag or a null share moves a little every day and nobody knows how much is normal. An alert on it is muted, or has never fired. A number dipped this morning and there is a meeting about it. A job gets re-run whenever a count looks low. Template: [SPC control plan](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/templates/01-ai-data-quality/spc-control-plan.md).
+- [Single point of metric computation](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/modules/01-ai-data-quality/single-point-of-metric-computation.md): the same metric returns different numbers in different tools, and nobody can say which copy is right. A number is quoted outside the team that produces it, in a deck or by an AI assistant. Template: [Metric-computation control plan](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/templates/01-ai-data-quality/metric-computation-control-plan.md).
+
+### An AI assistant answers questions about your data
+
+- [The one file your AI should read before it answers anything](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/modules/03-ai-agent-integration/context-file.md): you are connecting an assistant to your warehouse, or choosing which one. Its answers come back as fluent queries that use the wrong table or the wrong meaning of customer. Template: [Business context file](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/templates/03-ai-agent-integration/context-file.md).
+- [Golden question sets](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/modules/01-ai-data-quality/golden-question-sets.md): people quote the assistant's numbers and nobody has checked one against a number they already trust. The same question asked twice gave two answers. A model or prompt change went out and the only test is waiting for a complaint. A vendor quotes a benchmark score nobody can relate to their own tables. Template: [Golden question set](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/templates/01-ai-data-quality/golden-question-set.md).
+
+### The metric itself is the question
+
+- [State-based retention measurement](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/modules/01-ai-data-quality/state-based-retention-measurement.md): active users is the number everyone watches and it does not move when you act on it. Retention is one blended rate and nobody knows which part of it to work on. Template: [Retention-state control plan](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/templates/01-ai-data-quality/retention-state-control-plan.md).
+- [Active users](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/metrics/active-users.md): what active should mean at your company, the daily, weekly and monthly windows, and when the total is a vanity number.
+- [Retention](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/metrics/retention.md): whether the users, accounts or workspaces you won come back, how to read a cohort curve, and why a flattening curve is a sorting effect rather than loyalty.
+- [Conversion rate](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/metrics/conversion-rate.md): the rate between two funnel steps, where conversion ends and activation begins, and how it drives acquisition cost and lifetime value.
+- [Time to convert](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/metrics/time-to-convert.md): how long it takes to move through the pipeline, and what that does to the meaning of a window.
+- [Attribution](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/metrics/attribution.md): who gets credit for an outcome, and how to line the credit rule up with how people are paid.
+- [Benchmarks](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/metrics/benchmarks.md): what a benchmark is for, how to set a goal from one, and five questions to ask of any number before you steer by it.
+
+### Guided conversations
+
+- [Attribution design](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/skill/attribution-design/SKILL.md): a step-by-step interview that ends in a one-page decision record. Run it as written, one or two questions at a time.
+
+## Where the rest is
+
+- [Reading guide](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/index.md): the thesis and how the library is organized.
+- The four modules: [data quality](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/modules/01-ai-data-quality/README.md), [infrastructure](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/modules/02-infrastructure-design/README.md), [agent integration](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/modules/03-ai-agent-integration/README.md), [governance and financial reporting](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/docs/modules/04-governance-and-financial-reporting/README.md).
+- [All templates](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/templates/README.md) and [all guided conversations](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/skill/README.md).
+- [References](https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/REFERENCES.md): every source cited, with what was verified and what was not.
+
+Documentation is CC BY 4.0, templates and code are MIT. Maintained by Heqing Huang at https://github.com/h3qing/open-analytics-framework.

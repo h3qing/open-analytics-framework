@@ -46,3 +46,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check Sources & Stories sections and citation keys
         run: python3 .github/scripts/check_provenance.py
+
+  entry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check that every finished page has a row in llms.txt
+        run: python3 .github/scripts/check_entry.py

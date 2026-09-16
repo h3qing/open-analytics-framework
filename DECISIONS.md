@@ -2,6 +2,14 @@
 
 One entry per judgment call: decision, alternatives, why.
 
+## 2026-09-16 — The entry point is one raw markdown file, routed by the pages' own problem lists
+
+**Decision:** three calls made while building the pasted-line entry. (a) The entry point is `llms.txt` at the repository root, fetched through the raw GitHub URL, with no server of the framework's own. GitHub already returns plain text to a fetcher and HTML to a browser, so the content negotiation a product page would need comes for free. (b) The routing table restates each page's "When this applies" list in the reader's words, and CI fails when a finished page has no row, so the entry file cannot drift from the library. (c) The instructions to the assistant are short and begin with a question to the person rather than with an execution contract. The reader may not be technical, and the first job is to find out which number they are trying to trust; the page does the rest.
+
+**Alternatives:** a hosted domain with a short URL and hit counting, deferred until there is an audience to count; an installable plugin marketplace, which the `skill/` directory already fits and which is the next step; a line that loads the whole library, which costs the reader on every turn and asks the assistant to choose among pages it has not read.
+
+**Why:** the target reader copies one line and expects it to work. Anything that would make the line longer, or make the reader install something first, was cut.
+
 ## 2026-08-31 — M1-01 argues with the deferral advice; the platform stories carry two opposite signs
 
 **Decision:** two calls made while drafting the single-point-of-computation pattern. (a) The Position argues with the advice to wait. The competent practitioners it contests are the product manager of Airbnb's own metric platform, who advises smaller companies to standardize tables first and take up metric standardization with organizational maturity, and the metrics-layer retrospective finding the standalone product category commercially unsellable. The pattern answers that the deferral conflates the platform with the rule: the rule the platforms converged on is one sentence, and a ten-person team adopts it for the price of one view per metric, while what accrues during the wait is the expensive part, the retirement work Uber needed SQL-equivalence proofs and standing committees to do. (b) The three first-party platform accounts are therefore used twice with opposite signs: as convergent evidence for one metric mapping to one computation, and as cost evidence against copying the build. The enforcement mechanics at ten people, the registry, one blessed view per metric, and the drift check with retirement dates, are published nowhere for this audience and ship as the framework's own method, marked as such in the body, the template, and Sources & Stories.

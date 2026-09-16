@@ -2,6 +2,12 @@
 
 > Scope: the front door. States the thesis, explains how the framework is organized, and gives the reading order. No pattern content lives here.
 
+If an AI assistant is helping you, paste this line into it and answer its question:
+
+```text
+Read https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/llms.txt, then ask me which number I do not trust right now.
+```
+
 ## The thesis
 
 These systems do not fail at the model layer. They fail at deployment. Query generation is largely a solved problem — model ability is generalized, but it lacks opinion and industry experience. What breaks is everything around it: inconsistent metric definitions across teams, schemas that drift, outputs that look correct while resting on bad joins or incomplete data, and the resulting collapse of organizational trust that sends everyone back to manual validation. That is a process and systems problem, not a modeling problem, which is why industrial-engineering methodology is the right lens.
