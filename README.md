@@ -2,6 +2,16 @@
 
 Structured foundations for building analytics operations, for organizations that lack dedicated analytics resources. Free and open: documentation under CC BY 4.0, code and templates under MIT.
 
+## Paste this into your AI assistant
+
+Works in ChatGPT, Claude, Gemini, or any assistant that can read a link. Then answer its question.
+
+```text
+Read https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/llms.txt, then ask me which number I do not trust right now.
+```
+
+The assistant reads one short file, asks you one question, and fetches the single page that fits. You do not need to install anything or know the library first.
+
 ## Start here
 
 - **Read the first pattern:** [State-based retention measurement](docs/modules/01-ai-data-quality/state-based-retention-measurement.md) — decompose DAU into user states and find the one retention rate worth a team's focus, drawn from the Duolingo growth story.
