@@ -65,7 +65,7 @@ Reach for this pattern when an agent, a rebuilt pipeline, or a new tool is about
 
 It needs a handful of questions whose answers you can verify by hand from a source you trust, such as a closed quarter's revenue against the billing system, and one person willing to own a file. It needs no analyst and no purchase.
 
-It does **not** apply to questions with no checkable answer. A forecast, a ranking with ties, or a "why did revenue drop" question has no value to compare against. It does not replace tests on the pipeline itself, since a null check is cheaper than asking an agent. And it is not the check on a single answer as it is given; that is the job of spotting a plausible-but-wrong output. <!-- link to plausible-but-wrong.md once M1-03 lands -->
+It does **not** apply to questions with no checkable answer. A forecast, a ranking with ties, or a "why did revenue drop" question has no value to compare against. It does not replace tests on the pipeline itself, since a null check is cheaper than asking an agent. And it is not the check on a single answer as it is given; that is the job of [spotting a plausible-but-wrong output](plausible-but-wrong.md).
 
 Whenever another page in this library says to keep questions whose answers you already know and re-run them after a change, this is the set it means.
 

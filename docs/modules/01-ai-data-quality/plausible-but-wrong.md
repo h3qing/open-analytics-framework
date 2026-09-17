@@ -64,7 +64,7 @@ Reach for this pattern when a number is about to leave the room and the only evi
 
 It needs almost nothing. One total known independently of the warehouse, such as the billing system's monthly statement, is enough to start, and every check here fits in a spreadsheet.
 
-It does **not** apply to whether a number moved. A daily count that dipped is a question about variation, and statistical process control owns it. <!-- link statistical-process-control-for-pipelines.md#when-this-applies once #35 lands --> It also does not apply to exploratory numbers that stay in the room; the checks bind numbers that travel.
+It does **not** apply to whether a number moved. A daily count that dipped is a question about variation, and [statistical process control](statistical-process-control-for-pipelines.md#when-this-applies) owns it. It also does not apply to exploratory numbers that stay in the room; the checks bind numbers that travel.
 
 Whenever another page in this library asks whether a number is right, rather than whether it changed, this is the page it points to.
 
@@ -76,7 +76,7 @@ Before a number leaves the room, tie it to something the query did not produce. 
 2. **Grain.** Count the rows in the output, then count the distinct values of the key the output claims to be at, such as one row per order. A gap between the two is a fan-out, the most common way a join doubles a number.
 3. **Invariants.** The parts sum to the topline and the shares add to one, and nothing is negative that the definition forbids.
 4. **Bounds.** Ratios the business cannot produce unless something is wrong, such as revenue per order, bounded from the last closed period. A value outside the bound is a defect to explain, not a finding to present.
-5. **A second path.** For the three to five numbers that carry money, compute the figure again from a different table with a different join, preferably by a different author. A golden question set is one such path, <!-- link golden-question-sets.md once #36 lands --> because its answers were fixed by hand for closed periods.
+5. **A second path.** For the three to five numbers that carry money, compute the figure again from a different table with a different join, preferably by a different author. A [golden question set](golden-question-sets.md) is one such path, because its answers were fixed by hand for closed periods.
 
 The checks read the output and never the query, so a pipeline's output and an AI agent's answer get the same treatment.
 
