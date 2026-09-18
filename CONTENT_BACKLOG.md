@@ -20,7 +20,7 @@ The Module column uses `1A` (definition quality) and `1B` (data integrity) for t
 | M1-05 | 1B | Agreement measurement for analytics QA | pattern | v0.2.0 | drafted | Twenty-nine teams on one dataset returned odds ratios from 0.89 to 2.93; ISO 5725's repeatability and reproducibility as the lens; LinkedIn found 60 percent of its questions had more than one right answer | 1 session |
 | M1-06 | 1B | Data quality SLOs and error budgets | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-07 | 1B | Schema drift detection and data contracts | pattern | v0.1.0 | drafted | Avro resolution as the mechanism behind the quiet change; GoCardless's six-month report on what a producer-side programme costs; the author's addition of the assistant's memory as a drift of its own | 1 session |
-| M1-08 | 1B | The reconciliation protocol | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
+| M1-08 | 1B | The reconciliation protocol | pattern | v0.2.0 | drafted | The bank reconciliation's reconciling-items schedule as the lineage, from the 2025 Green Book and a state auditor's guide; Airbnb, Uber and Zoom as the two-numbers stories; the author's three causes, exclusions, calendars and as-of time | 1 session |
 | M1-09 | 1B | Measuring trust, not just accuracy | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-10 | 1B | Data incident root cause analysis | pattern | v0.2.0 | candidate | [TODO: prior art] | 1 session |
 | M1-11 | 1A | State-based retention measurement | pattern | v0.2.0 | drafted | Duolingo growth model (Gustafson, Mazal) | 1 session |

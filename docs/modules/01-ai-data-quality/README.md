@@ -45,7 +45,7 @@ Whether the number the pipeline returns is the number the definition asks for. R
 | M1-07 | [Schema drift detection and data contracts](schema-drift-and-data-contracts.md) | v0.1.0 |
 | M1-05 | [Agreement measurement for analytics QA](agreement-measurement.md) | v0.2.0 |
 | M1-06 | Data quality SLOs and error budgets | v0.2.0 |
-| M1-08 | The reconciliation protocol | v0.2.0 |
+| M1-08 | [The reconciliation protocol](reconciliation-protocol.md) | v0.2.0 |
 | M1-09 | Measuring trust, not just accuracy | v0.2.0 |
 | M1-10 | Data incident root cause analysis | v0.2.0 |
 
