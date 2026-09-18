@@ -24,7 +24,8 @@ Topic pages carry a Sources & Stories section like every other content file; cit
 | [Active users](active-users.md) | drafted; author opening written, interview questions open |
 | [Retention](retention.md) | drafted; entity retention only, author answers folded in, voice pass pending |
 | [Benchmarks](benchmarks.md) | drafted; every trace re-verified, interview pending |
+| [Segmentation](segmentation.md) | drafted; sourced draft, author interview on the thesis pending |
 
 Retention was too big for one page. [Retention](retention.md) now covers the entity: users, accounts and workspaces, and whether they come back. Value retention, where the thing retained is contract value, and lifetime value, where retention meets acquisition cost, are separate pages still to be written.
 
-Planned next: value retention and LTV, then segmentation, then cost and margin. Revenue and usage after those.
+Planned next: value retention and LTV, then cost and margin. Revenue and usage after those.
