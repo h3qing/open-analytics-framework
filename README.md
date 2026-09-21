@@ -79,6 +79,4 @@ Documentation: [CC BY 4.0](LICENSE). Code and templates: [MIT](LICENSE).
 
 ## Author
 
-Maintained by [Heqing Huang](https://github.com/h3qing).
-
-<!-- TODO(heqing): author bio -->
+Maintained by [Heqing Huang](https://github.com/h3qing). Bio on [LinkedIn](https://www.linkedin.com/in/hhq/).
