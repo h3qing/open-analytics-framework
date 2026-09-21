@@ -9,7 +9,7 @@ timeout = 30
 max_retries = 3
 retry_wait_time = 2
 
-# Phase 0 working document, not part of the published structure.
+# Maintainer working document, untracked and not part of the published structure.
 exclude_path = ["CANDIDATE_PATTERNS.md"]
 
 # Hosts that serve readers normally but answer automated checkers with 403 or

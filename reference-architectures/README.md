@@ -6,4 +6,4 @@ One architecture per file. Category-level, vendor-neutral: each names classes of
 |---|---|---|
 | [Analytics stack for an AI-native startup, pre-first-data-hire](analytics-stack-ai-native-startup.md) | Module 2 | stub |
 
-_More added per [CONTENT_BACKLOG.md](../CONTENT_BACKLOG.md); at least two ship by v0.2.0._
+_More follow the [roadmap](../ROADMAP.md)._

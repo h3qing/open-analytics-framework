@@ -2,7 +2,7 @@
 
 > Scope: a category-level architecture for the smallest reliable analytics stack at an AI-native company before its first dedicated data hire. Does not cover: product recommendations, cost comparisons, or organizations past the first-data-hire stage.
 
-**Status:** stub. Content is interview-driven and lands in a Phase 4 session.
+**Status:** stub. Not yet written.
 
 ## Problem
 

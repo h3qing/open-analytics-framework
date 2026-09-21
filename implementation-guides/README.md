@@ -6,4 +6,4 @@ One guide per file. Guides are the long-form counterpart to the patterns in `doc
 |---|---|---|
 | [Standing up a metric definitions repository](metric-definitions-repository.md) | Module 1 | stub |
 
-_More added per [CONTENT_BACKLOG.md](../CONTENT_BACKLOG.md); at least two ship by v0.3.0._
+_More follow the [roadmap](../ROADMAP.md)._

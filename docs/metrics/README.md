@@ -16,14 +16,16 @@ Topic pages carry a Sources & Stories section like every other content file; cit
 
 ## Topics
 
-| Topic | Status |
+| Topic | What it answers |
 |---|---|
-| [Attribution](attribution.md) | drafted; author answers and voice pass done, guided skill shipped |
-| [Conversion rate](conversion-rate.md) | drafted; author answers and voice pass done |
-| [Time to convert](time-to-convert.md) | drafted; author answers folded in, voice pass pending |
-| [Active users](active-users.md) | drafted; author opening written, interview questions open |
-| [Retention](retention.md) | drafted; entity retention only, author answers folded in, voice pass pending |
-| [Benchmarks](benchmarks.md) | drafted; every trace re-verified, interview pending |
+| [Attribution](attribution.md) | Who gets credit for an outcome, and how to line the credit rule up with how people are paid. Has a [guided skill](../../skill/attribution-design/SKILL.md). |
+| [Conversion rate](conversion-rate.md) | The rate between two funnel steps, where conversion ends and activation begins, and how it drives acquisition cost and lifetime value. |
+| [Time to convert](time-to-convert.md) | How long it takes to move through the pipeline, and what that does to the meaning of a window. |
+| [Active users](active-users.md) | What active should mean at your company, the daily, weekly and monthly windows, and when the total is a vanity number. |
+| [Retention](retention.md) | Whether the users, accounts or workspaces you won come back, how to read a cohort curve, and why a flattening curve is a sorting effect rather than loyalty. |
+| [Benchmarks](benchmarks.md) | What a benchmark is for, how to set a goal from one, and five questions to ask of any number before you steer by it. |
+
+Every page is a full sourced draft awaiting the author's final pass.
 
 Retention was too big for one page. [Retention](retention.md) now covers the entity: users, accounts and workspaces, and whether they come back. Value retention, where the thing retained is contract value, and lifetime value, where retention meets acquisition cost, are separate pages still to be written.
 

@@ -2,7 +2,7 @@
 
 > Scope: step-by-step implementation of single-point metric definition ownership, ending with the control-plan template in `templates/01-ai-data-quality/`. Does not cover: choosing infrastructure (Module 2) or governance of definition changes (Module 4).
 
-**Status:** stub. Content is interview-driven and lands in a Phase 3 session.
+**Status:** stub. Not yet written.
 
 ## Problem
 

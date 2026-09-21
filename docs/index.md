@@ -12,11 +12,9 @@ Read https://raw.githubusercontent.com/h3qing/open-analytics-framework/main/llms
 
 These systems do not fail at the model layer. They fail at deployment. Query generation is largely a solved problem — model ability is generalized, but it lacks opinion and industry experience. What breaks is everything around it: inconsistent metric definitions across teams, schemas that drift, outputs that look correct while resting on bad joins or incomplete data, and the resulting collapse of organizational trust that sends everyone back to manual validation. That is a process and systems problem, not a modeling problem, which is why industrial-engineering methodology is the right lens.
 
-[TODO(heqing): expand in your own voice — what this means for the reader, and why the deployment layer is where your five years were spent.]
+<!-- TODO(heqing): expand in your own voice — what this means for the reader, and why the deployment layer is where your five years were spent. -->
 
-## Who this is for
-
-[TODO(heqing): primary worked case (early-stage and AI-native companies) and how the patterns generalize down. Say it explicitly rather than pretending to be audience-neutral.]
+<!-- TODO(heqing): a "Who this is for" section. Primary worked case (early-stage and AI-native companies) and how the patterns generalize down. Say it explicitly rather than pretending to be audience-neutral. -->
 
 ## How the framework is organized
 
@@ -64,8 +62,21 @@ Patterns cite the stories and research they draw from: see [the prior-art review
 
 ## Available now
 
-- [State-based retention measurement](modules/01-ai-data-quality/state-based-retention-measurement.md) — the first pattern, drawn from the Duolingo growth story. Drafted; awaiting the author's voice pass.
+Every page below is a full sourced draft awaiting the author's final pass.
 
-## Reading order
+**Patterns**, each with its control-plan template in [`templates/`](../templates/README.md):
 
-[TODO(heqing): recommended paths — e.g., "deploying an agent this quarter" vs. "no analytics function yet". Write after Module 1 content exists.]
+- [State-based retention measurement](modules/01-ai-data-quality/state-based-retention-measurement.md) (1A)
+- [Single point of metric computation](modules/01-ai-data-quality/single-point-of-metric-computation.md) (1B)
+- [Statistical process control for data pipelines](modules/01-ai-data-quality/statistical-process-control-for-pipelines.md) (1B)
+- [Detecting plausible-but-wrong outputs](modules/01-ai-data-quality/plausible-but-wrong.md) (1B)
+- [Golden question sets for AI analytics validation](modules/01-ai-data-quality/golden-question-sets.md) (1B)
+- [Agreement measurement for analytics QA](modules/01-ai-data-quality/agreement-measurement.md) (1B)
+- [Schema drift detection and data contracts](modules/01-ai-data-quality/schema-drift-and-data-contracts.md) (1B)
+- [The one file your AI should read before it answers anything](modules/03-ai-agent-integration/context-file.md) (3B)
+
+**Metric topic pages** in the [metrics library](metrics/README.md): [attribution](metrics/attribution.md), [conversion rate](metrics/conversion-rate.md), [time to convert](metrics/time-to-convert.md), [active users](metrics/active-users.md), [retention](metrics/retention.md) and [benchmarks](metrics/benchmarks.md).
+
+**Guided skill:** [attribution design](../skill/attribution-design/SKILL.md).
+
+<!-- TODO(heqing): a "Reading order" section. Recommended paths — e.g., "deploying an agent this quarter" vs. "no analytics function yet". -->

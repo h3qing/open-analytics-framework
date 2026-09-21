@@ -59,7 +59,7 @@ The primary worked case is early-stage and AI-native companies; the patterns gen
 
 ## What ships
 
-Four deliverable types, each with a visible home here: the framework itself (`docs/modules/`), best-practices documentation, reference architectures (`reference-architectures/`), and implementation guides (`implementation-guides/`). Every module ships at least one copyable control-plan template in `templates/`. A diagnostic skill (`skill/`) assesses an organization's readiness before it deploys an AI analytics agent.
+Four deliverable types, each with a visible home here: the framework itself (`docs/modules/`), best-practices documentation, reference architectures (`reference-architectures/`), and implementation guides (`implementation-guides/`). Every module ships at least one copyable control-plan template in `templates/`. Guided skills (`skill/`) walk a team through one decision at a time; the planned diagnostic skill assesses an organization's readiness before it deploys an AI analytics agent.
 
 ## Sources
 
@@ -67,7 +67,7 @@ Every pattern lists the stories and research it draws from — the Duolingo grow
 
 ## Status
 
-Pre-release. Prior-art review in progress; module content follows. See [ROADMAP.md](ROADMAP.md).
+Pre-release, with no version tagged yet. Every page on `main` is a full sourced draft awaiting the author's final pass: the patterns listed in the [Module 1](docs/modules/01-ai-data-quality/README.md) and [Module 3](docs/modules/03-ai-agent-integration/README.md) charters, the topic pages in the [metrics library](docs/metrics/README.md), the control plans in [templates](templates/README.md), and one [guided skill](skill/README.md). The release plan is in [ROADMAP.md](ROADMAP.md).
 
 ## Contributing
 
@@ -78,5 +78,7 @@ Pattern proposals and case studies are welcome — see [CONTRIBUTING.md](CONTRIB
 Documentation: [CC BY 4.0](LICENSE). Code and templates: [MIT](LICENSE).
 
 ## Author
+
+Maintained by [Heqing Huang](https://github.com/h3qing).
 
 <!-- TODO(heqing): author bio -->

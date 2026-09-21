@@ -2,7 +2,7 @@
 
 > Scope: the quality of the whole measurement system — both whether you are measuring the right thing and whether the number you get back is right. Covers metric definition, instrumentation, statistical control, validation, and the trust signals built on them. Does not cover: model selection, prompting, or benchmark performance; infrastructure design (Module 2); agent deployment mechanics (Module 3); metric change control as a governance process (Module 4).
 
-**Status:** charter plus first drafted pattern. This is the opening module. Patterns land here after prior-art review and interview or source-synthesis sessions; the working list lives in [CONTENT_BACKLOG.md](../../../CONTENT_BACKLOG.md).
+**Status:** the opening module. The patterns linked below are drafted, each with its control-plan template in [`templates/01-ai-data-quality/`](../../../templates/01-ai-data-quality/); rows without a link are not yet written. Row-level status lives in [CONTENT_BACKLOG.md](../../../CONTENT_BACKLOG.md).
 
 ## Two halves
 
@@ -14,13 +14,13 @@ A measurement system fails in two independent ways. It can measure the wrong cha
 | Fails as | A precisely computed number that nobody can act on, or three teams reporting three different values for "active" | A correct definition returning a wrong value: bad join, late partition, silent schema change |
 | DMAIC phase | Define — naming the critical-to-quality characteristic | Measure, Analyze, Improve, Control — measurement-system analysis and SPC |
 | Knowledge layer | The [metrics library](../../metrics/README.md) | [`templates/01-ai-data-quality/`](../../../templates/01-ai-data-quality/) control plans |
-| Guided layer | The [skills](../../../skill/README.md) that walk a team through defining a metric in their own context | [TODO(heqing): validation-harness skill, or none] |
+| Guided layer | The [skills](../../../skill/README.md) that walk a team through defining a metric in their own context | — |
+
+<!-- TODO(heqing): 1B guided layer: a validation-harness skill, or none. -->
 
 Read 1A first. A definition defect propagates into every check 1B can run: statistical control on a metric that measures the wrong thing produces a well-behaved number nobody should steer by.
 
-## Why this module exists
-
-[TODO(heqing): the failure this module prevents, in one paragraph, in your voice. Say which half you have watched fail more often, and why the two are one module rather than two. Interview question to be generated in session.]
+<!-- TODO(heqing): a "Why this module exists" section: the failure this module prevents, in one paragraph, in your voice. Say which half you have watched fail more often, and why the two are one module rather than two. -->
 
 ## 1A — Definition quality
 
@@ -30,11 +30,11 @@ What to measure, and how to pin a definition down so it holds. The durable knowl
 |---|---|---|---|
 | M1-11 | [State-based retention measurement](state-based-retention-measurement.md) | drafted — awaiting author voice pass | Duolingo growth model (Gustafson, Mazal) |
 
-Topic pages currently drafted: [attribution](../../metrics/attribution.md), [conversion rate](../../metrics/conversion-rate.md), [time to convert](../../metrics/time-to-convert.md), [active users](../../metrics/active-users.md), [retention](../../metrics/retention.md). Planned topics and guided skills are backlog rows `MX-*` and `SK-*`.
+Topic pages drafted so far: [attribution](../../metrics/attribution.md), [conversion rate](../../metrics/conversion-rate.md), [time to convert](../../metrics/time-to-convert.md), [active users](../../metrics/active-users.md), [retention](../../metrics/retention.md) and [benchmarks](../../metrics/benchmarks.md); the pages planned next are listed at the end of the [metrics library](../../metrics/README.md#topics). The first guided skill is [attribution design](../../../skill/attribution-design/SKILL.md).
 
 ## 1B — Data integrity
 
-Whether the number the pipeline returns is the number the definition asks for. Rows without a link are `candidate` until the Phase 0 prior-art review cuts the list; the backlog is the source of truth.
+Whether the number the pipeline returns is the number the definition asks for. Rows without a link are not yet written.
 
 | ID | Working title | Target |
 |---|---|---|

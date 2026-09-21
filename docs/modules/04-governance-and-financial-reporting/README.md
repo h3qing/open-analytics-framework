@@ -14,13 +14,13 @@
 | Fails as | The number is right and you cannot defend it. The definition that produced last March's figure is unrecoverable, a retention clock expired on the history diligence just asked for, an invoice was edited in place and the old value is gone | ARR that quietly mixes subscription, usage, credits, pilots and implementation fees. A margin that omits inference cost. A definition that changed between two board decks and rewrote a trend with nothing disclosed |
 | DMAIC phase | Control — the evidence that the process was held, kept as long as someone can still ask | Define and Measure, applied to the money characteristics |
 | Knowledge layer | [`templates/04-governance-and-financial-reporting/`](../../../templates/04-governance-and-financial-reporting/) control plans | The investor pack and the definitions sheets |
-| Guided layer | [TODO(heqing): a reproduction drill, or none] | [TODO(heqing): a revenue-definition skill, or none] |
+| Guided layer | — | — |
+
+<!-- TODO(heqing): guided layer: a reproduction drill for 4A, a revenue-definition skill for 4B, or none. -->
 
 The money definitions carry a disclosure consequence: changing what counts as an active user is an internal problem, and changing what counts as ARR between two board decks is a restatement.
 
-## Why this module exists
-
-[TODO(heqing): interview-driven, written in session. Say in your own voice why a company with no compliance function should read any of this, and what you have watched go wrong when the record was not kept. The research supplies the rules; it cannot supply the reason you think this belongs in an analytics framework at all.]
+<!-- TODO(heqing): a "Why this module exists" section, in your own voice: why a company with no compliance function should read any of this, and what you have watched go wrong when the record was not kept. The research supplies the rules; it cannot supply the reason you think this belongs in an analytics framework at all. -->
 
 ## 4A — What you must be able to show
 
