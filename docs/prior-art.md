@@ -1,6 +1,6 @@
 # Prior art and landscape review
 
-> Scope: the coverage matrix — one row per candidate pattern, recording what already exists publicly and what does not. This file is what lets readers trace each pattern's Sources & Stories back to the landscape it came from. Status: **the full Phase 0 review is pending; rows land individually as units are synthesized.**
+> Scope: the coverage matrix — one row per candidate pattern, recording what already exists publicly and what does not. This file is what lets readers trace each pattern's Sources & Stories back to the landscape it came from. Status: **rows are added as patterns are drafted. The patterns drafted after the first do not yet have a row here; their sources are listed in each page's Sources & Stories section and in [REFERENCES.md](../REFERENCES.md).**
 
 ## Method
 
@@ -11,8 +11,8 @@ For each candidate pattern: search books, peer-reviewed papers, standards docume
 | Pattern | Closest prior art | Citation key | What it covers | What it does not cover |
 |---|---|---|---|---|
 | State-based retention measurement (M1-11) | Duolingo's growth model, documented by the practitioners who built it; per Mazal, itself adapted from state models at Zynga and MyFitnessPal | [GUSTAFSON-2023], [MAZAL-2023] | Seven MECE daily activity states; named transition rates (CURR, NURR, RURR, SURR, reactivation/resurrection); sensitivity simulation to select a focus metric; verifying the metric is movable and moves the topline | Application to organizations without analytics staff; low-volume weekly-window variant; reverse-funnel bottleneck framing and coarse-first instrumentation (original here); LLM-agent operationalization |
-| _remaining rows pending Phase 0_ | | | | |
+| _rows for the patterns drafted since are pending_ | | | | |
 
 ## Uncovered ground
 
-_Pending Phase 0: where the review found genuinely uncovered territory._
+_Pending: where the review found genuinely uncovered territory._

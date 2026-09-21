@@ -11,4 +11,4 @@ In the DMAIC mapping ([pattern template](../docs/pattern-template.md)), the arti
 | `03-ai-agent-integration/` | AI agent integration | [Business context file](03-ai-agent-integration/context-file.md) (M3-06) |
 | `04-governance-and-financial-reporting/` | Governance and financial reporting | _pending_ |
 
-Templates are dual-licensed MIT (see [LICENSE](../LICENSE)) so they can be copied into private repositories without ceremony.
+Templates are MIT licensed (see [LICENSE](../LICENSE)) so they can be copied into private repositories without ceremony.

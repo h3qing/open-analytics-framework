@@ -9,7 +9,7 @@ timeout = 30
 max_retries = 3
 retry_wait_time = 2
 
-# Phase 0 working document, not part of the published structure.
+# Maintainer working document, untracked and not part of the published structure.
 exclude_path = ["CANDIDATE_PATTERNS.md"]
 
 # Hosts that serve readers normally but answer automated checkers with 403 or
@@ -24,6 +24,7 @@ exclude = [
   "^https://www\\.reforge\\.com/",
   "^https://www\\.slideshare\\.net/",
   "^https://a16z\\.com/",
+  "^https://www\\.linkedin\\.com/",
 ]
 
 accept = ["200", "201", "202", "203", "204", "206", "301", "302", "308", "403", "429"]

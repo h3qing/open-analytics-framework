@@ -1,6 +1,6 @@
 # Roadmap
 
-Each tag below is a real git tag and a GitHub release with notes, aligned to [CHANGELOG.md](CHANGELOG.md).
+Each version below becomes a git tag and a GitHub release with notes when it ships, aligned to [CHANGELOG.md](CHANGELOG.md). No version is tagged yet.
 
 | Tag | Contents | Status |
 |---|---|---|
@@ -9,7 +9,7 @@ Each tag below is a real git tag and a GitHub release with notes, aligned to [CH
 | — | One pasted line gets a reader in: `llms.txt`, the line on the README, CI that keeps the file current | done, 2026-09-16 |
 | — | Diagnostic skill v0.1 published | not started; the first guided skill, attribution design, is drafted |
 | v0.1.0 | Module 1's core patterns: the 1B integrity patterns, on the 1A topic pages already drafted | drafted and on main: single point of computation, statistical process control, plausible-but-wrong, golden question sets, schema drift; the tag follows the author's voice pass |
-| v0.2.0 | Module 1 complete, both halves, and the first reference architecture | in progress: agreement measurement and the segmentation topic page are in review; four 1B patterns, the reference architecture, and the remaining 1A pages are open |
+| v0.2.0 | Module 1 complete, both halves, and the first reference architecture | in progress: agreement measurement is drafted and on main; the segmentation topic page, data quality SLOs and the reconciliation protocol are in review; the remaining 1B patterns, the reference architecture, and the remaining 1A pages are open |
 | v0.3.0 | Second module core patterns, first implementation guide, skill v1.0 | not started; the module 3 context-file pattern and its template are already on main |
 | v1.0.0 | All four modules at first complete draft | not started |
 

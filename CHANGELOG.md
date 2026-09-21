@@ -15,6 +15,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- Six Module 1B pattern drafts, each with a control-plan template: single point of metric computation, statistical process control for data pipelines, detecting plausible-but-wrong outputs, golden question sets for AI analytics validation, agreement measurement for analytics QA, and schema drift detection and data contracts.
+- The first Module 3 pattern draft, the business context file an AI assistant reads before it answers, with a copyable context-file template.
+- Six metrics-library topic pages: attribution, conversion rate, time to convert, active users, retention, and benchmarks.
+- The first guided skill, attribution design, and the skill template every skill follows.
 - `llms.txt`, the file an AI assistant reads after the reader pastes one line: what the library is, which page to fetch for which problem, and what to hand the reader at the end. The README carries the line. CI fails when a finished page has no row in the file.
 - Repository skeleton: module charters, pattern template, prior-art and references scaffolding, deliverable-type homes, community files, CI.
 - First pattern draft: state-based retention measurement (M1-11, Adapted from Duolingo's published growth model), with Module 1's first control-plan template, first prior-art row, and first verified REFERENCES entries.

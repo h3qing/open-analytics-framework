@@ -14,7 +14,9 @@ Infrastructure fails in two independent ways. It can be built wrong, and it can 
 | Fails as | Money spent on a stack that answers nothing, or a foundation you cannot retrofit because the history is already gone | A correct build that drifts, breaks without anyone noticing, or stops working the week one person leaves |
 | DMAIC phase | Improve — designing the process that produces the number | Control — holding it as volume, headcount and sources grow |
 | Knowledge layer | The [reference architectures](../../../reference-architectures/README.md): what a whole stack looks like at a stage | [`templates/02-infrastructure-design/`](../../../templates/02-infrastructure-design/) control plans |
-| Guided layer | [TODO(heqing): a stack-selection skill, or none] | The verification skill in 2B, and the [skills](../../../skill/README.md) layer generally |
+| Guided layer | — | The verification skill in 2B, and the [skills](../../../skill/README.md) layer generally |
+
+<!-- TODO(heqing): 2A guided layer: a stack-selection skill, or none. -->
 
 Read 2A first, and inside it start with what you cannot get back. Most of this module is reversible: a warehouse can be migrated, a tool can be cancelled, a model can be rewritten. History cannot be recovered once a source system has overwritten it, which is why the build order below leads with the units that expire rather than the units that matter most.
 
